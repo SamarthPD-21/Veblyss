@@ -5,12 +5,13 @@
 :root {
   --primary-color: #792727;
   --secondary-color: #368581;
-  --background-color: #FFECE0;
-  --card-background: #FAF9F7;
+  --background-color: #F6D9D8;
+  --card-background: #fff;
   --text-primary: #111;
   --text-light: #FAF9F7;
-  --gradient-bg: linear-gradient(180deg, #FFECE0 0%, #EAB4B4 46.63%, #FFECE0 100%);
-  --hero-text-color: #AFD8D1;
+  --gradient-bg: linear-gradient(180deg, #F6D9D8 0%, #EAB4B4 46.63%, #F6D9D8 100%);
+  --hero-text-color: #BCE2E0;
+  --nav-bg: #2a7b74;
   --font-poppins: var(--font-poppins);
 }
 

@@ -18,8 +18,8 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/35 flex items-center">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-left md:pl-8 lg:pl-12 xl:pl-20 py-10">
-            <h1 className="text-3xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow-lg">Exporting India&apos;s Finest to the World</h1>
-            <p className="mt-6 text-lg md:text-xl text-white/90 max-w-2xl">From handcrafted elegance to sustainable essentials  delivered globally</p>
+                <h1 className="text-3xl md:text-6xl lg:text-7xl font-extrabold text-[var(--hero-text-color)] leading-tight drop-shadow-lg">Exporting India&apos;s Finest to the World</h1>
+                <p className="mt-6 text-lg md:text-xl text-white/90 max-w-2xl">From handcrafted elegance to sustainable essentials – delivered globally</p>
             <div className="mt-8 flex gap-4">
               <Btn variant="primary" size="large" className="shadow-xl">Explore Products</Btn>
               <Btn variant="secondary" size="large">Enquire</Btn>

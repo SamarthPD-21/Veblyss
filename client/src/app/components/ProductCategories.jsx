@@ -43,7 +43,7 @@ const ProductCategories = () => {
   return (
     <section id="products" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center">Product Categories</h2>
+  <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">Product Categories</h2>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start justify-items-center">
           {productCategories.map((product) => (
             <Card key={product.id} title={product.title} description={product.description} image={product.image} />

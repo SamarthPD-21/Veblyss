@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 const Nav = () => {
   return (
-    <nav className="absolute inset-x-0 top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between bg-transparent">
+    <nav className="absolute inset-x-0 top-6 z-50">
+      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between rounded-lg bg-[var(--nav-bg)]/100 shadow-md">
         <div className="flex items-center gap-4">
           <div className="flex-shrink-0">
             <Image
@@ -17,10 +17,10 @@ const Nav = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-6">
-          <a href="#home" className="text-sm font-medium text-white/95">Home</a>
-          <a href="#about" className="text-sm font-medium text-white/95">About Us</a>
-          <a href="#products" className="text-sm font-medium text-white/95">Products</a>
-          <a href="#contact" className="text-sm font-medium text-white/95">Contact</a>
+          <a href="#home" className="text-sm font-medium text-white">Home</a>
+          <a href="#about" className="text-sm font-medium text-white">About Us</a>
+          <a href="#products" className="text-sm font-medium text-white">Products</a>
+          <a href="#contact" className="text-sm font-medium text-white">Contacts</a>
         </div>
 
         <div className="flex items-center gap-3">
