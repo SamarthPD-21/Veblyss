@@ -1,0 +1,11 @@
+// Central exports for components
+export { default as Nav } from './Nav'
+export { default as Hero } from './Hero'
+export { default as Welcome } from './Welcome'
+export { default as ProductCategories } from './ProductCategories'
+export { default as Features } from './Features'
+export { default as Partners } from './Partners'
+export { default as Footer } from './Footer'
+export { default as Btn } from './ui/Btn'
+export { default as Card } from './ui/Card'
+export { default as FeatureCard } from './ui/FeatureCard'
