@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer id="contact" className="mt-16">
-      <div className="w-full bg-[var(--nav-bg)]/95 text-white">
+      <div className="w-full bg-[var(--veblyss-color)]/95 text-white">
         <div className="max-w-6xl mx-auto px-4 py-10">
           <div className="flex items-start justify-between gap-8">
             <div className="flex-1">

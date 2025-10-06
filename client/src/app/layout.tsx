@@ -14,10 +14,10 @@ export const metadata = {
   description: 'Your one-stop solution for lifestyle, fashion, and home products.',
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={poppins.variable}>
-  <body className={`antialiased ${poppins.className}`}>
+  <body className={`antialiased ${poppins.className} bg-gradient-to-b from-white via-rose-200 to-white min-h-screen flex flex-col`}>
         <div className="page-container">
           <Navbar />
           <main className="main-content">{children}</main>
