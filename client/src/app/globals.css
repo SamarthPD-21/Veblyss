@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #792727;
-  --secondary-color: #368581;
-  --background-color: #F6D9D8;
-  --card-background: #fff;
-  --text-primary: #111;
-  --text-light: #FAF9F7;
-  --gradient-bg: linear-gradient(180deg, #F6D9D8 0%, #EAB4B4 46.63%, #F6D9D8 100%);
-  --hero-text-color: #BCE2E0;
+  --primary-color: #7c2b2b; /* deep warm maroon */
+  --secondary-color: #2a7b74;
+  --background-color: #fcede1; /* creme base */
+  --card-background: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-light: #faf9f7;
+  /* Pink -> Cream gradient for main background */
+  --gradient-bg: linear-gradient(180deg, #fff6f6 0%, #fde7e2 40%, #fcede1 100%);
+  --hero-text-color: #e9f6f4;
+  /* Teal used in Figma for navbar/footer */
   --nav-bg: #2a7b74;
   --font-poppins: var(--font-poppins);
 }
@@ -27,7 +29,10 @@ html {
 
 body {
   font-family: var(--font-poppins), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  background-color: var(--background-color);
+  /* Use the pink -> cream gradient as the page background. Keep a solid fallback. */
+  background: var(--gradient-bg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,6 +45,18 @@ img {
 
 button {
   cursor: pointer;
+}
+
+/* Buttons used by Btn component */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 a {
@@ -77,6 +94,12 @@ a {
 
 .grid {
   display: grid;
+}
+
+/* Card tweak */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .text-center {

@@ -3,9 +3,9 @@ import Image from 'next/image'
 
 const Btn = ({ children, variant = 'primary', size = 'medium', onClick, className = '', disabled = false, ...props }) => {
   const variantClass = {
-    primary: 'bg-primary text-white hover:bg-[#6a1f1f] disabled:opacity-60',
-    secondary: 'bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white disabled:opacity-60',
-    outline: 'bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white disabled:opacity-60'
+    primary: 'bg-[var(--primary-color)] text-white hover:brightness-90 disabled:opacity-60',
+    secondary: 'bg-white text-[var(--primary-color)] border-2 border-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white disabled:opacity-60',
+    outline: 'bg-transparent text-[var(--primary-color)] border-2 border-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-white disabled:opacity-60'
   }
 
   const sizeClass = {
@@ -39,18 +39,18 @@ const FeatureCard = ({ title, icon }) => (
 )
 
 const Card = ({ title, description, image }) => (
-  <div className="flex flex-col w-full max-w-sm bg-card rounded-lg shadow-lg overflow-hidden transition-transform hover:-translate-y-1">
-    <div className="w-full h-64 md:h-72 relative">
+  <div className="w-full max-w-sm bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2">
+    <div className="w-full h-56 md:h-64 relative bg-gray-100">
       <Image src={image} alt={title} fill className="object-cover" />
     </div>
 
-    <div className="p-6 flex flex-col justify-between gap-4">
+    <div className="p-5 flex flex-col gap-3">
       <h3 className="text-center text-lg md:text-xl font-semibold text-black">{title}</h3>
-      <p className="text-center text-sm md:text-base text-gray-700 flex-1">{description}</p>
+      <p className="text-center text-sm md:text-base text-gray-700">{description}</p>
 
-      <div className="flex gap-3 justify-center">
-        <Btn variant="primary" size="small">Enquire</Btn>
-        <Btn variant="outline" size="small">Check more</Btn>
+      <div className="mt-3 flex items-center justify-center gap-3">
+        <Btn variant="primary" size="small">Explore</Btn>
+        <Btn variant="outline" size="small">Enquire</Btn>
       </div>
     </div>
   </div>
@@ -58,7 +58,7 @@ const Card = ({ title, description, image }) => (
 
 function HeroSection() {
   return (
-    <section id="home" className="relative w-full h-[720px] md:h-[980px] overflow-hidden">
+    <section id="home" className="relative w-full h-[640px] md:h-[820px] overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="https://api.builder.io/api/v1/image/assets/TEMP/66cfb6c929cb8875e9ed7b6bf122061ede9eecea?width=2880"
@@ -70,13 +70,13 @@ function HeroSection() {
         />
       </div>
 
-      <div className="absolute inset-0 bg-black/35 flex items-center">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-left md:pl-8 lg:pl-12 xl:pl-20 py-10">
-            <h1 className="text-3xl md:text-6xl lg:text-7xl font-extrabold text-[var(--hero-text-color)] leading-tight drop-shadow-lg">Exporting India&apos;s Finest to the World</h1>
-            <p className="mt-6 text-lg md:text-xl text-white/90 max-w-2xl">From handcrafted elegance to sustainable essentials 
-delivered globally</p>
-            <div className="mt-8 flex gap-4">
+      {/* subtle gradient overlay to match screenshot tone */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-transparent flex items-center">
+        <div className="max-w-6xl mx-auto px-6 w-full">
+          <div className="w-full flex flex-col items-center text-center py-14 md:py-20">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-lg max-w-3xl">Exporting India&apos;s Finest to the World</h1>
+            <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl">From handcrafted elegance to sustainable essentials — delivered globally</p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
               <Btn variant="primary" size="large" className="shadow-xl">Explore Products</Btn>
               <Btn variant="secondary" size="large">Enquire</Btn>
             </div>
@@ -97,7 +97,7 @@ function WelcomeSection() {
           </div>
 
           <div className="flex-1 px-2 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary">Welcome to VeBlyss Global</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-color)]">Welcome to VeBlyss Global</h2>
             <p className="mt-4 text-gray-700">Based in Bengaluru, VeBlyss Global connects India&apos;s artisan heritage with international markets. We specialize in ethically sourced, premium exports including imitation jewelry, copperware, leather goods, handicrafts, and sustainable lifestyle products.</p>
             <div className="mt-6">
               <Btn variant="primary" size="medium">Read More</Btn>
@@ -123,9 +123,11 @@ function ProductCategoriesSection() {
     <section id="products" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">Product Categories</h2>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start justify-items-center">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start justify-items-center">
           {productCategories.map((product) => (
-            <Card key={product.id} title={product.title} description={product.description} image={product.image} />
+            <div key={product.id} className="w-full flex justify-center">
+              <Card title={product.title} description={product.description} image={product.image} />
+            </div>
           ))}
         </div>
       </div>
