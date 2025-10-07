@@ -1,9 +1,8 @@
-// Consolidated single-page with local subcomponents to avoid importing from src/components
+"use client";
 import Image from "next/image";
 
 const Btn = ({
   children,
-  variant = "primary",
   size = "medium",
   onClick,
   className = "",
@@ -11,20 +10,13 @@ const Btn = ({
   ...props
 }: {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "outline";
   size?: "small" | "medium" | "large";
   onClick?: () => void;
   className?: string;
   disabled?: boolean;
 }) => {
-  const variantClass = {
-    primary:
-      "text-white hover:brightness-90 disabled:opacity-60",
-    secondary:
-      "text-[var(--primary-color)] border-2 border-[var(--primary-color)] hover:text-white disabled:opacity-60",
-    outline:
-      "text-[var(--primary-color)] border-2 border-[var(--primary-color)] hover:text-white disabled:opacity-60",
-  };
+  const baseClass =
+    "bg-[#792727] text-white hover:brightness-90 active:bg-white active:text-black active:border active:border-black disabled:opacity-60 inline-flex items-center justify-center rounded-md font-medium transition-all duration-200";
 
   const sizeClass = {
     small: "px-4 py-2 text-sm",
@@ -33,8 +25,7 @@ const Btn = ({
   };
 
   const cls = [
-    "inline-flex items-center justify-center rounded-md font-medium transition-all",
-    variantClass[variant] || variantClass.primary,
+    baseClass,
     sizeClass[size] || sizeClass.medium,
     className,
     disabled ? "cursor-not-allowed" : "cursor-pointer",
@@ -46,6 +37,8 @@ const Btn = ({
     </button>
   );
 };
+
+
 
 const FeatureCard = ({ title, icon }: { title: string; icon: string }) => (
   <div className="flex flex-col items-center gap-3 p-6 bg-white rounded shadow">
@@ -71,10 +64,10 @@ const Card = ({ title, description, image }: { title: string; description: strin
       </p>
 
       <div className="mt-3 flex items-center justify-center gap-3">
-        <Btn variant="primary" size="small">
+        <Btn size="small">
           Explore
         </Btn>
-        <Btn variant="outline" size="small">
+        <Btn size="small">
           Enquire
         </Btn>
       </div>
@@ -90,7 +83,7 @@ function HeroSection() {
     >
       <div className="absolute inset-0">
         <Image
-          src="https://api.builder.io/api/v1/image/assets/TEMP/66cfb6c929cb8875e9ed7b6bf122061ede9eecea?width=2880"
+          src="/home/hero.png"
           alt="VeBlyss Global - Indian Exports"
           fill
           className="object-cover object-center"
@@ -98,6 +91,7 @@ function HeroSection() {
           sizes="100vw"
         />
       </div>
+
 
       {/* subtle gradient overlay to match screenshot tone */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-transparent flex items-center">
@@ -111,10 +105,10 @@ function HeroSection() {
               globally
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
-              <Btn variant="primary" size="large" className="shadow-xl">
+              <Btn size="large" className="shadow-xl">
                 Explore Products
               </Btn>
-              <Btn variant="secondary" size="large">
+              <Btn size="large">
                 Enquire
               </Btn>
             </div>
@@ -130,9 +124,9 @@ function WelcomeSection() {
     <section id="about" className="py-16">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="md:flex-0 md:w-[705px]">
+          <div className="md:flex-none md:w-[400px] md:h-[300px]">
             <Image
-              src="https://api.builder.io/api/v1/image/assets/TEMP/7b5dd6775f8b81552622e6b06000e703d81beb0b?width=1410"
+              src="/home/about.png"
               alt="VeBlyss Global Artisan Heritage"
               width={705}
               height={460}
@@ -151,7 +145,7 @@ function WelcomeSection() {
               leather goods, handicrafts, and sustainable lifestyle products.
             </p>
             <div className="mt-6">
-              <Btn variant="primary" size="medium">
+              <Btn size="medium">
                 Read More
               </Btn>
             </div>
@@ -304,13 +298,13 @@ function PartnersSection() {
               services tailored for your market.
             </p>
             <div className="mt-6">
-              <Btn variant="primary" size="large">
+              <Btn size="large">
                 Explore Products
               </Btn>
             </div>
           </div>
 
-          <div className="md:flex-0 md:w-[705px]">
+          <div className="md:flex-none md:w-[705px]">
             <Image
               src="https://api.builder.io/api/v1/image/assets/TEMP/f357956c466d4af5feea16f7a25acec44c4dab9b?width=1410"
               alt="Global Partnership"
