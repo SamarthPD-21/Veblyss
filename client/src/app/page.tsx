@@ -1,4 +1,5 @@
 "use client";
+import Difference from "@/components/Difference";
 import Image from "next/image";
 
 const Btn = ({
@@ -38,16 +39,6 @@ const Btn = ({
   );
 };
 
-
-
-const FeatureCard = ({ title, icon }: { title: string; icon: string }) => (
-  <div className="flex flex-col items-center gap-3 p-6 bg-white rounded shadow">
-    <div className="w-12 h-12 flex items-center justify-center">
-      <Image src={icon} alt={title} width={40} height={40} />
-    </div>
-    <h3 className="text-center text-sm font-medium">{title}</h3>
-  </div>
-);
 
 const Card = ({ title, description, image }: { title: string; description: string; image: string }) => (
   <div className="w-full max-w-sm bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2">
@@ -97,8 +88,8 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-transparent flex items-center">
         <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="w-full flex flex-col items-center text-center py-14 md:py-20">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-lg max-w-3xl">
-              Exporting India&apos;s Finest to the World
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg max-w-3xl">
+              Welcome to VeBlyss Global
             </h1>
             <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl">
               From handcrafted elegance to sustainable essentials — delivered
@@ -124,19 +115,19 @@ function WelcomeSection() {
     <section id="about" className="py-16">
       <div className="max-w-screen">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="md:flex-none md:w-[400px] md:h-[300px]">
+          <div className="max-w-[50%] w-[50%]">
             <Image
               src="/home/about.png"
               alt="VeBlyss Global Artisan Heritage"
-              width={600}
-              height={460}
-              className="rounded-r-3xl object-cover w-full h-[600px] "
+              height={706}
+              width={460}
+              className="rounded-r-3xl w-full object-cover h-[630]"
             />
           </div>
 
-          <div className="flex-1 px-2 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-[var(--veblyss-color)]">
-              Welcome to VeBlyss Global
+          <div className="flex-1 px-2 text-center flex flex-col pr-14 gap-4 md:text-left">
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--button-red)]">
+              Exporting India&apos;s Finest to the World
             </h2>
             <p className="mt-4 text-gray-700">
               Based in Bengaluru, VeBlyss Global connects India&apos;s artisan
@@ -230,64 +221,10 @@ function ProductCategoriesSection() {
   );
 }
 
-function FeaturesSection() {
-  const features = [
-    {
-      id: 1,
-      title: "Experienced in Global Trade",
-      icon: "https://api.builder.io/api/v1/image/assets/TEMP/8ce3347b26f3befa41dcb5ffc3db4facf5f5091a?width=80",
-    },
-    {
-      id: 2,
-      title: "End-to-End Support",
-      icon: "https://api.builder.io/api/v1/image/assets/TEMP/caa26d32b3d2c1006ea850e4554f04792d935332?width=80",
-    },
-    {
-      id: 3,
-      title: "Certified products",
-      icon: "https://api.builder.io/api/v1/image/assets/TEMP/ce022767f743074759ec4a973f0327b2ddc2ab1d?width=80",
-    },
-    {
-      id: 4,
-      title: "Ethical & Sustainable Sourcing",
-      icon: "https://api.builder.io/api/v1/image/assets/TEMP/c287701095fc37491a96a7eef19e5c880ec8d4d9?width=80",
-    },
-    {
-      id: 5,
-      title: "Timely Delivery",
-      icon: "https://api.builder.io/api/v1/image/assets/TEMP/1859803b76c873c5aee91ffde89f7ec1cfd0223f?width=80",
-    },
-    {
-      id: 6,
-      title: "Customization & Branding",
-      icon: "https://api.builder.io/api/v1/image/assets/TEMP/e2a1ea2486276a15963027ec179875987636b911?width=80",
-    },
-  ];
-
-  return (
-    <section className="py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-center">
-          What Makes Us Different
-        </h2>
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature) => (
-            <FeatureCard
-              key={feature.id}
-              title={feature.title}
-              icon={feature.icon}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function PartnersSection() {
   return (
     <section className="py-16">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="pl-16 mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="flex-1">
             <h2 className="text-2xl md:text-3xl font-bold">
@@ -326,7 +263,7 @@ export default function Home() {
       <div className="relative z-10">
         <WelcomeSection />
         <ProductCategoriesSection />
-        <FeaturesSection />
+        <Difference />
         <PartnersSection />
       </div>
     </div>

@@ -1,5 +1,6 @@
 "use client";
 import Image from 'next/image'
+import Link from 'next/link';
 import { useEffect, useState } from 'react'
 
 export default function Navbar() {
@@ -31,10 +32,10 @@ export default function Navbar() {
             </div>
 
             <div className="hidden md:flex items-center gap-8">
-              <a href="#home" className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1">Home</a>
-              <a href="#about" className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1">About Us</a>
-              <a href="#products" className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1">Products</a>
-              <a href="#contact" className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1">Contacts</a>
+              <Link href="/" className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1">Home</Link>
+              <Link href="/about" className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1">About Us</Link>
+              <Link href="#products" className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1">Products</Link>
+              <Link href="#contact" className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1">Contacts</Link>
 
               <Image src="https://api.builder.io/api/v1/image/assets/TEMP/01dcb384f2c1c328b2985c852aa9ab955ff469c4?width=72" alt="Search" width={36} height={36} />
               <Image src="https://api.builder.io/api/v1/image/assets/TEMP/73da6505901c7d3ffb216886239f3a763691faed?width=60" alt="Menu" width={30} height={30} />
