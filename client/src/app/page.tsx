@@ -1,4 +1,3 @@
-// Consolidated single-page with local subcomponents to avoid importing from src/components
 import Image from "next/image";
 
 const Btn = ({
@@ -19,11 +18,11 @@ const Btn = ({
 }) => {
   const variantClass = {
     primary:
-      "text-white hover:brightness-90 disabled:opacity-60",
+      "text-white bg-[var(--button-red)] hover:bg-red-700 disabled:opacity-60 shadow",
     secondary:
-      "text-[var(--primary-color)] border-2 border-[var(--primary-color)] hover:text-white disabled:opacity-60",
+      "text-white bg-[var(--button-red)] hover:text-white disabled:opacity-60",
     outline:
-      "text-[var(--primary-color)] border-2 border-[var(--primary-color)] hover:text-white disabled:opacity-60",
+      "text-white bg-[var(--button-red)] hover:text-white disabled:opacity-60",
   };
 
   const sizeClass = {
@@ -90,7 +89,7 @@ function HeroSection() {
     >
       <div className="absolute inset-0">
         <Image
-          src="https://api.builder.io/api/v1/image/assets/TEMP/66cfb6c929cb8875e9ed7b6bf122061ede9eecea?width=2880"
+          src="/images/hero-bg.png"
           alt="VeBlyss Global - Indian Exports"
           fill
           className="object-cover object-center"
@@ -128,20 +127,20 @@ function HeroSection() {
 function WelcomeSection() {
   return (
     <section id="about" className="py-16">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-screen">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="md:flex-0 md:w-[705px]">
+          <div className="left-0 w-[50%]">
             <Image
-              src="https://api.builder.io/api/v1/image/assets/TEMP/7b5dd6775f8b81552622e6b06000e703d81beb0b?width=1410"
+              src="/images/welcome-image.png"
               alt="VeBlyss Global Artisan Heritage"
-              width={705}
+              width={600}
               height={460}
-              className="rounded-lg object-cover"
+              className="rounded-r-3xl object-cover w-full h-[600px] "
             />
           </div>
 
           <div className="flex-1 px-2 text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-[var(--primary-color)]">
+            <h2 className="text-2xl md:text-3xl font-bold text-[var(--veblyss-color)]">
               Welcome to VeBlyss Global
             </h2>
             <p className="mt-4 text-gray-700">
@@ -217,7 +216,7 @@ function ProductCategoriesSection() {
   return (
     <section id="products" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--primary-color)]">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--veblyss-color)]">
           Product Categories
         </h2>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start justify-items-center">
