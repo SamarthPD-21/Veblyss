@@ -1,4 +1,3 @@
-"use client";
 import Difference from "@/components/Difference";
 import Image from "next/image";
 
