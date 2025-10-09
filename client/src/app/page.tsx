@@ -1,6 +1,7 @@
 "use client";
 import Difference from "@/components/Difference";
 import Image from "next/image";
+import BackgroundImage from "@/components/BackgroundImage";
 
 const Btn = ({
   children,
@@ -72,16 +73,7 @@ function HeroSection() {
       id="home"
       className="relative w-full h-[640px] md:h-[820px] overflow-hidden"
     >
-      <div className="absolute inset-0">
-        <Image
-          src="/home/hero.png"
-          alt="VeBlyss Global - Indian Exports"
-          fill
-          className="object-cover object-center"
-          priority
-          sizes="100vw"
-        />
-      </div>
+      <BackgroundImage source="/home/hero.png" />
 
 
       {/* subtle gradient overlay to match screenshot tone */}
