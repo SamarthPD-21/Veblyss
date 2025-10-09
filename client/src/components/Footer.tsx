@@ -1,6 +1,6 @@
 import React from "react";
 import Image from 'next/image'
-
+import Link from "next/link";
 export default function Footer() {
   const socialIcons = [
     { src: 'https://api.builder.io/api/v1/image/assets/TEMP/a485700930340924e8ea7079d9d2f12894a62a98?width=70', alt: 'Facebook' },
@@ -28,12 +28,12 @@ export default function Footer() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold">Quick Links</h3>
-                  <ul className="mt-3 space-y-2">
-                    <li><a href="#home" className="text-sm text-white/90">Home</a></li>
-                    <li><a href="#about" className="text-sm text-white/90">About Us</a></li>
-                    <li><a href="#products" className="text-sm text-white/90">Products</a></li>
-                    <li><a href="#contact" className="text-sm text-white/90">Contact</a></li>
-                  </ul>
+                  <div className="mt-3 space-y-2 gap-2 flex flex-col align-items-start">
+                    <Link href="/" className="text-sm text-white/90">Home</Link>
+                    <Link href="/about" className="text-sm text-white/90">About Us</Link>
+                    <Link href="/products" className="text-sm text-white/90">Products</Link>
+                    <Link href="/contact" className="text-sm text-white/90">Contact</Link>
+                  </div>
                 </div>
 
                 <div>
