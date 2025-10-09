@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={poppins.variable}>
-  <body className={`antialiased ${poppins.className} bg-gradient-to-b from-white via-rose-200 to-white min-h-screen flex flex-col`}>
+  <body className={`antialiased ${poppins.className} bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0] min-h-screen flex flex-col`}>
         <div className="page-container">
           <Navbar />
           <main className="main-content">{children}</main>
