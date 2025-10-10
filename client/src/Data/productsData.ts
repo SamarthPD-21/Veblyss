@@ -62,9 +62,87 @@ export const productsData = {
             }
         ]
     },
-    "handicrafts": {},
+    "leather-products": {
+        "heroSection": {
+            "backgroundImage": "/images/products/leather/hero.png",
+            "mainHeading": "Leather Products",
+            "subHeading": "Premium Indian leather goods combining traditional craftsmanship with modern design, perfect for global markets seeking quality and authenticity."
+        },
+        "productRangeSections": [
+            {
+                "name": "Premium Laptop/iPad Bags",
+                "image": "/images/products/leather/laptop-bag.png"
+            },
+            {
+                "name": "Formal & Casual Leather Belts",
+                "image": "/images/products/leather/belts.png"
+            },
+            {
+                "name": "Handcrafted Wallets",
+                "image": "/images/products/leather/wallet.png"
+            },
+            {
+                "name": "Office Accessories",
+                "image": "/images/products/leather/office-acs.png"
+            },
+            {
+                "name": "Leather Travel Accessories",
+                "image": "/images/products/leather/travel-acs.png"
+            },
+            {
+                "name": "Leather Jackets",
+                "image": "/images/products/leather/jacket.png"
+            },
+            {
+                "name": "Luxury Hand Bags ",
+                "image": "/images/products/leather/handbag.png"
+            },
+            {
+                "name": "Corporate Custom Gifts",
+                "image": "/images/products/leather/custom.png"
+            },
+            {
+                "name": "Premium Leather Shoes",
+                "image": "/images/products/leather/shoes.png"
+            }
+        ],
+        "whyChooseOurProductSection": {
+            "name": "leather",
+            "features": [
+                "Private Label Services Available",
+                "Skilled Handcrafted Detailing",
+                "International Durability Standards",
+            ]
+        },
+        "idealForSection": [
+            {
+                "title": "E-commerce Stores",
+                "icon": "/images/products/leather/e-commerce.png"
+            },
+            {
+                "title": "Luxury Boutiques",
+                "icon": "/images/products/leather/luxury.png"
+            },
+            {
+                "title": "Fashion Retailers",
+                "icon": "/images/products/leather/fashion-retailers.png"
+            },
+            {
+                "title": "Corporate Gifts",
+                "icon": "/images/products/leather/office-acs.png"
+            },
+            {
+                "title": "Wholesale Distributors",
+                "icon": "/images/products/leather/wholesale.png"
+            },
+            {
+                "title": "Export Companies",
+                "icon": "/images/products/leather/export-companies.png"
+            }
+        ]
+    },
     "imitation-jewelry": {},
-    "leather-products": {},
+    "handicrafts": {},
     "sustainable-products": {},
     "agricultural-products": {}
 }
