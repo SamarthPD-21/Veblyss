@@ -31,7 +31,7 @@ export default function Footer() {
                   <div className="mt-3 space-y-2 gap-2 flex flex-col align-items-start">
                     <Link href="/" className="text-sm text-white/90">Home</Link>
                     <Link href="/about" className="text-sm text-white/90">About Us</Link>
-                    <Link href="/products" className="text-sm text-white/90">Products</Link>
+                    <a href="#products" className="text-sm text-white/90">Products</a>
                     <Link href="/contact" className="text-sm text-white/90">Contact</Link>
                   </div>
                 </div>
