@@ -68,11 +68,44 @@ export default function Footer() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold">Quick Links</h3>
-                  <div className="mt-3 space-y-2 gap-2 flex flex-col align-items-start">
-                    <Link href="/" className="text-sm text-white/90">Home</Link>
-                    <Link href="/about" className="text-sm text-white/90">About Us</Link>
-                    <Link href="/products" className="text-sm text-white/90">Products</Link>
-                    <Link href="/contact" className="text-sm text-white/90">Contact</Link>
+                  <div className="mt-3 relative space-y-2 gap-2 flex flex-col align-items-start">
+                    <Link href="/" className="text-sm text-white/90">
+                      Home
+                    </Link>
+                    <Link href="/about" className="text-sm text-white/90">
+                      About Us
+                    </Link>
+                    {/* Products Dropdown */}
+                    <div ref={dropdownRef}>
+                      <button
+                        onClick={() => setShowDropdown(!showDropdown)}
+                        className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1 flex items-center gap-1"
+                      >
+                        Products
+                      </button>
+
+                      <div
+                        className={`absolute right-0 top-0 mt-2 w-48 bg-[var(--veblyss-color)] border border-white/20 rounded-lg shadow-lg py-2 z-50 transform transition-all duration-300 ease-out origin-top ${
+                          showDropdown
+                            ? "opacity-100 scale-100 translate-y-0"
+                            : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+                        }`}
+                      >
+                        {products.map((product) => (
+                          <Link
+                            key={product.name}
+                            href={product.link}
+                            className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors"
+                            onClick={() => setShowDropdown(false)}
+                          >
+                            {product.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <Link href="/contact" className="text-sm text-white/90">
+                      Contact
+                    </Link>
                   </div>
                 </div>
 
