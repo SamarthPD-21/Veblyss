@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Btn from '@/components/Btn';
+import { MapButton, WhatsappButton } from '@/components/ContactActions';
 export default function ContactPage() {
   return (
     <section className="w-full">
@@ -38,9 +39,9 @@ export default function ContactPage() {
             <div className="flex items-start gap-4">
               <div className="text-3xl">📞</div>
               <div>
-                <div className="flex items-center gap-3">
+                  <div className="flex items-center gap-3">
                   <h3 className="font-bold text-[30px] text-[#792727]">Contact:</h3>
-                  <Btn size="small">Whatsapp</Btn>
+                  <WhatsappButton />
                 </div>
                 <p className="mt-3 text-gray-700 text-base">+xx xxxxxxxxxx</p>
               </div>
@@ -50,9 +51,9 @@ export default function ContactPage() {
               <div className="flex items-start gap-4">
                 <div className="text-3xl">📍</div>
                 <div>
-                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-3">
                     <h3 className="font-bold text-[30px] text-[#792727]">Address:</h3>
-                    <Btn size="small">Map</Btn>
+                    <MapButton />
                   </div>
                   <p className="mt-2 text-gray-700 text-base">
                     VeBlyss Global Pvt Ltd<br />

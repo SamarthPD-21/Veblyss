@@ -33,7 +33,7 @@ const Card = ({
 
       <div className="mt-3 flex items-center justify-center gap-3">
         <Btn size="small">Explore</Btn>
-        <EnquireBtn size="small" />
+  <EnquireBtn />
       </div>
     </div>
   </div>
@@ -63,7 +63,7 @@ function HeroSection() {
               <Btn size="large" className="shadow-xl">
                 Explore Products
               </Btn>
-              <EnquireBtn size="large" />
+                  <EnquireBtn />
             </div>
           </div>
         </div>

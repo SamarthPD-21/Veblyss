@@ -105,7 +105,7 @@ function OtherProductsSection({
                   <Btn size="large" className="shadow-xl">
                     Explore Products
                   </Btn>
-                  <EnquireBtn size="large" />
+                       <EnquireBtn message={`Hi, I'm interested in ${product.name}`} />
                 </div>
               </div>
             </div>
