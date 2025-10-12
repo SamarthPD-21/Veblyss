@@ -179,7 +179,7 @@ export default function Navbar() {
       </div>
       {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transform transition-opacity duration-300 ${
+        className={`fixed inset-0 z-40 md:hidden transform transition-opacity duration-300 text-[20px] ${
           mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         aria-hidden={!mobileOpen}
@@ -189,12 +189,12 @@ export default function Navbar() {
         <div className={`absolute top-16 right-0 left-0 px-4`}>
           <div className={`bg-[var(--veblyss-color)] rounded-lg p-4 mx-auto max-w-3xl shadow-lg`}>
             <nav aria-label="Mobile navigation" className="flex flex-col gap-2">
-              <Link href="/" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2">Home</Link>
-              <Link href="/about" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2">About Us</Link>
+              <Link href="/" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2 text-[20px]">Home</Link>
+              <Link href="/about" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2 text-[20px]">About Us</Link>
 
               <button
                 onClick={() => setMobileProductsOpen((s) => !s)}
-                className="flex items-center justify-between text-white font-medium py-2 px-2"
+                className="flex items-center justify-between text-white font-medium py-2 px-2 text-[20px]"
                 aria-expanded={mobileProductsOpen}
               >
                 <span>Products</span>
@@ -216,7 +216,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link href="/contact" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2">Contact</Link>
+              <Link href="/contact" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2 text-[20px]">Contact</Link>
             </nav>
           </div>
         </div>
