@@ -2,12 +2,6 @@
 
 import React from "react";
 
-// Simple Pop component (toast-like) that listens for a custom window event
-// Usage:
-// 1) Mount <Pop /> once (e.g. in layout.tsx under <body />)
-// 2) Trigger with: window.dispatchEvent(new CustomEvent('veblyss:pop', { detail: { message: 'Hi', duration: 3000 } }))
-// Or use the helper `triggerPop(message, duration)` exported below.
-
 type PopEventDetail = { message: string; duration?: number };
 
 export default function Pop() {
@@ -20,7 +14,6 @@ export default function Pop() {
       const ev = e as CustomEvent<PopEventDetail>;
       const msg = ev?.detail?.message ?? "";
       const duration = ev?.detail?.duration ?? 3000;
-      // clear any existing timer
       if (hideTimerRef.current) {
         window.clearTimeout(hideTimerRef.current);
         hideTimerRef.current = null;
@@ -42,15 +35,23 @@ export default function Pop() {
     };
   }, []);
 
-  if (!visible) return null;
-
   return (
+    // Always render (so animation can play). Use aria-hidden when not visible.
     <div
       aria-live="polite"
-      className="fixed left-1/2 bottom-6 z-[9999] -translate-x-1/2 transform"
+      aria-hidden={!visible}
+      className={`fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none`}
     >
-      <div className="bg-black/80 text-white px-4 py-2 rounded-lg shadow-lg max-w-[90vw] text-sm">
-        {message}
+      <div
+        className={`pointer-events-auto transform transition-all duration-250 ease-out max-w-[90vw] w-auto ${
+          visible
+            ? "opacity-100 scale-100"
+            : "opacity-0 scale-95"
+        }`}
+      >
+        <div className="bg-white text-gray-900 px-6 py-4 rounded-2xl shadow-2xl max-w-2xl text-sm">
+          {message}
+        </div>
       </div>
     </div>
   );

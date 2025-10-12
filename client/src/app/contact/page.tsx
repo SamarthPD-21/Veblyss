@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Btn from "@/components/Btn";
+import { triggerPop } from "@/components/Pop";
 
 export default function ContactPage() {
   return (
@@ -87,7 +90,9 @@ export default function ContactPage() {
               Social Media Links
             </h3>
             <div className="grid grid-cols-4 items-center gap-6 ">
-              <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
+              <div 
+              onClick={() => triggerPop("Coming soon!")}
+              className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
                 <div className="w-12 h-12 flex items-center justify-center">
                   <Image
                     src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"

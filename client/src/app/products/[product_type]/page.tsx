@@ -10,11 +10,13 @@ import WhyChooseOurProductSection from "@/components/product_page_components/Why
 import IdealForSection from "@/components/product_page_components/IdealFor";
 import Btn from "@/components/Btn";
 import EnquireBtn from "@/components/EnquireBtn";
+
 interface productDataType {
   heroSection: {
     backgroundImage: string;
     mainHeading: string;
     subHeading: string;
+    catalogueLink?: string;
   };
   productRangeSections?: Array<{
     name: string;
@@ -103,6 +105,7 @@ export default function Products() {
         backgroundImage={productData.heroSection.backgroundImage}
         mainHeading={productData.heroSection.mainHeading}
         subHeading={productData.heroSection.subHeading}
+        catalogueLink={productData.heroSection.catalogueLink ?? ''}
       />
 
       <div className="relative z-10 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0]">

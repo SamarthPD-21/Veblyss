@@ -3,7 +3,8 @@ export const productsData = {
         "heroSection": {
             "backgroundImage": "/images/products/copper/hero.png",
             "mainHeading": "Copper Products",
-            "subHeading": "Authentic Indian copper products combining traditional Ayurvedic wisdom with modern functionality, perfect for health-conscious global markets."
+            "subHeading": "Authentic Indian copper products combining traditional Ayurvedic wisdom with modern functionality, perfect for health-conscious global markets.",
+            "catalogueLink": "https://drive.google.com/file/d/1fnx2SFX2x-XFpphu5WNdXE2J2AYkl5Dm/view?usp=sharing"
         },
         "productRangeSections": [
             {

@@ -1,8 +1,11 @@
+"use client";
+
 import Difference from "@/components/Difference";
 import Image from "next/image";
 import Btn from "@/components/Btn";
 import SlideShow from "@/components/SlideShow";
 import EnquireBtn from "@/components/EnquireBtn";
+import { triggerPop } from "@/components/Pop";
 
 const Card = ({
   title,
@@ -34,7 +37,7 @@ const Card = ({
       <div className="mt-3 flex items-center justify-center gap-3">
         <Btn size="small">Explore</Btn>
         <EnquireBtn size="small" />
-        <Btn size="small">Catalogue</Btn>
+        <div onClick={() => triggerPop("Sorry, we’re working on it! Meanwhile, feel free to send us an enquiry message.")}><Btn size="small">Catalogue</Btn></div>
       </div>
     </div>
   </div>

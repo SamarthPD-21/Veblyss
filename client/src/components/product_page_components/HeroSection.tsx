@@ -1,7 +1,8 @@
 import React from "react";
 import BackgroundImage from "@/components/BackgroundImage";
+import Btn from "../Btn";
 
-export default function HeroSection({backgroundImage, mainHeading, subHeading}: {backgroundImage: string, mainHeading: string, subHeading: string}) {
+export default function HeroSection({backgroundImage, mainHeading, subHeading, catalogueLink}: {backgroundImage: string, mainHeading: string, subHeading: string, catalogueLink?: string}) {
   return (
     <section
       className="relative w-full h-[640px] md:h-[695.1781616210938px] overflow-hidden"
@@ -18,6 +19,13 @@ export default function HeroSection({backgroundImage, mainHeading, subHeading}: 
             <p className="mt-6 text-base md:text-xl text-white/90 max-w-4xl">
               {subHeading}
             </p>
+            {catalogueLink && (
+              <a href={catalogueLink} target="_blank" rel="noopener noreferrer">
+                <Btn size="large" className="mt-8 shadow-xl">
+                  Catalogue
+                </Btn>
+              </a>
+            )}
           </div>
         </div>
       </div>

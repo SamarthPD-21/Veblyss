@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { triggerPop } from "./Pop";
 export default function Footer() {
   const socialIcons = [
     {
@@ -74,6 +75,7 @@ export default function Footer() {
                     <div
                       key={index}
                       className="w-9 h-9 rounded flex items-center justify-center"
+                      onClick={() => triggerPop("Coming Soon!")}
                     >
                       <Image
                         src={icon.src}
