@@ -27,7 +27,10 @@ export default function Navbar() {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
         setShowDropdown(false);
       }
     };
@@ -80,16 +83,16 @@ export default function Navbar() {
             </div>
 
             {/* Navigation Links */}
-            <div className="hidden md:flex items-center gap-8 relative">
+            <div className="hidden md:flex items-center gap-4 relative">
               <Link
                 href="/"
-                className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
+                className="text-[16px] font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
+                className="text-[16px] font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
               >
                 About Us
               </Link>
@@ -98,7 +101,7 @@ export default function Navbar() {
               <div className="relative" ref={dropdownRef}>
                 <button
                   onClick={() => setShowDropdown(!showDropdown)}
-                  className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1 flex items-center gap-1"
+                  className="text-[16px] font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1 flex items-center gap-1"
                 >
                   Products
                 </button>
@@ -125,24 +128,37 @@ export default function Navbar() {
 
               <Link
                 href="/contact"
-                className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
+                className="text-[16px] font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
               >
                 Contact
               </Link>
 
               {/* Icons */}
-              <Image
-                src="https://api.builder.io/api/v1/image/assets/TEMP/01dcb384f2c1c328b2985c852aa9ab955ff469c4?width=72"
-                alt="Search"
-                width={36}
-                height={36}
-              />
-              <Image
-                src="https://api.builder.io/api/v1/image/assets/TEMP/73da6505901c7d3ffb216886239f3a763691faed?width=60"
-                alt="Menu"
-                width={30}
-                height={30}
-              />
+              <Link
+                href="mailto:Info@veblyssglobal.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/01dcb384f2c1c328b2985c852aa9ab955ff469c4?width=72"
+                  alt="Search"
+                  width={36}
+                  height={36}
+                />
+              </Link>
+              <Link
+                href="https://wa.me/918904592009?text=Hello%2C%20I%27m%20interested%20in%20your%20%5BProduct%20Name%5D%20from%20VeBlyss%20Global.%20Please%20share%20more%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-2"
+              >
+                <Image
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/73da6505901c7d3ffb216886239f3a763691faed?width=60"
+                  alt="Menu"
+                  width={30}
+                  height={30}
+                />
+              </Link>
             </div>
 
             {/* Mobile hamburger */}
@@ -180,17 +196,36 @@ export default function Navbar() {
       {/* Mobile menu overlay */}
       <div
         className={`fixed inset-0 z-40 md:hidden transform transition-opacity duration-300 text-[20px] ${
-          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          mobileOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
         }`}
         aria-hidden={!mobileOpen}
       >
-        <div className="absolute inset-0 bg-black/50" onClick={() => setMobileOpen(false)} />
+        <div
+          className="absolute inset-0 bg-black/50"
+          onClick={() => setMobileOpen(false)}
+        />
 
         <div className={`absolute top-16 right-0 left-0 px-4`}>
-          <div className={`bg-[var(--veblyss-color)] rounded-lg p-4 mx-auto max-w-3xl shadow-lg`}>
+          <div
+            className={`bg-[var(--veblyss-color)] rounded-lg p-4 mx-auto max-w-3xl shadow-lg`}
+          >
             <nav aria-label="Mobile navigation" className="flex flex-col gap-2">
-              <Link href="/" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2 text-[20px]">Home</Link>
-              <Link href="/about" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2 text-[20px]">About Us</Link>
+              <Link
+                href="/"
+                onClick={() => setMobileOpen(false)}
+                className="text-white font-medium py-2 px-2 text-[20px]"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                onClick={() => setMobileOpen(false)}
+                className="text-white font-medium py-2 px-2 text-[20px]"
+              >
+                About Us
+              </Link>
 
               <button
                 onClick={() => setMobileProductsOpen((s) => !s)}
@@ -198,10 +233,22 @@ export default function Navbar() {
                 aria-expanded={mobileProductsOpen}
               >
                 <span>Products</span>
-                <span className={`transition-transform duration-150 ${mobileProductsOpen ? "rotate-180" : ""}`}>▾</span>
+                <span
+                  className={`transition-transform duration-150 ${
+                    mobileProductsOpen ? "rotate-180" : ""
+                  }`}
+                >
+                  ▾
+                </span>
               </button>
 
-              <div className={`${mobileProductsOpen ? "max-h-96 py-2" : "max-h-0 overflow-hidden"} transition-all duration-200` }>
+              <div
+                className={`${
+                  mobileProductsOpen
+                    ? "max-h-96 py-2"
+                    : "max-h-0 overflow-hidden"
+                } transition-all duration-200`}
+              >
                 <div className="flex flex-col gap-1">
                   {products.map((product) => (
                     <Link
@@ -216,7 +263,13 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link href="/contact" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2 text-[20px]">Contact</Link>
+              <Link
+                href="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="text-white font-medium py-2 px-2 text-[20px]"
+              >
+                Contact
+              </Link>
             </nav>
           </div>
         </div>

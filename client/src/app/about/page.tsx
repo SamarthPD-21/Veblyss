@@ -90,7 +90,7 @@ function VisionAndMissionSection() {
           <h2 className="font-poppins text-4xl text-[var(--button-red)] font-bold">
             Our Vision & Mission
           </h2>
-          <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-center md:items-start">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-24 mr-12 ml-16 items-center md:items-start">
             <div className="text-gray-700 max-w-[50%] text-left flex flex-col gap-12">
               <h3 className="font-extrabold text-2xl">Our Vision</h3>
 
@@ -164,9 +164,12 @@ function CertificationsSection() {
           <div className="flex flex-col w-full items-center">
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {certifications.map((text, index) => (
-                <div key={index}
+                <div
+                  key={index}
                   className="bg-gray-100 p-4 rounded-lg text-center text-lg font-medium text-gray-800 shadow-md"
-                >{text}</div>
+                >
+                  {text}
+                </div>
               ))}
             </div>
           </div>
@@ -180,11 +183,13 @@ export default function About() {
   return (
     <section className="min-h-screen">
       <HeroSection />
-      <WhoWeAreSection />
-      <VisionAndMissionSection />
-      <Difference />
-      <MarketsWeServeSection />
-      <CertificationsSection />
+      <div className="relative z-10 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0]">
+        <WhoWeAreSection />
+        <VisionAndMissionSection />
+        <Difference />
+        <MarketsWeServeSection />
+        <CertificationsSection />
+      </div>
     </section>
   );
 }
