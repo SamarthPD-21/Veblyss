@@ -3,6 +3,7 @@ import Image from "next/image";
 import BackgroundImage from "@/components/BackgroundImage";
 import Btn from "@/components/Btn";
 import EnquireBtn from "@/components/EnquireBtn";
+import Link from "next/link";
 
 const Card = ({
   title,
@@ -32,8 +33,35 @@ const Card = ({
       </p>
 
       <div className="mt-3 flex items-center justify-center gap-3">
-        <Btn size="small">Explore</Btn>
-  <EnquireBtn />
+        {(() => {
+          // explicit mapping for category titles -> product-type slug
+          const map: Record<string, string> = {
+            "Leather Products": "leather-products",
+            "Copper Products": "copper-products",
+            "Imitation Jewelry": "imitation-jewelry",
+            "Indian Handicrafts": "handicrafts",
+            "Sustainable Products": "sustainable-products",
+            "Spices": "agricultural-products",
+          };
+          const slug = map[title] ||
+            title
+              .toLowerCase()
+              .replace(/[^a-z0-9 ]/g, "")
+              .trim()
+              .replace(/\s+/g, "-");
+
+          return (
+            <>
+              <Link
+                href={`/products/${slug}`}
+                className="bg-[#792727] text-white hover:brightness-90 active:bg-white active:text-black active:border active:border-black disabled:opacity-60 inline-flex items-center justify-center rounded-md font-medium transition-all duration-200 px-4 py-2 text-sm"
+              >
+                Explore
+              </Link>
+            </>
+          );
+        })()}
+        <EnquireBtn />
       </div>
     </div>
   </div>
