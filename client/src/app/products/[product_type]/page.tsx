@@ -9,7 +9,6 @@ import ProductRangeSections from "@/components/product_page_components/ProductRa
 import WhyChooseOurProductSection from "@/components/product_page_components/WhyChooseOurProductSection";
 import IdealForSection from "@/components/product_page_components/IdealFor";
 import Btn from "@/components/Btn";
-
 interface productDataType {
   heroSection: {
     backgroundImage: string;
