@@ -21,12 +21,12 @@ const Card = ({
       alt={title}
       width={384}
       height={394}
-      className="w-full p-5 object-cover"
+      className="w-full p-5 h-[394px] object-cover"
     />
     <div className="p-6">
       <h2 className="text-2xl text-gray-900 font-bold mb-3">{title}</h2>
 
-      <p className="text-center text-lg text-gray-700">
+      <p className="text-center text-xl mx-2 text-gray-700">
         {description}
       </p>
 
@@ -114,7 +114,7 @@ function ProductCategoriesSection() {
       description:
         "Premium quality bags, wallets & accessories crafted from ethically sourced leather.",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/1cc98503454f2a38f26dc6cdb9b88ade043b6498?width=680",
+        "/home/Leather.png",
     },
     {
       id: 2,
@@ -122,7 +122,7 @@ function ProductCategoriesSection() {
       description:
         "Traditional and modern copper-ware for kitchen, d\u00e9cor, and wellness that's food-safe.",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/bb026a644e05f59b428d904a33574ff27ea432f3?width=680",
+        "/home/Copper.png",
     },
     {
       id: 3,
@@ -130,7 +130,7 @@ function ProductCategoriesSection() {
       description:
         "Stylish, high-quality artificial jewellery necklaces, bangles, earrings, sets, and more.",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/1cc98503454f2a38f26dc6cdb9b88ade043b6498?width=680",
+        "/home/Imitation.png",
     },
     {
       id: 4,
@@ -138,7 +138,7 @@ function ProductCategoriesSection() {
       description:
         "Handcrafted art pieces from skilled artisans woodwork, pottery, textiles, and more.",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/1cc98503454f2a38f26dc6cdb9b88ade043b6498?width=680",
+        "/home/Handicrafts.png",
     },
     {
       id: 5,
@@ -146,15 +146,15 @@ function ProductCategoriesSection() {
       description:
         "Eco-conscious goods including reusable items, natural materials, & bio - products.",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/1cc98503454f2a38f26dc6cdb9b88ade043b6498?width=680",
+        "/home/Sustainable.png",
     },
     {
       id: 6,
-      title: "Spices",
+      title: "Agricultural Products",
       description:
-        "Export-grade Indian spices whole, ground, and blends. Pure, flavorful, and traceable.",
+        "Fresh, sustainable produce and quality grains from trusted farms.",
       image:
-        "https://api.builder.io/api/v1/image/assets/TEMP/1cc98503454f2a38f26dc6cdb9b88ade043b6498?width=680",
+        "/home/Agriculture.png",
     },
   ];
 

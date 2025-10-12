@@ -9,7 +9,7 @@ export default function FeatureCard({
 }) {
 
   return (
-    <div className="flex flex-col items-center gap-2 p-4 bg-white rounded-2xl shadow">
+    <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
       <div className="w-12 h-12 flex items-center justify-center">
         <Image src={icon} alt={title} width={40} height={40} />
       </div>

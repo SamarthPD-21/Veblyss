@@ -7,27 +7,27 @@ export default function Footer() {
   const socialIcons = [
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/a485700930340924e8ea7079d9d2f12894a62a98?width=70",
-      alt: "Facebook",
+      alt: "WhatsApp",
+      link: "https://wa.me/918904592009?text=Hello%2C%20I%27m%20interested%20in%20your%20%5BProduct%20Name%5D%20from%20VeBlyss%20Global.%20Please%20share%20more%20details.",
     },
     {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/7d28cd2fa3c279b9bf4b750ec80557a698155f06?width=69",
-      alt: "Instagram",
+      src: "https://cdn-icons-png.flaticon.com/512/3536/3536505.png",
+      alt: "Linkdin",
+      link: "https://www.linkedin.com/company/veblyss-global-pvt-ltd/",
     },
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/3cceb4b47b0ca6cbd775a7816295a547642291dd?width=65",
-      alt: "LinkedIn",
+      alt: "Email",
+      link: "mailto:Info@veblyssglobal.com",
     },
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/ec26709e9aca62af8f7ef1d837d635c77fc463df?width=69",
-      alt: "Twitter",
+      alt: "Facebook",
     },
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/69333b329d2202c4ee17aeb58e3f6f6b75f2aba7?width=68",
-      alt: "YouTube",
-    },
-    {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/c887a88c2e41e3688e899618c4663131bab9126d?width=69",
-      alt: "WhatsApp",
+      alt: "Instagram",
+      link: "https://www.instagram.com/veblyss_global?igsh=eWd3OHFuNWc1d2M3",
     },
   ];
 
@@ -51,17 +51,38 @@ export default function Footer() {
             <div className="flex justify-between">
               <div className="flex items-end-safe gap-3">
                 {socialIcons.map((icon, index) => (
-                  <div
+                  icon.link ? (
+                 <Link
                     key={index}
-                    className="w-9 h-9 rounded flex items-center justify-center"
+                    href={icon.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Image
-                      src={icon.src}
-                      alt={icon.alt}
-                      width={28}
-                      height={28}
-                    />
-                  </div>
+                    <div
+                      key={index}
+                      className="w-9 h-9 rounded flex items-center justify-center"
+                    >
+                      <Image
+                        src={icon.src}
+                        alt={icon.alt}
+                        width={28}
+                        height={28}
+                      />
+                    </div>
+                  </Link>
+                  ) : (
+                    <div
+                      key={index}
+                      className="w-9 h-9 rounded flex items-center justify-center"
+                    >
+                      <Image
+                        src={icon.src}
+                        alt={icon.alt}
+                        width={28}
+                        height={28}
+                      />
+                    </div>
+                  )
                 ))}
               </div>
 
