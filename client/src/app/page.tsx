@@ -1,43 +1,7 @@
 import Difference from "@/components/Difference";
 import Image from "next/image";
 import BackgroundImage from "@/components/BackgroundImage";
-
-const Btn = ({
-  children,
-  size = "medium",
-  onClick,
-  className = "",
-  disabled = false,
-  ...props
-}: {
-  children: React.ReactNode;
-  size?: "small" | "medium" | "large";
-  onClick?: () => void;
-  className?: string;
-  disabled?: boolean;
-}) => {
-  const baseClass =
-    "bg-[#792727] text-white hover:brightness-90 active:bg-white active:text-black active:border active:border-black disabled:opacity-60 inline-flex items-center justify-center rounded-md font-medium transition-all duration-200";
-
-  const sizeClass = {
-    small: "px-4 py-2 text-sm",
-    medium: "px-6 py-2 text-base",
-    large: "px-8 py-3 text-base",
-  };
-
-  const cls = [
-    baseClass,
-    sizeClass[size] || sizeClass.medium,
-    className,
-    disabled ? "cursor-not-allowed" : "cursor-pointer",
-  ].join(" ");
-
-  return (
-    <button className={cls} onClick={onClick} disabled={disabled} {...props}>
-      {children}
-    </button>
-  );
-};
+import Btn from "@/components/Btn";
 
 const Card = ({
   title,
@@ -78,7 +42,7 @@ function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full h-[640px] md:h-[820px] overflow-hidden"
+      className="relative w-full h-[640px] md:h-[700px] overflow-hidden"
     >
       <BackgroundImage source="/home/hero.png" />
 
@@ -86,13 +50,14 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-transparent flex items-center">
         <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="w-full flex flex-col items-center text-center py-14 md:py-20">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg max-w-3xl">
-              Welcome to VeBlyss Global
-            </h1>
-            <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl">
-              From handcrafted elegance to sustainable essentials — delivered
-              globally
-            </p>
+            <div className="flex flex-col items-center justify-center text-center py-16">
+              <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg">
+                Welcome to VeBlyss Global
+              </h1>
+              <p className="text-[20px] text-white/90 mt-6 max-w-2xl">
+                From handcrafted elegance to sustainable essentials — delivered globally
+              </p>
+            </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
               <Btn size="large" className="shadow-xl">
                 Explore Products
@@ -122,7 +87,7 @@ function WelcomeSection() {
           </div>
 
           <div className="flex-1 px-2 text-center flex flex-col pr-14 gap-4 md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-[var(--button-red)]">
+            <h2 className="text-3xl md:text-3xl font-bold text-[var(--button-red)]">
               Exporting India&apos;s Finest to the World
             </h2>
             <p className="mt-4 text-gray-700">

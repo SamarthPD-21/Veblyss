@@ -114,17 +114,6 @@ export default function Footer() {
                   <div className="mt-3 text-sm text-white/90">
                     +xx xxxxx-xxxxx
                   </div>
-                  <div className="mt-4 text-sm text-white/90">
-                    VeBlyss Global Pvt Ltd
-                    <br />
-                    2619, 36th A Cross, 26th Main,
-                    <br />
-                    4th T Block, 9th Block Post,
-                    <br />
-                    Jayanagar, Bengaluru,
-                    <br />
-                    Karnataka 01 560069
-                  </div>
                 </div>
 
                 <div>
