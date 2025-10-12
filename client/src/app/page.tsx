@@ -12,10 +12,12 @@ const Card = ({
   title,
   description,
   image,
+  catalogueLink,
 }: {
   title: string;
   description: string;
   image: string;
+  catalogueLink?: string;
 }) => (
   <div
     key={title}
@@ -98,9 +100,6 @@ function HeroSection() {
               </p>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
-              <Btn size="large" className="shadow-xl">
-                Explore Products
-              </Btn>
                   <EnquireBtn />
             </div>
           </div>
@@ -136,7 +135,9 @@ function WelcomeSection() {
               leather goods, handicrafts, and sustainable lifestyle products.
             </p>
             <div className="mt-6">
+              <Link href="/about">
               <Btn size="medium">Read More</Btn>
+              </Link>
             </div>
           </div>
         </div>
@@ -162,6 +163,7 @@ function ProductCategoriesSection() {
         "Traditional and modern copper-ware for kitchen, d\u00e9cor, and wellness that's food-safe.",
       image:
         "/home/Copper.png",
+      catalogueLink: "https://drive.google.com/file/d/1fnx2SFX2x-XFpphu5WNdXE2J2AYkl5Dm/view?usp=sharing"
     },
     {
       id: 3,
@@ -210,6 +212,7 @@ function ProductCategoriesSection() {
                 title={product.title}
                 description={product.description}
                 image={product.image}
+                catalogueLink={product.catalogueLink}
               />
               {/* Add Enquire button below each card for quick enquiries */}
             </div>
