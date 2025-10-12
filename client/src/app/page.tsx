@@ -39,28 +39,36 @@ const Btn = ({
   );
 };
 
+const Card = ({
+  title,
+  description,
+  image,
+}: {
+  title: string;
+  description: string;
+  image: string;
+}) => (
+  <div
+    key={title}
+    className="bg-white/90 rounded-xl shadow-lg overflow-hidden flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+  >
+    <Image
+      src={image}
+      alt={title}
+      width={384}
+      height={394}
+      className="w-full p-5 object-cover"
+    />
+    <div className="p-6">
+      <h2 className="text-2xl text-gray-900 font-bold mb-3">{title}</h2>
 
-const Card = ({ title, description, image }: { title: string; description: string; image: string }) => (
-  <div className="w-full max-w-sm bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:-translate-y-2">
-    <div className="w-full h-56 md:h-64 relative bg-gray-100">
-      <Image src={image} alt={title} fill className="object-cover" />
-    </div>
-
-    <div className="p-5 flex flex-col gap-3">
-      <h3 className="text-center text-lg md:text-xl font-semibold text-black">
-        {title}
-      </h3>
-      <p className="text-center text-sm md:text-base text-gray-700">
+      <p className="text-center text-lg text-gray-700">
         {description}
       </p>
 
       <div className="mt-3 flex items-center justify-center gap-3">
-        <Btn size="small">
-          Explore
-        </Btn>
-        <Btn size="small">
-          Enquire
-        </Btn>
+        <Btn size="small">Explore</Btn>
+        <Btn size="small">Enquire</Btn>
       </div>
     </div>
   </div>
@@ -73,7 +81,6 @@ function HeroSection() {
       className="relative w-full h-[640px] md:h-[820px] overflow-hidden"
     >
       <BackgroundImage source="/home/hero.png" />
-
 
       {/* subtle gradient overlay to match screenshot tone */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-transparent flex items-center">
@@ -90,9 +97,7 @@ function HeroSection() {
               <Btn size="large" className="shadow-xl">
                 Explore Products
               </Btn>
-              <Btn size="large">
-                Enquire
-              </Btn>
+              <Btn size="large">Enquire</Btn>
             </div>
           </div>
         </div>
@@ -127,9 +132,7 @@ function WelcomeSection() {
               leather goods, handicrafts, and sustainable lifestyle products.
             </p>
             <div className="mt-6">
-              <Btn size="medium">
-                Read More
-              </Btn>
+              <Btn size="medium">Read More</Btn>
             </div>
           </div>
         </div>
@@ -192,11 +195,11 @@ function ProductCategoriesSection() {
 
   return (
     <section id="products" className="py-20">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="mx-auto px-24">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--veblyss-color)]">
           Product Categories
         </h2>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start justify-items-center">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 items-start justify-items-center">
           {productCategories.map((product) => (
             <div key={product.id} className="w-full flex justify-center">
               <Card
@@ -226,9 +229,7 @@ function PartnersSection() {
               services tailored for your market.
             </p>
             <div className="mt-6">
-              <Btn size="large">
-                Explore Products
-              </Btn>
+              <Btn size="large">Explore Products</Btn>
             </div>
           </div>
 
