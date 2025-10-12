@@ -124,10 +124,10 @@ export default function Navbar() {
               </div>
 
               <Link
-                href="#contact"
+                href="/contact"
                 className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
               >
-                Contacts
+                Contact
               </Link>
 
               {/* Icons */}
@@ -216,7 +216,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link href="#contact" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2">Contacts</Link>
+              <Link href="/contact" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2">Contact</Link>
             </nav>
           </div>
         </div>
