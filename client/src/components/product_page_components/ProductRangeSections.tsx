@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-
+import Btn from "../Btn";
 export default function ProductRangeSections({
   products,
 }: {
@@ -34,9 +34,9 @@ export default function ProductRangeSections({
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">
                   {product.name}
                 </h2>
-                <button className="mt-2 px-6 py-2 bg-[var(--button-red)] text-white font-semibold rounded-lg hover:opacity-90 transition">
+                <Btn size="medium" className="mt-4 bg-[var(--button-red)] text-white">
                   Enquire
-                </button>
+                </Btn>
               </div>
             </div>
           ))}
