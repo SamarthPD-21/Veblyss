@@ -90,7 +90,7 @@ function VisionAndMissionSection() {
           <h2 className="font-poppins text-4xl text-[var(--button-red)] font-bold">
             Our Vision & Mission
           </h2>
-          <div className="flex flex-col md:flex-row gap-12 md:gap-24 items-center md:items-start">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-24 mr-12 ml-16 items-center md:items-start">
             <div className="text-gray-700 max-w-[50%] text-left flex flex-col gap-12">
               <h3 className="font-extrabold text-2xl">Our Vision</h3>
 

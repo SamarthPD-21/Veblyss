@@ -129,7 +129,7 @@ export const productsData = {
             },
             {
                 "title": "Corporate Gifts",
-                "icon": "/images/products/leather/office-acs.png"
+                "icon": "/images/products/leather/corporate-gifts.png"
             },
             {
                 "title": "Wholesale Distributors",

@@ -80,16 +80,16 @@ export default function Navbar() {
             </div>
 
             {/* Navigation Links */}
-            <div className="hidden md:flex items-center gap-8 relative">
+            <div className="hidden md:flex items-center gap-4 relative">
               <Link
                 href="/"
-                className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
+                className="text-[16px] font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
+                className="text-[16px] font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
               >
                 About Us
               </Link>
@@ -98,7 +98,7 @@ export default function Navbar() {
               <div className="relative" ref={dropdownRef}>
                 <button
                   onClick={() => setShowDropdown(!showDropdown)}
-                  className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1 flex items-center gap-1"
+                  className="text-[16px] font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1 flex items-center gap-1"
                 >
                   Products
                 </button>
@@ -125,7 +125,7 @@ export default function Navbar() {
 
               <Link
                 href="/contact"
-                className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
+                className="text-[16px] font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1"
               >
                 Contact
               </Link>

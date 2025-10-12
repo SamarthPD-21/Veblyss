@@ -46,10 +46,10 @@ export default function Footer() {
   return (
     <footer id="contact">
       <div className="w-full bg-[var(--veblyss-color)]/95 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-10">
-          <div className="flex items-start justify-between gap-8">
-            <div className="flex-1">
-              <div className="mb-4 flex items-center gap-3">
+        <div className="mx-auto px-4 py-4">
+          <div>
+            <div className="flex justify-between">
+              <div className="flex items-end-safe gap-3">
                 {socialIcons.map((icon, index) => (
                   <div
                     key={index}
@@ -85,7 +85,7 @@ export default function Footer() {
                       </button>
 
                       <div
-                        className={`absolute right-0 top-0 mt-2 w-48 bg-[var(--veblyss-color)] border border-white/20 rounded-lg shadow-lg py-2 z-50 transform transition-all duration-300 ease-out origin-top ${
+                        className={`absolute -right-19 -top-7 mt-2 w-48 bg-[var(--veblyss-color)] border border-white/20 rounded-lg shadow-lg py-2 z-50 transform transition-all duration-300 ease-out origin-top ${
                           showDropdown
                             ? "opacity-100 scale-100 translate-y-0"
                             : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
@@ -134,7 +134,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-8 border-t border-white/10 pt-4 text-center text-sm text-white/80">
+          <div className="mt-8 border-t border-white pt-4 text-left text-sm text-white/80">
             <p>© VeBlyss Global Pvt Ltd. All Rights Reserved.</p>
             <p className="mt-2">
               Website designed & powered by Krisha – Art from Heart | Branding •
