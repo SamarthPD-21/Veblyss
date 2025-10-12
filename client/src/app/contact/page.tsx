@@ -10,7 +10,7 @@ export default function ContactPage() {
           src="/contact/hero.png"
           alt="contact hero"
           fill
-          style={{ objectFit: 'cover', opacity: 0.35 }}
+          style={{ objectFit: 'cover', opacity: 1 }}
         />
 
         <div className="z-10 text-center text-white">
@@ -21,19 +21,19 @@ export default function ContactPage() {
 
       {/* Content: Pink panel + cards */}
       <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Pink intro panel with CTA */}
-        <div className="w-full bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0] rounded-xl p-8 shadow-md flex flex-col md:flex-row items-center gap-6">
-          <p className="flex-1 text-sm md:text-base text-gray-700 max-w-3xl">We&apos;d love to hear from you. Whether you&apos;re interested in our wholesale products, have a query, or want to explore collaborations just reach out.</p>
+        {/* Intro area (transparent so page pink background shows through) */}
+        <div className="w-full bg-transparent rounded-xl p-8 flex flex-col md:flex-row items-center gap-6">
+          <p className="flex-1 text-sm md:text-base text-[#4b2f2f] max-w-3xl">We&apos;d love to hear from you. Whether you&apos;re interested in our wholesale products, have a query, or want to explore collaborations just reach out.</p>
 
           <div className="w-full md:w-auto flex justify-center md:justify-end">
-            <Link href="/contact/form" className="bg-[var(--button-red)] text-white px-10 py-3 rounded-lg text-lg font-medium shadow-md">Contact Form</Link>
+            <Link href="/contact/form" className="bg-[var(--button-red)] text-white px-10 py-3 rounded-lg text-lg font-medium">Contact Form</Link>
           </div>
         </div>
 
         {/* Cards row */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact card */}
-          <div className="bg-white rounded-2xl p-6 shadow-md">
+          <div className="rounded-2xl p-6 bg-transparent">
             <div className="flex items-start gap-4">
               <div className="text-3xl">📞</div>
               <div>
@@ -45,7 +45,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mt-6 border-t pt-6">
+            <div className="mt-6 pt-6">
               <div className="flex items-start gap-4">
                 <div className="text-3xl">📍</div>
                 <div>
@@ -57,7 +57,7 @@ export default function ContactPage() {
           </div>
 
           {/* Social card */}
-          <div className="bg-white rounded-2xl p-6 shadow-md">
+          <div className="rounded-2xl p-6 bg-transparent">
             <h3 className="text-2xl font-semibold text-[#792727]">Social Media</h3>
             <div className="mt-6 flex items-center gap-4">
               <Image src="https://api.builder.io/api/v1/image/assets/TEMP/a485700930340924e8ea7079d9d2f12894a62a98?width=70" alt="facebook" width={48} height={48} />
