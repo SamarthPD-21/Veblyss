@@ -19,63 +19,53 @@ export default function ContactPage() {
         </div>
       </div>
 
-      {/* Content */}
+      {/* Content: Pink panel + cards */}
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          <div className="md:col-span-2 bg-white rounded-xl shadow p-8">
-            <div className="flex items-center justify-between">
+        {/* Pink intro panel with CTA */}
+        <div className="w-full bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0] rounded-xl p-8 shadow-md flex flex-col md:flex-row items-center gap-6">
+          <p className="flex-1 text-sm md:text-base text-gray-700 max-w-3xl">We&apos;d love to hear from you. Whether you&apos;re interested in our wholesale products, have a query, or want to explore collaborations just reach out.</p>
+
+          <div className="w-full md:w-auto flex justify-center md:justify-end">
+            <Link href="/contact/form" className="bg-[var(--button-red)] text-white px-10 py-3 rounded-lg text-lg font-medium shadow-md">Contact Form</Link>
+          </div>
+        </div>
+
+        {/* Cards row */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Contact card */}
+          <div className="bg-white rounded-2xl p-6 shadow-md">
+            <div className="flex items-start gap-4">
+              <div className="text-3xl">📞</div>
               <div>
-                <h2 className="text-2xl font-semibold text-[#792727]">We&apos;d love to hear from you.</h2>
-                <p className="mt-3 text-sm text-gray-600">Whether you&apos;re interested in our wholesale products, have a query, or want to explore collaborations just reach out.</p>
+                <div className="flex items-center gap-3">
+                  <h3 className="text-xl font-semibold">Contact:</h3>
+                  <span className="ml-2 inline-block bg-[#792727] text-white text-xs px-3 py-1 rounded">Whatsapp</span>
+                </div>
+                <p className="mt-3 text-sm text-gray-700">+xx xxxxxxxxxx</p>
               </div>
             </div>
 
-            {/* Info cards */}
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="rounded-lg border p-6 shadow-sm bg-white">
-                <div className="flex items-start gap-4">
-                  <div className="text-2xl">📞</div>
-                  <div>
-                    <h3 className="font-semibold">Contact:</h3>
-                    <p className="text-sm text-gray-700 mt-1">+xx xxxxxxxxxx <span className="ml-2 inline-block bg-[#25D366] text-white text-xs px-2 py-0.5 rounded">Whatsapp</span></p>
-                  </div>
+            <div className="mt-6 border-t pt-6">
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">📍</div>
+                <div>
+                  <h4 className="font-semibold">Address:</h4>
+                  <p className="mt-2 text-sm text-gray-700">VeBlyss Global Pvt Ltd<br/>2619, 36th A Cross, 26th Main,<br/>4th T Block, 9th Block Post,<br/>Jayanagar, Bengaluru, Karnataka - 560069</p>
                 </div>
-              </div>
-
-              <div className="rounded-lg border p-6 shadow-sm bg-white">
-                <div className="flex items-start gap-4">
-                  <div className="text-2xl">📍</div>
-                  <div>
-                    <h3 className="font-semibold">Address:</h3>
-                    <p className="text-sm text-gray-700 mt-1">VeBlyss Global Pvt Ltd<br/>2619, 36th A Cross, 26th Main,<br/>4th T Block, 9th Block Post,<br/>Jayanagar, Bengaluru, Karnataka - 560069</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Social box */}
-            <div className="mt-8 bg-white border rounded-lg p-6 shadow-sm">
-              <h3 className="text-lg font-semibold text-[#792727]">Social Media</h3>
-              <div className="mt-4 flex items-center gap-3">
-                {/* reuse footer icons visually */}
-                <Image src="https://api.builder.io/api/v1/image/assets/TEMP/a485700930340924e8ea7079d9d2f12894a62a98?width=70" alt="facebook" width={40} height={40} />
-                <Image src="https://api.builder.io/api/v1/image/assets/TEMP/7d28cd2fa3c279b9bf4b750ec80557a698155f06?width=70" alt="instagram" width={40} height={40} />
-                <Image src="https://api.builder.io/api/v1/image/assets/TEMP/3cceb4b47b0ca6cbd775a7816295a547642291dd?width=70" alt="linkedin" width={40} height={40} />
-                <Image src="https://api.builder.io/api/v1/image/assets/TEMP/ec26709e9aca62af8f7ef1d837d635c77fc463df?width=70" alt="twitter" width={40} height={40} />
               </div>
             </div>
           </div>
 
-          {/* Right column CTA */}
-          <aside className="bg-[var(--veblyss-color)]/5 rounded-xl p-6 flex flex-col gap-6">
-            <div className="bg-[var(--button-red)] text-white text-center rounded-lg py-6 px-4 font-medium shadow">Contact Form</div>
-
-            <div className="rounded-lg bg-white p-4 shadow">
-              <h4 className="font-semibold">Quick Contact</h4>
-              <p className="text-sm text-gray-700 mt-2">+xx xxxxx-xxxxx</p>
-              <p className="text-sm text-gray-700 mt-2">Location: Jayanagar, Bengaluru</p>
+          {/* Social card */}
+          <div className="bg-white rounded-2xl p-6 shadow-md">
+            <h3 className="text-2xl font-semibold text-[#792727]">Social Media</h3>
+            <div className="mt-6 flex items-center gap-4">
+              <Image src="https://api.builder.io/api/v1/image/assets/TEMP/a485700930340924e8ea7079d9d2f12894a62a98?width=70" alt="facebook" width={48} height={48} />
+              <Image src="https://api.builder.io/api/v1/image/assets/TEMP/7d28cd2fa3c279b9bf4b750ec80557a698155f06?width=70" alt="instagram" width={48} height={48} />
+              <Image src="https://api.builder.io/api/v1/image/assets/TEMP/3cceb4b47b0ca6cbd775a7816295a547642291dd?width=70" alt="linkedin" width={48} height={48} />
+              <Image src="https://api.builder.io/api/v1/image/assets/TEMP/ec26709e9aca62af8f7ef1d837d635c77fc463df?width=70" alt="twitter" width={48} height={48} />
             </div>
-          </aside>
+          </div>
         </div>
       </div>
     </section>
