@@ -12,7 +12,7 @@ export default function SlideShow({ interval = 3000 }: Props) {
     '/home/hero.png',
     '/home/Leather.png',
     '/home/Copper.png',
-    '/home/Imitation.png',
+    '/images/products/jewelry/hero.png',
     '/home/Handicrafts.png',
     '/home/Sustainable.png',
     '/home/Agriculture.png',
