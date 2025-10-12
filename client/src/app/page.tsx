@@ -135,7 +135,7 @@ function ProductCategoriesSection() {
       description:
         "Stylish, high-quality artificial jewellery necklaces, bangles, earrings, sets, and more.",
       image:
-        "/home/Imitation.png",
+        "/images/products/jewelry/hero.png",
     },
     {
       id: 4,
