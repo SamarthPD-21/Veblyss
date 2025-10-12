@@ -53,6 +53,7 @@ export default function Footer() {
                 {socialIcons.map((icon, index) => (
                   <div
                     key={index}
+                    className="w-10 h-10 flex items-center justify-center bg-white"
                   >
                     <Image
                       src={icon.src}

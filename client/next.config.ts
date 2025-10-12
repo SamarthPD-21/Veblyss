@@ -1,9 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   images: {
-    domains: ['api.builder.io', 'pngtree.com'],
+    domains: [
+      "api.builder.io",
+      "pngtree.com",
+      "cdn-icons-png.flaticon.com",
+    ],
   },
 };
 

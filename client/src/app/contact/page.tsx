@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-
+import Btn from '@/components/Btn';
 export default function ContactPage() {
   return (
     <section className="w-full">
@@ -21,49 +21,90 @@ export default function ContactPage() {
 
       {/* Content: Pink panel + cards */}
       <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Intro area (transparent so page pink background shows through) */}
+        {/* Intro area */}
         <div className="w-full bg-transparent rounded-xl p-8 flex flex-col md:flex-row items-center gap-6">
-          <p className="flex-1 text-sm md:text-base text-[#4b2f2f] max-w-3xl">We&apos;d love to hear from you. Whether you&apos;re interested in our wholesale products, have a query, or want to explore collaborations just reach out.</p>
+          <p className="text-center text-[#4b2f2f] max-w-xl mx-auto text-base leading-relaxed font-medium">
+            We&apos;d love to hear from you. Whether you&apos;re interested in our wholesale products,
+            have a query, or want to explore collaborations — just reach out.
+          </p>
 
           <div className="w-full md:w-auto flex justify-center md:justify-end">
-            <Link href="/contact/form" className="bg-[var(--button-red)] text-white px-10 py-3 rounded-lg text-lg font-medium">Contact Form</Link>
+            <Btn size="large">Contact Form</Btn>
           </div>
         </div>
-
         {/* Cards row */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact card */}
-          <div className="rounded-2xl p-6 bg-transparent">
+          <div className="rounded-2xl p-6 bg-white shadow-lg flex flex-col justify-between">
             <div className="flex items-start gap-4">
               <div className="text-3xl">📞</div>
               <div>
                 <div className="flex items-center gap-3">
-                  <h3 className="text-xl font-semibold">Contact:</h3>
-                  <span className="ml-2 inline-block bg-[#792727] text-white text-xs px-3 py-1 rounded">Whatsapp</span>
+                  <h3 className="font-bold text-[30px] text-[#792727]">Contact:</h3>
+                  <Btn size="small">Whatsapp</Btn>
                 </div>
-                <p className="mt-3 text-sm text-gray-700">+xx xxxxxxxxxx</p>
+                <p className="mt-3 text-gray-700 text-base">+xx xxxxxxxxxx</p>
               </div>
             </div>
 
-            <div className="mt-6 pt-6">
+            <div className="mt-6 pt-6 border-t border-gray-200">
               <div className="flex items-start gap-4">
                 <div className="text-3xl">📍</div>
                 <div>
-                  <h4 className="font-semibold">Address:</h4>
-                  <p className="mt-2 text-sm text-gray-700">VeBlyss Global Pvt Ltd<br/>2619, 36th A Cross, 26th Main,<br/>4th T Block, 9th Block Post,<br/>Jayanagar, Bengaluru, Karnataka - 560069</p>
+                  <div className="flex items-center gap-3">
+                    <h3 className="font-bold text-[30px] text-[#792727]">Address:</h3>
+                    <Btn size="small">Map</Btn>
+                  </div>
+                  <p className="mt-2 text-gray-700 text-base">
+                    VeBlyss Global Pvt Ltd<br />
+                    2619, 36th A Cross, 26th Main,<br />
+                    4th T Block, 9th Block Post,<br />
+                    Jayanagar, Bengaluru, Karnataka - 560069
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Social card */}
-          <div className="rounded-2xl p-6 bg-transparent">
-            <h3 className="text-2xl font-semibold text-[#792727]">Social Media</h3>
-            <div className="mt-6 flex items-center gap-4">
-              <Image src="https://api.builder.io/api/v1/image/assets/TEMP/a485700930340924e8ea7079d9d2f12894a62a98?width=70" alt="facebook" width={48} height={48} />
-              <Image src="https://api.builder.io/api/v1/image/assets/TEMP/7d28cd2fa3c279b9bf4b750ec80557a698155f06?width=70" alt="instagram" width={48} height={48} />
-              <Image src="https://api.builder.io/api/v1/image/assets/TEMP/3cceb4b47b0ca6cbd775a7816295a547642291dd?width=70" alt="linkedin" width={48} height={48} />
-              <Image src="https://api.builder.io/api/v1/image/assets/TEMP/ec26709e9aca62af8f7ef1d837d635c77fc463df?width=70" alt="twitter" width={48} height={48} />
+          <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+            <h3 className="text-[48px] font-bold text-[#792727] mb-2">Social Media</h3>
+            <div className="flex justify-center items-center gap-6">
+              <Image
+                src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
+                alt="Facebook"
+                width={48}
+                height={48}
+                className="hover:scale-110 transition-transform duration-200 cursor-pointer"
+              />
+              <Image
+                src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                alt="Instagram"
+                width={48}
+                height={48}
+                className="hover:scale-110 transition-transform duration-200 cursor-pointer"
+              />
+              <Image
+                src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"
+                alt="LinkedIn"
+                width={48}
+                height={48}
+                className="hover:scale-110 transition-transform duration-200 cursor-pointer"
+              />
+              <Image
+                src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+                alt="Gmail"
+                width={48}
+                height={48}
+                className="hover:scale-110 transition-transform duration-200 cursor-pointer"
+              />
+              <Image
+                src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                alt="Twitter"
+                width={48}
+                height={48}
+                className="hover:scale-110 transition-transform duration-200 cursor-pointer"
+              />
             </div>
           </div>
         </div>
