@@ -33,6 +33,7 @@ const Card = ({
       <div className="mt-3 flex items-center justify-center gap-3">
         <Btn size="small">Explore</Btn>
         <Btn size="small">Enquire</Btn>
+        <Btn size="small">Catalogue</Btn>
       </div>
     </div>
   </div>
