@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Btn from '@/components/Btn';
 import { MapButton, WhatsappButton } from '@/components/ContactActions';
 import Link from 'next/link';
-import EnquireBtn from '@/components/EnquireBtn';
+import { triggerPop } from '@/components/Pop';
 
 export default function ContactPage() {
   return (
@@ -85,21 +85,21 @@ export default function ContactPage() {
               Social Media Links
             </h3>
             <div className="grid grid-cols-4 items-center gap-6 ">
-                <EnquireBtn size="small" message={`Coming soon!`} subject={`Social link coming soon`}>
-                  <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
-                    <div className="w-12 h-12 flex items-center justify-center">
-                      <Image
-                        src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
-                        alt="Facebook"
-                        width={54}
-                        height={54}
-                        className="hover:scale-110 transition-transform duration-200 cursor-pointer"
-                      />
-                    </div>
-                    <h3 className="text-center text-xl font-medium">Facebook</h3>
-                  </div>
-                </EnquireBtn>
-                <Link
+              <div 
+              onClick={() => triggerPop("Coming soon!")}
+              className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
+                <div className="w-12 h-12 flex items-center justify-center">
+                  <Image
+                    src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
+                    alt="Facebook"
+                    width={54}
+                    height={54}
+                    className="hover:scale-110 transition-transform duration-200 cursor-pointer"
+                  />
+                </div>
+                <h3 className="text-center text-xl font-medium">Facebook</h3>
+              </div>
+              <Link
                 href="https://www.instagram.com/veblyss_global?igsh=eWd3OHFuNWc1d2M3"
                 target="_blank"
                 rel="noopener noreferrer"

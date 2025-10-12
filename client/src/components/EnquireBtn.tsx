@@ -11,7 +11,6 @@ export default function EnquireBtn({
   subject,
   size = "medium",
   className = "",
-  children,
 }: {
   message?: string;
   whatsappNumber?: string;
@@ -19,14 +18,13 @@ export default function EnquireBtn({
   subject?: string;
   size?: "small" | "medium" | "large";
   className?: string;
-  children?: React.ReactNode;
 }) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <Btn size={size} className={className} onClick={() => setOpen(true)}>
-        {children ?? "Enquire"}
+        Enquire
       </Btn>
 
       <EnquirePopup

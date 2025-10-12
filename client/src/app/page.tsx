@@ -5,19 +5,17 @@ import Image from "next/image";
 import Btn from "@/components/Btn";
 import SlideShow from "@/components/SlideShow";
 import EnquireBtn from "@/components/EnquireBtn";
-import CatalogueDownloadButton from "@/components/CatalogueDownloadButton";
+import { triggerPop } from "@/components/Pop";
 import Link from "next/link";
 
 const Card = ({
   title,
   description,
   image,
-  catalogueLink,
 }: {
   title: string;
   description: string;
   image: string;
-  catalogueLink?: string;
 }) => (
   <div
     key={title}
@@ -37,43 +35,10 @@ const Card = ({
         {description}
       </p>
 
-  <div className="mt-3 flex items-center justify-center gap-3">
-        {(() => {
-          // explicit mapping for category titles -> product-type slug
-          const map: Record<string, string> = {
-            "Leather Products": "leather-products",
-            "Copper Products": "copper-products",
-            "Imitation Jewelry": "imitation-jewelry",
-            "Indian Handicrafts": "handicrafts",
-            "Sustainable Products": "sustainable-products",
-            "Spices": "agricultural-products",
-          };
-          const slug = map[title] ||
-            title
-              .toLowerCase()
-              .replace(/[^a-z0-9 ]/g, "")
-              .trim()
-              .replace(/\s+/g, "-");
-
-          return (
-            <>
-              <Link
-                href={`/products/${slug}`}
-                className="bg-[#792727] text-white hover:brightness-90 active:bg-white active:text-black active:border active:border-black disabled:opacity-60 inline-flex items-center justify-center rounded-md font-medium transition-all duration-200 px-4 py-2 text-sm"
-              >
-                Explore
-              </Link>
-              {/* Enquire button with contextual message and subject */}
-              <EnquireBtn
-                size="small"
-                message={`Hello, I'm interested in ${title}. Could you share more details and pricing?`}
-                subject={`Enquiry: ${title}`}
-                className=""
-              />
-              <CatalogueDownloadButton slug={slug} title={title} size="small" />
-            </>
-          );
-        })()}
+      <div className="mt-3 flex items-center justify-center gap-3">
+        <Btn size="small">Explore</Btn>
+        <EnquireBtn size="small" />
+        <div onClick={() => triggerPop("Sorry, we’re working on it! Meanwhile, feel free to send us an enquiry message.")}><Btn size="small">Catalogue</Btn></div>
       </div>
     </div>
   </div>
@@ -163,7 +128,6 @@ function ProductCategoriesSection() {
         "Traditional and modern copper-ware for kitchen, d\u00e9cor, and wellness that's food-safe.",
       image:
         "/home/Copper.png",
-      catalogueLink: "https://drive.google.com/file/d/1fnx2SFX2x-XFpphu5WNdXE2J2AYkl5Dm/view?usp=sharing"
     },
     {
       id: 3,
@@ -212,9 +176,7 @@ function ProductCategoriesSection() {
                 title={product.title}
                 description={product.description}
                 image={product.image}
-                catalogueLink={product.catalogueLink}
               />
-              {/* Add Enquire button below each card for quick enquiries */}
             </div>
           ))}
         </div>
