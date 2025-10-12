@@ -12,10 +12,12 @@ const Card = ({
   title,
   description,
   image,
+  catalogueLink,
 }: {
   title: string;
   description: string;
   image: string;
+  catalogueLink?: string;
 }) => (
   <div
     key={title}
@@ -38,7 +40,15 @@ const Card = ({
       <div className="mt-3 flex items-center justify-center gap-3">
         <Btn size="small">Explore</Btn>
         <EnquireBtn size="small" />
-        <div onClick={() => triggerPop("Sorry, we’re working on it! Meanwhile, feel free to send us an enquiry message.")}><Btn size="small">Catalogue</Btn></div>
+        {catalogueLink ? (
+          <a href={catalogueLink} target="_blank" rel="noopener noreferrer">
+            <Btn size="small">Catalogue</Btn>
+          </a>
+        ) : (
+          <div onClick={() => triggerPop("Sorry, we’re working on it! Meanwhile, feel free to send us an enquiry message.")}>
+            <Btn size="small">Catalogue</Btn>
+          </div>
+        )}
       </div>
     </div>
   </div>
@@ -128,6 +138,7 @@ function ProductCategoriesSection() {
         "Traditional and modern copper-ware for kitchen, d\u00e9cor, and wellness that's food-safe.",
       image:
         "/home/Copper.png",
+      catalogueLink: "https://drive.google.com/file/d/1fnx2SFX2x-XFpphu5WNdXE2J2AYkl5Dm/view?usp=sharing"
     },
     {
       id: 3,
@@ -176,6 +187,7 @@ function ProductCategoriesSection() {
                 title={product.title}
                 description={product.description}
                 image={product.image}
+                catalogueLink={product.catalogueLink}
               />
             </div>
           ))}
