@@ -9,6 +9,7 @@ import ProductRangeSections from "@/components/product_page_components/ProductRa
 import WhyChooseOurProductSection from "@/components/product_page_components/WhyChooseOurProductSection";
 import IdealForSection from "@/components/product_page_components/IdealFor";
 import Btn from "@/components/Btn";
+import EnquireBtn from "@/components/EnquireBtn";
 interface productDataType {
   heroSection: {
     backgroundImage: string;
@@ -100,12 +101,12 @@ function OtherProductsSection({
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">
                   {product.name}
                 </h2>
-                <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
-              <Btn size="large" className="shadow-xl">
-                Explore Products
-              </Btn>
-              <Btn size="large">Enquire</Btn>
-            </div>
+                    <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
+                  <Btn size="large" className="shadow-xl">
+                    Explore Products
+                  </Btn>
+                  <EnquireBtn size="large" />
+                </div>
               </div>
             </div>
           ))}
