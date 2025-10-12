@@ -44,7 +44,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="contact" className="mt-16">
+    <footer id="contact">
       <div className="w-full bg-[var(--veblyss-color)]/95 text-white">
         <div className="max-w-6xl mx-auto px-4 py-10">
           <div className="flex items-start justify-between gap-8">
@@ -53,7 +53,7 @@ export default function Footer() {
                 {socialIcons.map((icon, index) => (
                   <div
                     key={index}
-                    className="w-9 h-9 bg-white rounded flex items-center justify-center shadow"
+                    className="w-9 h-9 rounded flex items-center justify-center"
                   >
                     <Image
                       src={icon.src}

@@ -132,6 +132,7 @@ export default function Products() {
         mainHeading={productData.heroSection.mainHeading}
         subHeading={productData.heroSection.subHeading}
       />
+      <div className="relative z-10 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0]">
       <ProductRangeSections products={productData.productRangeSections ?? []} />
       <WhyChooseOurProductSection
         name={productData.whyChooseOurProductSection?.name ?? ""}
@@ -139,6 +140,7 @@ export default function Products() {
       />
       <IdealForSection features={productData.idealForSection ?? []} />
       <OtherProductsSection currentProductType={product_type} />
+      </div>
     </section>
   );
 }

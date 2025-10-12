@@ -162,9 +162,12 @@ function CertificationsSection() {
           <div className="flex flex-col w-full items-center">
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {certifications.map((text, index) => (
-                <div key={index}
+                <div
+                  key={index}
                   className="bg-gray-100 p-4 rounded-lg text-center text-lg font-medium text-gray-800 shadow-md"
-                >{text}</div>
+                >
+                  {text}
+                </div>
               ))}
             </div>
           </div>
@@ -178,11 +181,13 @@ export default function About() {
   return (
     <section className="min-h-screen">
       <HeroSection />
-      <WhoWeAreSection />
-      <VisionAndMissionSection />
-      <Difference />
-      <MarketsWeServeSection />
-      <CertificationsSection />
+      <div className="relative z-10 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0]">
+        <WhoWeAreSection />
+        <VisionAndMissionSection />
+        <Difference />
+        <MarketsWeServeSection />
+        <CertificationsSection />
+      </div>
     </section>
   );
 }

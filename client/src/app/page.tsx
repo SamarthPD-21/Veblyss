@@ -1,7 +1,7 @@
 import Difference from "@/components/Difference";
 import Image from "next/image";
-import BackgroundImage from "@/components/BackgroundImage";
 import Btn from "@/components/Btn";
+import SlideShow from "@/components/SlideShow";
 
 const Card = ({
   title,
@@ -44,7 +44,7 @@ function HeroSection() {
       id="home"
       className="relative w-full h-[640px] md:h-[700px] overflow-hidden"
     >
-      <BackgroundImage source="/home/hero.png" />
+      <SlideShow interval={10000} />
 
       {/* subtle gradient overlay to match screenshot tone */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-transparent flex items-center">
@@ -54,7 +54,7 @@ function HeroSection() {
               <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg">
                 Welcome to VeBlyss Global
               </h1>
-              <p className="text-[20px] text-white/90 mt-6 max-w-2xl">
+              <p className="text-[20px] text-white/90 mt-6 max-w-4xl">
                 From handcrafted elegance to sustainable essentials — delivered globally
               </p>
             </div>
@@ -80,9 +80,9 @@ function WelcomeSection() {
             <Image
               src="/home/about.png"
               alt="VeBlyss Global Artisan Heritage"
-              height={706}
-              width={460}
-              className="rounded-r-3xl w-full object-cover h-[630]"
+              height={460}
+              width={706}
+              className="rounded-r-3xl w-full h-[360px] object-cover shadow-lg"
             />
           </div>
 
@@ -161,7 +161,7 @@ function ProductCategoriesSection() {
   return (
     <section id="products" className="py-20">
       <div className="mx-auto px-24">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--veblyss-color)]">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--button-red)]">
           Product Categories
         </h2>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 items-start justify-items-center">
@@ -189,7 +189,7 @@ function PartnersSection() {
             <h2 className="text-3xl md:text-3xl font-bold text-[var(--button-red)]">
               Let&apos;s Build a Global Partnership
             </h2>
-            <p className="mt-4 text-gray-700">
+            <p className="my-8 mr-8 text-xl text-gray-700">
               Reach out today to explore our curated collections and export
               services tailored for your market.
             </p>
@@ -217,7 +217,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <HeroSection />
-      <div className="relative z-10">
+      <div className="relative z-10 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0]">
         <WelcomeSection />
         <ProductCategoriesSection />
         <Difference />
