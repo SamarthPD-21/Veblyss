@@ -184,7 +184,7 @@ function PartnersSection() {
       <div className="pl-16 mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="flex-1">
-            <h2 className="text-2xl md:text-3xl font-bold">
+            <h2 className="text-3xl md:text-3xl font-bold text-[var(--button-red)]">
               Let&apos;s Build a Global Partnership
             </h2>
             <p className="mt-4 text-gray-700">
