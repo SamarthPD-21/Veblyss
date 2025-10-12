@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Btn from "../Btn";
+// Btn intentionally not used here; EnquireBtn replaces it
+import EnquireBtn from "../EnquireBtn";
 export default function ProductRangeSections({
   products,
 }: {
@@ -34,9 +35,7 @@ export default function ProductRangeSections({
                 <h2 className="text-2xl text-gray-900 mb-3">
                   {product.name}
                 </h2>
-                <Btn size="medium" className="mt-4 bg-[var(--button-red)] text-white">
-                  Enquire
-                </Btn>
+                <EnquireBtn size="medium" className="mt-4 bg-[var(--button-red)] text-white" />
               </div>
             </div>
           ))}

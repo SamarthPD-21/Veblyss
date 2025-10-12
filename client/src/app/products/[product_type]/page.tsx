@@ -9,6 +9,7 @@ import ProductRangeSections from "@/components/product_page_components/ProductRa
 import WhyChooseOurProductSection from "@/components/product_page_components/WhyChooseOurProductSection";
 import IdealForSection from "@/components/product_page_components/IdealFor";
 import Btn from "@/components/Btn";
+import EnquireBtn from "@/components/EnquireBtn";
 interface productDataType {
   heroSection: {
     backgroundImage: string;
@@ -48,27 +49,35 @@ function OtherProductsSection({ currentProductType }: { currentProductType: stri
           Explore Other Products
         </h1>
 
-        <div className="w-full overflow-hidden">
-          <div className="flex gap-4 py-2 px-0 overflow-x-auto w-full">
-            {otherProducts.map((product) => (
-              <article
-                key={product.type}
-                className="bg-white/90 rounded-xl shadow-lg overflow-hidden w-[360px] flex flex-col h-full transition-transform duration-300 hover:scale-105"
-              >
-                <div className="relative w-full h-[180px] md:h-[220px] lg:h-[260px] flex-shrink-0">
-                  <Image src={product.image} alt={product.name} fill className="p-4 object-cover" sizes="(max-width: 768px) 100vw, 360px" />
+        {/* Product Grid */}
+        <div className="flex gap-4 w-full">
+          {otherProducts.map((product) => (
+            <div
+              key={product.name}
+              className="w-full h-[420px] bg-white/90 rounded-xl shadow-lg overflow-hidden flex flex-col justify-between items-center text-center transition-transform duration-300 hover:scale-105"
+            >
+              <div className="w-full h-56">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  width={300}
+                  height={200}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6 flex flex-col justify-between flex-grow">
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                  {product.name}
+                </h2>
+                    <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
+                  <Btn size="large" className="shadow-xl">
+                    Explore Products
+                  </Btn>
+                  <EnquireBtn size="large" />
                 </div>
-
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <h2 className="text-xl text-gray-900 font-bold text-center mb-3">{product.name}</h2>
-                  <div className="mt-3 flex items-center justify-center gap-3">
-                    <Btn size="small">Enquire</Btn>
-                    <Btn size="small">Check More</Btn>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

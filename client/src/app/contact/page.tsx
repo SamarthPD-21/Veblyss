@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Btn from "@/components/Btn";
+
 export default function ContactPage() {
   return (
     <section className="w-full">

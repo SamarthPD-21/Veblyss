@@ -2,6 +2,7 @@ import Difference from "@/components/Difference";
 import Image from "next/image";
 import Btn from "@/components/Btn";
 import SlideShow from "@/components/SlideShow";
+import EnquireBtn from "@/components/EnquireBtn";
 
 const Card = ({
   title,
@@ -32,7 +33,7 @@ const Card = ({
 
       <div className="mt-3 flex items-center justify-center gap-3">
         <Btn size="small">Explore</Btn>
-        <Btn size="small">Enquire</Btn>
+        <EnquireBtn size="small" />
         <Btn size="small">Catalogue</Btn>
       </div>
     </div>
@@ -63,7 +64,7 @@ function HeroSection() {
               <Btn size="large" className="shadow-xl">
                 Explore Products
               </Btn>
-              <Btn size="large">Enquire</Btn>
+              <EnquireBtn size="large" />
             </div>
           </div>
         </div>
