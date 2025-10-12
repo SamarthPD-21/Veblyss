@@ -10,11 +10,13 @@ import WhyChooseOurProductSection from "@/components/product_page_components/Why
 import IdealForSection from "@/components/product_page_components/IdealFor";
 import Btn from "@/components/Btn";
 import EnquireBtn from "@/components/EnquireBtn";
+
 interface productDataType {
   heroSection: {
     backgroundImage: string;
     mainHeading: string;
     subHeading: string;
+    catalogueLink?: string;
   };
   productRangeSections?: Array<{
     name: string;
@@ -30,54 +32,22 @@ interface productDataType {
   }>;
 }
 
-function OtherProductsSection({
-  currentProductType,
-}: {
-  currentProductType: string;
-}) {
+function OtherProductsSection({ currentProductType }: { currentProductType: string }) {
   const products = [
-    {
-      name: "Leather Products",
-      image: "/home/Leather.png",
-      type: "leather-products",
-    },
-    {
-      name: "Copper Products",
-      image: "/home/Copper.png",
-      type: "copper-products",
-    },
-    {
-      name: "Imitation Jewelry",
-      image: "/home/imitation.png",
-      type: "imitation-jewelry",
-    },
-    {
-      name: "Handicrafts",
-      image: "/home/Handicrafts.png",
-      type: "handicrafts",
-    },
-    {
-      name: "Sustainable Products",
-      image: "/home/Sustainable.png",
-      type: "sustainable-products",
-    },
-    {
-      name: "Agriculture Products",
-      image: "/home/Agriculture.png",
-      type: "agricultural-products",
-    },
-  ];
+    { name: 'Leather Products', image: '/home/Leather.png', type: 'leather-products' },
+    { name: 'Copper Products', image: '/home/Copper.png', type: 'copper-products' },
+    { name: 'Imitation Jewelry', image: '/home/imitation.png', type: 'imitation-jewelry' },
+    { name: 'Handicrafts', image: '/home/Handicrafts.png', type: 'handicrafts' },
+    { name: 'Sustainable Products', image: '/home/Sustainable.png', type: 'sustainable-products' },
+    { name: 'Agriculture Products', image: '/home/Agriculture.png', type: 'agricultural-products' },
+  ]
 
-  const otherProducts = products.filter(
-    (product) => product.type !== currentProductType
-  );
+  const otherProducts = products.filter((p) => p.type !== currentProductType)
 
   return (
     <section className="relative w-full py-20 overflow-hidden">
-      {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 flex flex-col items-center text-center">
-        {/* Section Heading */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--button-red)] leading-tight drop-shadow-lg mb-12">
+      <div className="relative z-10 px-6">
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-[var(--button-red)] leading-tight drop-shadow-lg mb-8 text-center">
           Explore Other Products
         </h1>
 
@@ -113,7 +83,7 @@ function OtherProductsSection({
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 type ProductTypeKey = keyof typeof productsData;
@@ -135,14 +105,18 @@ export default function Products() {
         backgroundImage={productData.heroSection.backgroundImage}
         mainHeading={productData.heroSection.mainHeading}
         subHeading={productData.heroSection.subHeading}
+        catalogueLink={productData.heroSection.catalogueLink ?? ''}
       />
-      <ProductRangeSections products={productData.productRangeSections ?? []} />
-      <WhyChooseOurProductSection
-        name={productData.whyChooseOurProductSection?.name ?? ""}
-        features={productData.whyChooseOurProductSection?.features ?? []}
-      />
-      <IdealForSection features={productData.idealForSection ?? []} />
-      <OtherProductsSection currentProductType={product_type} />
+
+      <div className="relative z-10 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0]">
+        <ProductRangeSections products={productData.productRangeSections ?? []} />
+        <WhyChooseOurProductSection
+          name={productData.whyChooseOurProductSection?.name ?? ''}
+          features={productData.whyChooseOurProductSection?.features ?? []}
+        />
+        <IdealForSection features={productData.idealForSection ?? []} />
+        <OtherProductsSection currentProductType={product_type} />
+      </div>
     </section>
-  );
+  )
 }

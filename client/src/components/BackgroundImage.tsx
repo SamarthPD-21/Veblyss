@@ -12,6 +12,7 @@ export default function BackgroundImage({ source }: { source: string }) {
         priority
         sizes="100vw"
       />
+      <div aria-hidden="true" className="absolute inset-0 bg-black/30" />
     </div>
   );
 }
