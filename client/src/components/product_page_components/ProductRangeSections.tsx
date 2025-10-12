@@ -31,7 +31,7 @@ export default function ProductRangeSections({
                 className="w-full p-5 object-cover"
               />
               <div className="p-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                <h2 className="text-2xl text-gray-900 mb-3">
                   {product.name}
                 </h2>
                 <Btn size="medium" className="mt-4 bg-[var(--button-red)] text-white">
