@@ -6,6 +6,8 @@ import { useEffect, useState, useRef } from "react";
 export default function Navbar() {
   const [mounted, setMounted] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const products = [
@@ -32,6 +34,29 @@ export default function Navbar() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  // Close mobile menu on ESC and lock body scroll when open
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMobileOpen(false);
+        setMobileProductsOpen(false);
+        setShowDropdown(false);
+      }
+    };
+    document.addEventListener("keydown", onKey);
+
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   return (
     <nav
@@ -119,6 +144,80 @@ export default function Navbar() {
                 height={30}
               />
             </div>
+
+            {/* Mobile hamburger */}
+            <div className="md:hidden flex items-center">
+              <button
+                aria-label={mobileOpen ? "Close menu" : "Open menu"}
+                aria-expanded={mobileOpen}
+                onClick={() => setMobileOpen((s) => !s)}
+                className="p-2 rounded-md bg-white/10 hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+              >
+                {/* simple 3-line hamburger icon */}
+                <span className="sr-only">Toggle menu</span>
+                <div className="w-6 h-5 relative">
+                  <span
+                    className={`block absolute h-0.5 w-6 bg-white left-0 top-0 transition-transform duration-200 ${
+                      mobileOpen ? "rotate-45 translate-y-2.5" : ""
+                    }`}
+                  />
+                  <span
+                    className={`block absolute h-0.5 w-6 bg-white left-0 top-2.25 transition-all duration-200 ${
+                      mobileOpen ? "opacity-0" : ""
+                    }`}
+                  />
+                  <span
+                    className={`block absolute h-0.5 w-6 bg-white left-0 top-4.5 transition-transform duration-200 ${
+                      mobileOpen ? "-rotate-45 -translate-y-2.5" : ""
+                    }`}
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Mobile menu overlay */}
+      <div
+        className={`fixed inset-0 z-40 md:hidden transform transition-opacity duration-300 ${
+          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        aria-hidden={!mobileOpen}
+      >
+        <div className="absolute inset-0 bg-black/50" onClick={() => setMobileOpen(false)} />
+
+        <div className={`absolute top-16 right-0 left-0 px-4`}>
+          <div className={`bg-[var(--veblyss-color)] rounded-lg p-4 mx-auto max-w-3xl shadow-lg`}>
+            <nav aria-label="Mobile navigation" className="flex flex-col gap-2">
+              <Link href="/" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2">Home</Link>
+              <Link href="/about" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2">About Us</Link>
+
+              <button
+                onClick={() => setMobileProductsOpen((s) => !s)}
+                className="flex items-center justify-between text-white font-medium py-2 px-2"
+                aria-expanded={mobileProductsOpen}
+              >
+                <span>Products</span>
+                <span className={`transition-transform duration-150 ${mobileProductsOpen ? "rotate-180" : ""}`}>▾</span>
+              </button>
+
+              <div className={`${mobileProductsOpen ? "max-h-96 py-2" : "max-h-0 overflow-hidden"} transition-all duration-200` }>
+                <div className="flex flex-col gap-1">
+                  {products.map((product) => (
+                    <Link
+                      key={product.name}
+                      href={product.link}
+                      onClick={() => setMobileOpen(false)}
+                      className="text-sm text-white/90 pl-4 py-1"
+                    >
+                      {product.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              <Link href="#contact" onClick={() => setMobileOpen(false)} className="text-white font-medium py-2 px-2">Contacts</Link>
+            </nav>
           </div>
         </div>
       </div>
