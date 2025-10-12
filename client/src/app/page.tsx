@@ -6,6 +6,7 @@ import Btn from "@/components/Btn";
 import SlideShow from "@/components/SlideShow";
 import EnquireBtn from "@/components/EnquireBtn";
 import { triggerPop } from "@/components/Pop";
+import Link from "next/link";
 
 const Card = ({
   title,
@@ -64,9 +65,6 @@ function HeroSection() {
               </p>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
-              <Btn size="large" className="shadow-xl">
-                Explore Products
-              </Btn>
                   <EnquireBtn />
             </div>
           </div>
@@ -102,7 +100,9 @@ function WelcomeSection() {
               leather goods, handicrafts, and sustainable lifestyle products.
             </p>
             <div className="mt-6">
+              <Link href="/about">
               <Btn size="medium">Read More</Btn>
+              </Link>
             </div>
           </div>
         </div>
