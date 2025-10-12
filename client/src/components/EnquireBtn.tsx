@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import Btn from "./Btn";
-import SharePopup from "./SharePopup";
+import Btn from "@/components/Btn";
+import EnquirePopup from "@/components/EnquirePopup";
 
 export default function EnquireBtn({
   message,
@@ -27,7 +27,7 @@ export default function EnquireBtn({
         Enquire
       </Btn>
 
-      <SharePopup
+      <EnquirePopup
         open={open}
         onClose={() => setOpen(false)}
         message={message}

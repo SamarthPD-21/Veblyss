@@ -67,7 +67,7 @@ function HeroSection() {
               <Btn size="large" className="shadow-xl">
                 Explore Products
               </Btn>
-              <EnquireBtn size="large" />
+                  <EnquireBtn />
             </div>
           </div>
         </div>

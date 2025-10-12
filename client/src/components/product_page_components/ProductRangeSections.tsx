@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 // Btn intentionally not used here; EnquireBtn replaces it
-import EnquireBtn from "../EnquireBtn";
+import EnquireBtn from "@/components/EnquireBtn";
 export default function ProductRangeSections({
   products,
 }: {
@@ -35,7 +35,9 @@ export default function ProductRangeSections({
                 <h2 className="text-2xl text-gray-900 mb-3">
                   {product.name}
                 </h2>
-                <EnquireBtn size="medium" className="mt-4 bg-[var(--button-red)] text-white" />
+                <div className="mt-4">
+                  <EnquireBtn message={`Hi, I'm interested in ${product.name}`} className="mt-0 bg-[var(--button-red)] text-white" />
+                </div>
               </div>
             </div>
           ))}
