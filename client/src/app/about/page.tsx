@@ -8,25 +8,27 @@ function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full h-[640px] md:h-[820px] overflow-hidden"
+      className="relative w-full h-[687.7290649414062px] overflow-hidden"
     >
       <BackgroundImage source="/about/hero.png" />
 
       {/* subtle gradient overlay to match screenshot tone */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-transparent flex items-center">
         <div className="max-w-6xl mx-auto px-6 w-full">
-          <div className="w-full flex flex-col items-center text-center py-14 md:py-20">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg max-w-3xl">
-              About Veblyss Global Pvt Ltd
-            </h1>
-            <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl">
-              Where Indian Craft Meets Global Standards
-            </p>
-          </div>
+          <div className="flex flex-col items-center justify-center text-center py-16 -mt-4 md:-mt-8 lg:-mt-12">
+              <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg">
+                About Veblyss Global Pvt Ltd
+              </h1>
+              <p className="text-[20px] text-white/90 mt-6 max-w-2xl">
+                Where Indian Craft Meets Global Standards
+              </p>
+            </div>
         </div>
       </div>
     </section>
   );
+  
+  
 }
 function WhoWeAreSection() {
   return (
@@ -134,7 +136,7 @@ function MarketsWeServeSection() {
               alt="Markets We Serve"
               height={400}
               width={650}
-              className="w-full object-cover"
+              className="w-[80%] md:w-[50%] object-cover"
             />
           </div>
         </div>

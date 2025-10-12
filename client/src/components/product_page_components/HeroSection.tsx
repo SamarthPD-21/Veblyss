@@ -4,7 +4,7 @@ import BackgroundImage from "@/components/BackgroundImage";
 export default function HeroSection({backgroundImage, mainHeading, subHeading}: {backgroundImage: string, mainHeading: string, subHeading: string}) {
   return (
     <section
-      className="relative w-full h-[640px] md:h-[820px] overflow-hidden"
+      className="relative w-full h-[640px] md:h-[695.1781616210938px] overflow-hidden"
     >
       <BackgroundImage source={backgroundImage} />
 
