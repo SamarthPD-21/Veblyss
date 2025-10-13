@@ -92,22 +92,32 @@ export default function Footer() {
                 <div>
                   <h3 className="text-lg font-semibold">Quick Links</h3>
                   <div className="mt-3 relative space-y-2 gap-2 flex flex-col align-items-start">
-                    <Link href="/" className="text-sm text-white/90">
+                    {/* Shared animation classes for quick links: subtle lift, color change and scale */}
+                    <Link
+                      href="/"
+                      className="text-sm text-white/90 transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/30"
+                    >
                       Home
                     </Link>
-                    <Link href="/about" className="text-sm text-white/90">
+                    <Link
+                      href="/about"
+                      className="text-sm text-white/90 transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/30"
+                    >
                       About Us
                     </Link>
                     {/* Products Dropdown */}
                     <div ref={dropdownRef}>
                       <button
                         onClick={() => setShowDropdown(!showDropdown)}
-                        className="text-sm font-medium text-white transition-transform duration-150 ease-out hover:scale-105 active:translate-y-1 flex items-center gap-1"
+                        aria-expanded={showDropdown}
+                        aria-controls="footer-products-dropdown"
+                        className="text-sm font-medium text-white transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-1"
                       >
                         Products
                       </button>
 
                       <div
+                        id="footer-products-dropdown"
                         className={`absolute -right-19 -top-7 mt-2 w-48 bg-[var(--veblyss-color)] border border-white/20 rounded-lg shadow-lg py-2 z-50 transform transition-all duration-300 ease-out origin-top ${
                           showDropdown
                             ? "opacity-100 scale-100 translate-y-0"
@@ -118,7 +128,7 @@ export default function Footer() {
                           <Link
                             key={product.name}
                             href={product.link}
-                            className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors"
+                            className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30"
                             onClick={() => setShowDropdown(false)}
                           >
                             {product.name}
@@ -126,7 +136,7 @@ export default function Footer() {
                         ))}
                       </div>
                     </div>
-                    <Link href="/contact" className="text-sm text-white/90">
+                    <Link href="/contact" className="text-sm text-white/90 transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/30">
                       Contact
                     </Link>
                   </div>
