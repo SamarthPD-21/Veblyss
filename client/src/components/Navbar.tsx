@@ -72,12 +72,12 @@ export default function Navbar() {
         <div className="max-w-[98%] mx-auto">
           <div className="bg-[var(--veblyss-color)] rounded-lg px-6 py-3 flex items-center justify-between shadow-md border border-white/10 h-16 relative">
             {/* Left Logo */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 width-[195px] height-[39px]">
               <Image
-                src="https://api.builder.io/api/v1/image/assets/TEMP/7081ea104ef1e2504dd5e98584d29bfdd24c5e8c?width=390"
+                src="/logo.png"
                 alt="VeBlyss Global Logo"
-                width={160}
-                height={36}
+                width={195}
+                height={39}
                 priority
               />
             </div>
