@@ -10,6 +10,7 @@ import WhyChooseOurProductSection from "@/components/product_page_components/Why
 import IdealForSection from "@/components/product_page_components/IdealFor";
 import Btn from "@/components/Btn";
 import EnquireBtn from "@/components/EnquireBtn";
+import Link from "next/link";
 
 interface productDataType {
   heroSection: {
@@ -72,10 +73,12 @@ function OtherProductsSection({ currentProductType }: { currentProductType: stri
                   {product.name}
                 </h2>
                     <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
-                  <Btn size="large" className="shadow-xl">
-                    Explore Products
-                  </Btn>
-                       <EnquireBtn message={`Hi, I'm interested in ${product.name}`} />
+                  <Link href={`/products/${product.type}`}>
+                    <Btn size="large" className="shadow-xl">
+                      Explore
+                    </Btn>
+                  </Link>
+                       <EnquireBtn size="large" message={`Hi, I'm interested in ${product.name}`} />
                 </div>
               </div>
             </div>

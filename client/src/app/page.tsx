@@ -12,10 +12,12 @@ const Card = ({
   title,
   description,
   image,
+  slug,
 }: {
   title: string;
   description: string;
   image: string;
+  slug?: string;
 }) => (
   <div
     key={title}
@@ -36,7 +38,13 @@ const Card = ({
       </p>
 
       <div className="mt-3 flex items-center justify-center gap-3">
-        <Btn size="small">Explore</Btn>
+        {slug ? (
+          <Link href={`/products/${slug}`}>
+            <Btn size="small">Explore</Btn>
+          </Link>
+        ) : (
+          <Btn size="small">Explore</Btn>
+        )}
         <EnquireBtn size="small" />
         <div onClick={() => triggerPop("Sorry, we’re working on it! Meanwhile, feel free to send us an enquiry message.")}><Btn size="small">Catalogue</Btn></div>
       </div>
@@ -120,6 +128,7 @@ function ProductCategoriesSection() {
         "Premium quality bags, wallets & accessories crafted from ethically sourced leather.",
       image:
         "/home/Leather.png",
+      slug: "leather-products",
     },
     {
       id: 2,
@@ -128,6 +137,7 @@ function ProductCategoriesSection() {
         "Traditional and modern copper-ware for kitchen, d\u00e9cor, and wellness that's food-safe.",
       image:
         "/home/Copper.png",
+      slug: "copper-products",
     },
     {
       id: 3,
@@ -136,6 +146,7 @@ function ProductCategoriesSection() {
         "Stylish, high-quality artificial jewellery necklaces, bangles, earrings, sets, and more.",
       image:
         "/images/products/jewelry/hero.png",
+      slug: "imitation-jewelry",
     },
     {
       id: 4,
@@ -144,6 +155,7 @@ function ProductCategoriesSection() {
         "Handcrafted art pieces from skilled artisans woodwork, pottery, textiles, and more.",
       image:
         "/home/Handicrafts.png",
+      slug: "handicrafts",
     },
     {
       id: 5,
@@ -152,6 +164,7 @@ function ProductCategoriesSection() {
         "Eco-conscious goods including reusable items, natural materials, & bio - products.",
       image:
         "/home/Sustainable.png",
+      slug: "sustainable-products",
     },
     {
       id: 6,
@@ -160,6 +173,7 @@ function ProductCategoriesSection() {
         "Fresh, sustainable produce and quality grains from trusted farms.",
       image:
         "/home/Agriculture.png",
+      slug: "agricultural-products",
     },
   ];
 
@@ -176,6 +190,7 @@ function ProductCategoriesSection() {
                 title={product.title}
                 description={product.description}
                 image={product.image}
+                slug={product.slug}
               />
             </div>
           ))}
