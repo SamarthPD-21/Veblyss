@@ -26,9 +26,9 @@ export default function ContactPage() {
       </div>
 
       {/* Content: Pink panel + cards */}
-      <div className="px-32 mx-auto py-12 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0] rounded-3xl shadow-lg flex flex-col gap-8">
+      <div className="md:px-32 px-4 mx-auto py-12 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0] rounded-3xl shadow-lg flex flex-col gap-8">
         {/* Intro area */}
-        <div className="w-full bg-transparent rounded-xl p-8 flex flex-col md:flex-row items-center gap-6">
+        <div className="w-full bg-transparent rounded-xl md:p-8 flex flex-col md:flex-row items-center gap-6">
           <p className="text-center text-[#4b2f2f] max-w-2xl mx-auto text-base leading-relaxed font-medium">
             We&apos;d love to hear from you. Whether you&apos;re interested in
             our wholesale products, have a query, or want to explore
@@ -81,7 +81,7 @@ export default function ContactPage() {
             <h3 className="text-[48px] font-bold text-[#792727] mb-2">
               Social Media Links
             </h3>
-            <div className="grid grid-cols-4 items-center gap-6 ">
+            <div className="grid md:grid-cols-4 grid-cols-2 items-center gap-6 ">
               <div 
               onClick={() => triggerPop("Coming soon!")}
               className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
