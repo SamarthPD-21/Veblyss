@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import React from "react";
 import Image from "next/image";
-import { productsData } from '../../../Data/productsData';
+import { productsData } from "../../../Data/productsData";
 import HeroSection from "@/components/product_page_components/HeroSection";
 import ProductRangeSections from "@/components/product_page_components/ProductRangeSections";
 import WhyChooseOurProductSection from "@/components/product_page_components/WhyChooseOurProductSection";
@@ -31,18 +31,45 @@ interface productDataType {
   }>;
 }
 
-
-function OtherProductsSection({ currentProductType }: { currentProductType: string }) {
+function OtherProductsSection({
+  currentProductType,
+}: {
+  currentProductType: string;
+}) {
   const products = [
-    { name: 'Leather Products', image: '/home/Leather.png', type: 'leather-products' },
-    { name: 'Copper Products', image: '/home/Copper.png', type: 'copper-products' },
-    { name: 'Imitation Jewelry', image: '/home/imitation.png', type: 'imitation-jewelry' },
-    { name: 'Handicrafts', image: '/home/Handicrafts.png', type: 'handicrafts' },
-    { name: 'Sustainable Products', image: '/home/Sustainable.png', type: 'sustainable-products' },
-    { name: 'Agriculture Products', image: '/home/Agriculture.png', type: 'agricultural-products' },
-  ]
+    {
+      name: "Leather Products",
+      image: "/home/Leather.png",
+      type: "leather-products",
+    },
+    {
+      name: "Copper Products",
+      image: "/home/Copper.png",
+      type: "copper-products",
+    },
+    {
+      name: "Imitation Jewelry",
+      image: "/home/imitation.png",
+      type: "imitation-jewelry",
+    },
+    {
+      name: "Handicrafts",
+      image: "/home/Handicrafts.png",
+      type: "handicrafts",
+    },
+    {
+      name: "Sustainable Products",
+      image: "/home/Sustainable.png",
+      type: "sustainable-products",
+    },
+    {
+      name: "Agriculture Products",
+      image: "/home/Agriculture.png",
+      type: "agricultural-products",
+    },
+  ];
 
-  const otherProducts = products.filter((p) => p.type !== currentProductType)
+  const otherProducts = products.filter((p) => p.type !== currentProductType);
 
   return (
     <section className="relative w-full py-20 overflow-hidden">
@@ -71,13 +98,16 @@ function OtherProductsSection({ currentProductType }: { currentProductType: stri
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">
                   {product.name}
                 </h2>
-                    <div className="md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
+                <div className="md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
                   <Link href={`/products/${product.type}`}>
                     <Btn size="large" className="shadow-xl">
                       Explore
                     </Btn>
                   </Link>
-                       <EnquireBtn size="large" message={`Hi, I'm interested in ${product.name}`} />
+                  <EnquireBtn
+                    size="large"
+                    message={`Hi, I'm interested in ${product.name}`}
+                  />
                 </div>
               </div>
             </div>
@@ -85,12 +115,16 @@ function OtherProductsSection({ currentProductType }: { currentProductType: stri
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 type ProductTypeKey = keyof typeof productsData;
 
-export default function Products({ params }: { params: { product_type: string } }) {
+export default function Products({
+  params,
+}: {
+  params: { product_type: string };
+}) {
   const { product_type } = params;
 
   const productData = productsData[product_type as ProductTypeKey] as
@@ -107,26 +141,30 @@ export default function Products({ params }: { params: { product_type: string } 
         backgroundImage={productData.heroSection.backgroundImage}
         mainHeading={productData.heroSection.mainHeading}
         subHeading={productData.heroSection.subHeading}
-        catalogueLink={productData.heroSection.catalogueLink ?? ''}
+        catalogueLink={productData.heroSection.catalogueLink ?? ""}
       />
 
       <div className="relative z-10 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0]">
-        <ProductRangeSections products={productData.productRangeSections ?? []} />
+        <ProductRangeSections
+          products={productData.productRangeSections ?? []}
+        />
         <WhyChooseOurProductSection
-          name={productData.whyChooseOurProductSection?.name ?? ''}
+          name={productData.whyChooseOurProductSection?.name ?? ""}
           features={productData.whyChooseOurProductSection?.features ?? []}
         />
         <IdealForSection features={productData.idealForSection ?? []} />
         <OtherProductsSection currentProductType={product_type} />
       </div>
     </section>
-  )
+  );
 }
 
 // Static export requirements for Next when using `output: 'export'`.
 export const dynamicParams = false;
 
-export async function generateStaticParams(): Promise<Array<{ product_type: string }>> {
+export async function generateStaticParams(): Promise<
+  Array<{ product_type: string }>
+> {
   const productTypes = Object.keys(productsData);
 
   return productTypes.map((type) => ({ product_type: type }));
