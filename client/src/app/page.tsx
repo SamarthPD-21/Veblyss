@@ -85,19 +85,15 @@ function HeroSection() {
 function WelcomeSection() {
   return (
     <section id="about" className="py-16">
-      <div className="max-w-screen">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="max-w-[50%] w-[50%]">
-            <Image
-              src="/home/about.png"
-              alt="VeBlyss Global Artisan Heritage"
-              height={460}
-              width={706}
-              className="rounded-r-3xl w-full h-[360px] object-cover shadow-lg"
-            />
+          <div className="w-full md:w-1/2">
+            <div className="relative w-full h-[220px] sm:h-[300px] md:h-[360px] lg:h-[460px] rounded-r-3xl overflow-hidden shadow-lg">
+              <Image src="/home/about.png" alt="VeBlyss Global Artisan Heritage" fill className="object-cover" />
+            </div>
           </div>
 
-          <div className="flex-1 px-2 text-center flex flex-col pr-14 gap-4 md:text-left">
+          <div className="flex-1 px-2 text-center flex flex-col gap-4 md:text-left md:pr-14">
             <h2 className="text-3xl md:text-3xl font-bold text-[var(--button-red)]">
               Exporting India&apos;s Finest to the World
             </h2>
