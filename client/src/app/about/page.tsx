@@ -2,6 +2,8 @@
 import BackgroundImage from "@/components/BackgroundImage";
 import React from "react";
 import Difference from "@/components/Difference";
+import Image from "next/image";
+
 
 function HeroSection() {
   return (
@@ -130,7 +132,7 @@ function MarketsWeServeSection() {
             Our Vision & Mission
           </h2>
           <div className="flex flex-col w-full items-center">
-            <img
+            <Image
               src="/about/marketsweserve.jpg"
               alt="Map and markets we serve - international export destinations"
               height={400}
