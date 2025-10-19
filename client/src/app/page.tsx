@@ -85,7 +85,7 @@ function HeroSection() {
 function WelcomeSection() {
   return (
     <section id="about" className="py-16">
-      <div className="max-w-screen">
+      <div className="w-full">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="max-w-[50%] w-[50%]">
             <Image

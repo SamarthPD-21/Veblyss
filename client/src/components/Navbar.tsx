@@ -68,17 +68,17 @@ export default function Navbar() {
       }`}
       aria-label="Main navigation"
     >
-      <div className="w-full bg-transparent px-4">
-        <div className="max-w-[98%] mx-auto">
+      <div className="w-full px-4">
+        <div className="w-full mx-auto max-w-full">
           <div className="bg-[var(--veblyss-color)] rounded-lg px-6 py-3 flex items-center justify-between shadow-md border border-white/10 h-16 relative">
             {/* Left Logo */}
-            <div className="flex items-center gap-4 width-[195px] height-[200px]">
+            <div className="flex items-center gap-4 w-[195px] h-[90px]">
               <img
                 src="/logo.png"
                 alt="VeBlyss Global company logo"
                 width={195}
                 height={90}
-                className="w-[140px] h-[200px] object-contain zoom-in duration-300 ease-out hover:scale-105 active:translate-y-1"
+                className="w-[140px] h-auto object-contain zoom-in duration-300 ease-out hover:scale-105 active:translate-y-1"
               />
             </div>
 
@@ -210,9 +210,7 @@ export default function Navbar() {
         />
 
         <div className={`absolute top-16 right-0 left-0 px-4`}>
-          <div
-            className={`bg-[var(--veblyss-color)] rounded-lg p-4 mx-auto max-w-3xl shadow-lg`}
-          >
+          <div className={`bg-[var(--veblyss-color)] rounded-lg p-4 mx-auto w-full max-w-md shadow-lg`}>
             <nav aria-label="Mobile navigation" className="flex flex-col gap-2">
               <Link
                 href="/"

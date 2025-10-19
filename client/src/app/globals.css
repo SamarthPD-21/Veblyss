@@ -9,6 +9,8 @@
     display: none;
 }
 
+html, body, #__next { overflow-x: hidden; }
+
 body {
     font-family: 'Poppins';
 }
