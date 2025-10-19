@@ -85,15 +85,19 @@ function HeroSection() {
 function WelcomeSection() {
   return (
     <section id="about" className="py-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-screen">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="w-full md:w-1/2">
-            <div className="relative w-full h-[220px] sm:h-[300px] md:h-[360px] lg:h-[460px] rounded-r-3xl overflow-hidden shadow-lg">
-              <Image src="/home/about.png" alt="VeBlyss Global Artisan Heritage" fill className="object-cover" />
-            </div>
+          <div className="max-w-[50%] w-[50%]">
+            <Image
+              src="/home/about.png"
+              alt="VeBlyss Global Artisan Heritage"
+              height={460}
+              width={706}
+              className="rounded-r-3xl w-full h-[360px] object-cover shadow-lg"
+            />
           </div>
 
-          <div className="flex-1 px-2 text-center flex flex-col gap-4 md:text-left md:pr-14">
+          <div className="flex-1 px-2 text-center flex flex-col pr-14 gap-4 md:text-left">
             <h2 className="text-3xl md:text-3xl font-bold text-[var(--button-red)]">
               Exporting India&apos;s Finest to the World
             </h2>
@@ -214,13 +218,13 @@ function PartnersSection() {
             </div>
           </div>
 
-          <div className="md:flex-none md:w-[705px] h-[460px] w-full">
+          <div className="md:flex-none md:w-[705px]">
             <Image
-              src="/home/about.png"
+              src="https://api.builder.io/api/v1/image/assets/TEMP/f357956c466d4af5feea16f7a25acec44c4dab9b?width=1410"
               alt="Global Partnership"
               width={705}
               height={460}
-              className="rounded-lg object-cover h-[460px] w-full shadow-lg object-[0.9%_top]"
+              className="rounded-lg object-cover"
             />
           </div>
         </div>
