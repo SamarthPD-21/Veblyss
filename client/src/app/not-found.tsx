@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+// using native <img> for static export stable behavior
 import { motion } from "framer-motion";
 
 export default function NotFound() {
@@ -9,12 +9,10 @@ export default function NotFound() {
     <div className="relative flex flex-col items-center justify-center h-screen text-center overflow-hidden bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0]">
       {/* Background image */}
       <div className="absolute inset-0 z-0">
-        <Image
+        <img
           src="/images/404.jpg"
-          alt="404 Background"
-          fill
-          priority
-          className="object-cover object-center brightness-90 opacity-80"
+          alt="Decorative 404 background image - empty page illustration"
+          className="w-full h-full object-cover object-center brightness-90 opacity-80"
         />
       </div>
 

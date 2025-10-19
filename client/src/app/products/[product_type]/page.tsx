@@ -1,9 +1,7 @@
-"use client";
-
-import { notFound, useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import React from "react";
 import Image from "next/image";
-import { productsData } from "@/Data/productsData";
+import { productsData } from '../../../Data/productsData';
 import HeroSection from "@/components/product_page_components/HeroSection";
 import ProductRangeSections from "@/components/product_page_components/ProductRangeSections";
 import WhyChooseOurProductSection from "@/components/product_page_components/WhyChooseOurProductSection";
@@ -32,6 +30,7 @@ interface productDataType {
     icon: string;
   }>;
 }
+
 
 function OtherProductsSection({ currentProductType }: { currentProductType: string }) {
   const products = [
@@ -91,8 +90,8 @@ function OtherProductsSection({ currentProductType }: { currentProductType: stri
 
 type ProductTypeKey = keyof typeof productsData;
 
-export default function Products() {
-  const { product_type }: { product_type: string } = useParams();
+export default function Products({ params }: { params: { product_type: string } }) {
+  const { product_type } = params;
 
   const productData = productsData[product_type as ProductTypeKey] as
     | productDataType
@@ -122,4 +121,13 @@ export default function Products() {
       </div>
     </section>
   )
+}
+
+// Static export requirements for Next when using `output: 'export'`.
+export const dynamicParams = false;
+
+export async function generateStaticParams(): Promise<Array<{ product_type: string }>> {
+  const productTypes = Object.keys(productsData);
+
+  return productTypes.map((type) => ({ product_type: type }));
 }

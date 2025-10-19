@@ -1,6 +1,4 @@
 "use client";
-
-import Image from 'next/image'
 import Btn from '@/components/Btn';
 import { MapButton, WhatsappButton } from '@/components/ContactActions';
 import Link from 'next/link';
@@ -8,21 +6,20 @@ import { triggerPop } from '@/components/Pop';
 
 export default function ContactPage() {
   return (
-    <section className="w-full">
-      {/* Hero */}
-      <div className="relative w-full h-[500px]  flex items-center justify-center">
-        <Image
+    <section className="w-full overflow-hidden">
+      {/* Hero - full bleed */}
+      <div className="relative w-screen left-1/2 right-1/2 translate-x-[-50%] h-[500px] md:h-[500px]">
+        <img
           src="/contact/hero.png"
-          alt="contact hero"
-          fill
-          style={{ objectFit: "cover", opacity: 1 }}
+          alt="Contact page hero - VeBlyss Global building or products"
+          className="absolute inset-0 w-full h-full object-cover"
         />
 
-        <div className="z-10 text-center text-white">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg max-w-3xl">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg tracking-tight max-w-4xl">
             Get in Touch
           </h1>
-          <p className="mt-6 text-base md:text-lg text-white/90 max-w-2xl">
+          <p className="mt-4 text-sm md:text-lg text-white/90 max-w-2xl">
             Let&apos;s build stronger business connections together
           </p>
         </div>
@@ -89,9 +86,9 @@ export default function ContactPage() {
               onClick={() => triggerPop("Coming soon!")}
               className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
                 <div className="w-12 h-12 flex items-center justify-center">
-                  <Image
+                  <img
                     src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
-                    alt="Facebook"
+                    alt="Facebook logo"
                     width={54}
                     height={54}
                     className="hover:scale-110 transition-transform duration-200 cursor-pointer"
@@ -106,9 +103,9 @@ export default function ContactPage() {
               >
               <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
                 <div className="w-12 h-12 flex items-center justify-center">
-                  <Image
+                  <img
                     src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
-                    alt="Instagram"
+                    alt="Instagram logo"
                     width={54}
                     height={54}
                     className="hover:scale-110 transition-transform duration-200 cursor-pointer"
@@ -124,9 +121,9 @@ export default function ContactPage() {
               >
                 <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
                   <div className="w-12 h-12 flex items-center justify-center">
-                    <Image
+                    <img
                       src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"
-                      alt="LinkedIn"
+                      alt="LinkedIn logo"
                       width={54}
                       height={54}
                       className="hover:scale-110 transition-transform duration-200 cursor-pointer"
@@ -142,9 +139,9 @@ export default function ContactPage() {
               >
                 <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
                   <div className="w-12 h-12 flex items-center justify-center">
-                    <Image
+                    <img
                       src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-                      alt="Gmail"
+                      alt="Email / Gmail icon"
                       width={54}
                       height={54}
                       className="hover:scale-110 transition-transform duration-200 cursor-pointer"

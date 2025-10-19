@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// Use native <img> for static export reliability
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 
@@ -72,13 +72,13 @@ export default function Navbar() {
         <div className="max-w-[98%] mx-auto">
           <div className="bg-[var(--veblyss-color)] rounded-lg px-6 py-3 flex items-center justify-between shadow-md border border-white/10 h-16 relative">
             {/* Left Logo */}
-            <div className="flex items-center gap-4 width-[195px] height-[39px]">
-              <Image
+            <div className="flex items-center gap-4 width-[195px] height-[200px]">
+              <img
                 src="/logo.png"
-                alt="VeBlyss Global Logo"
+                alt="VeBlyss Global company logo"
                 width={195}
-                height={39}
-                priority
+                height={90}
+                className="w-[140px] h-[200px] object-contain zoom-in duration-300 ease-out hover:scale-105 active:translate-y-1"
               />
             </div>
 
@@ -139,11 +139,12 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/01dcb384f2c1c328b2985c852aa9ab955ff469c4?width=72"
-                  alt="Search"
+                  alt="Email contact icon"
                   width={36}
                   height={36}
+                  className="w-9 h-9 object-contain"
                 />
               </Link>
               <Link
@@ -152,11 +153,12 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="ml-2"
               >
-                <Image
+                <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/73da6505901c7d3ffb216886239f3a763691faed?width=60"
-                  alt="Menu"
+                  alt="WhatsApp contact icon"
                   width={30}
                   height={30}
+                  className="w-7 h-7 object-contain"
                 />
               </Link>
             </div>

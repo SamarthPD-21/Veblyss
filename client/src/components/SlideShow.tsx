@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
+// removed next/image to avoid optimization issues in static export
 
 type Props = {
   interval?: number
@@ -64,7 +64,7 @@ export default function SlideShow({ interval = 3000 }: Props) {
             className="absolute inset-0 transition-transform duration-700 h-full"
             style={{ transform: `translateX(${offset}%)` }}
           >
-            <Image src={src} alt={`slide-${i}`} fill className="object-cover h-full" sizes="100vw" />
+            <img src={src} alt={`Hero slide ${i + 1}`} className="w-full h-full object-cover" loading={i === 0 ? 'eager' : 'lazy'} />
             <div aria-hidden="true" className="absolute inset-0 bg-black/20" />
           </div>
         )
@@ -76,7 +76,7 @@ export default function SlideShow({ interval = 3000 }: Props) {
         onClick={handlePrev}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/30 p-3 rounded-md shadow-md flex items-center justify-center"
       >
-        <Image src={leftArrow} alt="left" width={28} height={28} />
+  <img src={leftArrow} alt="previous slide" width={28} height={28} className="object-contain" />
       </button>
 
       <button
@@ -84,7 +84,7 @@ export default function SlideShow({ interval = 3000 }: Props) {
         onClick={handleNext}
         className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/30 p-3 rounded-md shadow-md flex items-center justify-center"
       >
-        <Image src={rightArrow} alt="right" width={28} height={28} />
+  <img src={rightArrow} alt="next slide" width={28} height={28} className="object-contain" />
       </button>
     </div>
   )
