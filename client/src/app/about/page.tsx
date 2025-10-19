@@ -33,20 +33,20 @@ function HeroSection() {
 }
 function WhoWeAreSection() {
   return (
-    <section id="about" className="py-16 pr-16">
+    <section id="about" className="py-16 md:pr-16">
       <div className="max-w-screen">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="max-w-[50%] w-[50%]">
+          <div className="md:max-w-[50%] md:w-[50%] md:p-0 p-4 w-full">
             <Image
               src="/about/whoweare.png"
               alt="VeBlyss Global Artisan Heritage"
               height={706}
               width={460}
-              className="rounded-r-3xl w-full object-cover h-[630]"
+              className="md:rounded-r-3xl rounded-3xl w-full h-[360px] md:h-[630px] object-cover shadow-lg"
             />
           </div>
 
-          <div className="flex-1 px-2 text-center flex flex-col pr-14 gap-4 md:text-left">
+          <div className="flex-1 px-2 text-center flex flex-col md:pr-14 gap-4 md:text-left">
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--button-red)]">
               Who we are
             </h2>
@@ -86,13 +86,13 @@ function WhoWeAreSection() {
 function VisionAndMissionSection() {
   return (
     <section>
-      <div className="max-w-screen flex flex-col items-center py-16 px-6">
+      <div className="max-w-screen flex flex-col items-center py-16 md:px-6 px-1">
         <div className="flex flex-col items-center justify-center container gap-8">
-          <h2 className="font-poppins text-4xl text-[var(--button-red)] font-bold">
+          <h2 className="font-poppins md:text-4xl text-3xl text-[var(--button-red)] font-bold">
             Our Vision & Mission
           </h2>
-          <div className="flex flex-col md:flex-row gap-12 md:gap-24 mr-12 ml-16 items-center md:items-start">
-            <div className="text-gray-700 max-w-[50%] text-left flex flex-col gap-12">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-24 md:mr-12 md:ml-16 items-center md:items-start">
+            <div className="text-gray-700 md:max-w-[50%] md:p-0 p-2 text-left flex flex-col gap-12">
               <h3 className="font-extrabold text-2xl">Our Vision</h3>
 
               <p className="text-2xl">
@@ -102,7 +102,7 @@ function VisionAndMissionSection() {
                 every client.
               </p>
             </div>
-            <div className="text-gray-700 max-w-[50%] text-left flex flex-col gap-12">
+            <div className="text-gray-700 md:max-w-[50%] md:p-0 p-2 text-left flex flex-col gap-12">
               <h3 className="font-extrabold text-2xl">Our Mission</h3>
 
               <ul className="list-disc list-inside space-y-2 text-2xl">
