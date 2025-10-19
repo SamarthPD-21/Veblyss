@@ -63,7 +63,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`max-w-full fixed inset-x-0 top-0 z-50 pt-2 transform transition-all duration-500 ease-out ${
+      className={`fixed inset-x-0 top-0 z-50 pt-2 transform transition-all duration-500 ease-out ${
         mounted ? "translate-y-0 opacity-100" : "-translate-y-6 opacity-0"
       }`}
       aria-label="Main navigation"

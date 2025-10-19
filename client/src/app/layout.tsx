@@ -14,7 +14,6 @@ export const metadata = {
   title: "VeBlyss Global",
   description:
     "Your one-stop solution for lifestyle, fashion, and home products.",
-  viewport: 'width=device-width, initial-scale=1',
 };
 
 export default function RootLayout({
@@ -23,13 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} w-full overflow-x-hidden`}>
+    <html lang="en" className={poppins.variable}>
       <body
         className={`antialiased ${poppins.className} min-h-screen flex flex-col`}
       >
         <div className="page-container">
           <Navbar />
-          <main className="main-content w-full">{children}</main>
+          <main className="main-content">{children}</main>
           <Footer />
           <Pop />
         </div>

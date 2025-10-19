@@ -128,7 +128,7 @@ export default function Footer() {
                           <Link
                             key={product.name}
                             href={product.link}
-                            className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors duration-200 ease-out hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30"
+                            className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30"
                             onClick={() => setShowDropdown(false)}
                           >
                             {product.name}

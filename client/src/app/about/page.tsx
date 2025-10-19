@@ -31,16 +31,20 @@ function HeroSection() {
 }
 function WhoWeAreSection() {
   return (
-    <section id="about" className="py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="about" className="py-16 pr-16">
+      <div className="max-w-screen">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="w-full md:w-1/2">
-            <div className="relative w-full h-[220px] sm:h-[320px] md:h-[420px] lg:h-[630px] rounded-r-3xl overflow-hidden">
-              <Image src="/about/whoweare.png" alt="VeBlyss Global Artisan Heritage" fill className="object-cover" />
-            </div>
+          <div className="max-w-[50%] w-[50%]">
+            <Image
+              src="/about/whoweare.png"
+              alt="VeBlyss Global Artisan Heritage"
+              height={706}
+              width={460}
+              className="rounded-r-3xl w-full object-cover h-[630]"
+            />
           </div>
 
-          <div className="flex-1 px-2 text-center flex flex-col gap-4 md:text-left">
+          <div className="flex-1 px-2 text-center flex flex-col pr-14 gap-4 md:text-left">
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--button-red)]">
               Who we are
             </h2>
@@ -80,13 +84,13 @@ function WhoWeAreSection() {
 function VisionAndMissionSection() {
   return (
     <section>
-      <div className="w-full flex flex-col items-center py-12 px-4 sm:px-6">
-        <div className="flex flex-col items-center justify-center gap-8 max-w-6xl mx-auto w-full">
-          <h2 className="font-poppins text-3xl sm:text-4xl text-[var(--button-red)] font-bold">
+      <div className="max-w-screen flex flex-col items-center py-16 px-6">
+        <div className="flex flex-col items-center justify-center container gap-8">
+          <h2 className="font-poppins text-4xl text-[var(--button-red)] font-bold">
             Our Vision & Mission
           </h2>
-          <div className="flex flex-col md:flex-row gap-8 md:gap-20 items-center md:items-start w-full">
-            <div className="text-gray-700 md:w-1/2 text-left flex flex-col gap-8">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-24 mr-12 ml-16 items-center md:items-start">
+            <div className="text-gray-700 max-w-[50%] text-left flex flex-col gap-12">
               <h3 className="font-extrabold text-2xl">Our Vision</h3>
 
               <p className="text-2xl">
@@ -120,9 +124,9 @@ function VisionAndMissionSection() {
 function MarketsWeServeSection() {
   return (
     <section>
-      <div className="w-full flex flex-col items-center py-12 px-4 sm:px-6">
-        <div className="flex flex-col items-center justify-center gap-8 max-w-6xl mx-auto w-full">
-          <h2 className="font-poppins text-3xl sm:text-4xl text-[var(--button-red)] font-bold">
+      <div className="max-w-screen flex flex-col items-center py-16 px-6">
+        <div className="flex flex-col items-center justify-center container gap-8">
+          <h2 className="font-poppins text-4xl text-[var(--button-red)] font-bold">
             Our Vision & Mission
           </h2>
           <div className="flex flex-col w-full items-center">
@@ -152,8 +156,8 @@ function CertificationsSection() {
   ];
   return (
     <section>
-      <div className="w-full flex flex-col items-center py-12 px-4 sm:px-6">
-        <div className="flex flex-col items-center justify-center gap-8 max-w-6xl mx-auto w-full">
+      <div className="max-w-screen flex flex-col items-center py-16 px-6">
+        <div className="flex flex-col items-center justify-center container gap-8">
           <h2 className="font-poppins text-4xl text-[var(--button-red)] font-bold">
             Certifications & Legal Compliance
           </h2>

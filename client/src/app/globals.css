@@ -12,13 +12,3 @@
 body {
     font-family: 'Poppins';
 }
-
-html, body, #__next {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-img, video {
-    max-width: 100%;
-    height: auto;
-}

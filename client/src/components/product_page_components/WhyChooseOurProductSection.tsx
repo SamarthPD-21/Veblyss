@@ -3,8 +3,8 @@ import React from 'react'
 export default function WhyChooseOurProductSection({ name, features }: { name: string; features: string[]; }) {
   return (
     <section>
-      <div className="w-full flex flex-col items-center py-12 px-4 sm:px-6 max-w-6xl mx-auto">
-        <div className="flex flex-col items-center justify-center gap-8 w-full">
+      <div className="max-w-screen flex flex-col items-center py-16 px-6">
+        <div className="flex flex-col items-center justify-center container gap-8">
           <h2 className="font-poppins text-4xl text-[var(--button-red)] font-bold">
             Why Choose Our {name} Products
           </h2>
