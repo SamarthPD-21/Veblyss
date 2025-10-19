@@ -1,7 +1,6 @@
 "use client";
 import BackgroundImage from "@/components/BackgroundImage";
 import React from "react";
-import Image from "next/image";
 import Difference from "@/components/Difference";
 
 function HeroSection() {
@@ -36,12 +35,13 @@ function WhoWeAreSection() {
       <div className="max-w-screen">
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div className="max-w-[50%] w-[50%]">
-            <Image
+            <img
               src="/about/whoweare.png"
-              alt="VeBlyss Global Artisan Heritage"
+              alt="VeBlyss Global - who we are illustration"
               height={706}
               width={460}
               className="rounded-r-3xl w-full object-cover h-[630]"
+              loading="eager"
             />
           </div>
 
@@ -131,12 +131,13 @@ function MarketsWeServeSection() {
             Our Vision & Mission
           </h2>
           <div className="flex flex-col w-full items-center">
-            <Image
+            <img
               src="/about/marketsweserve.jpg"
-              alt="Markets We Serve"
+              alt="Map and markets we serve - international export destinations"
               height={400}
               width={650}
               className="w-[80%] md:w-[50%] object-cover"
+              loading="lazy"
             />
           </div>
         </div>
