@@ -52,7 +52,7 @@ function OtherProductsSection({ currentProductType }: { currentProductType: stri
         </h1>
 
         {/* Product Grid */}
-        <div className="flex gap-4 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-full">
           {otherProducts.map((product) => (
             <div
               key={product.name}
@@ -71,7 +71,7 @@ function OtherProductsSection({ currentProductType }: { currentProductType: stri
                 <h2 className="text-2xl font-bold text-gray-900 mb-3">
                   {product.name}
                 </h2>
-                    <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
+                    <div className="md:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
                   <Link href={`/products/${product.type}`}>
                     <Btn size="large" className="shadow-xl">
                       Explore

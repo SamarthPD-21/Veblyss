@@ -179,11 +179,11 @@ function ProductCategoriesSection() {
 
   return (
     <section id="products" className="py-20">
-      <div className="mx-auto md:px-24 px-4">
+      <div className="mx-auto xl:px-24 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--button-red)]">
           Product Categories
         </h2>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 items-start justify-items-center">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:gap-20 md:gap-14 gap-4 items-start justify-items-center">
           {productCategories.map((product) => (
             <div key={product.id} className="w-full flex justify-center">
               <Card
