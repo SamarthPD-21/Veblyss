@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable}>
       <body
-        className={`antialiased ${poppins.className} min-h-screen flex flex-col`}
+        className={`antialiased ${poppins.className} min-h-screen min-w-screen flex flex-col`}
       >
         <div className="page-container">
           <Navbar />
