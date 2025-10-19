@@ -33,16 +33,16 @@ function HeroSection() {
 }
 function WhoWeAreSection() {
   return (
-    <section id="about" className="py-16 md:pr-16">
+    <section id="about" className="py-16 lg:pr-16">
       <div className="max-w-screen">
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="md:max-w-[50%] md:w-[50%] md:p-0 p-4 w-full">
+        <div className="flex flex-col lg:flex-row items-center gap-8">
+          <div className="lg:max-w-[50%] lg:w-[50%] lg:p-0 p-4 w-full">
             <Image
               src="/about/whoweare.png"
               alt="VeBlyss Global Artisan Heritage"
               height={706}
               width={460}
-              className="md:rounded-r-3xl rounded-3xl w-full h-[360px] md:h-[630px] object-cover shadow-lg"
+              className="lg:rounded-r-3xl rounded-3xl w-full h-[360px] md:h-[540px] lg:h-[630px] object-cover shadow-lg"
             />
           </div>
 
