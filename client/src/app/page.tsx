@@ -87,17 +87,17 @@ function WelcomeSection() {
     <section id="about" className="py-16">
       <div className="w-full">
         <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="max-w-[50%] w-[50%]">
+          <div className="md:max-w-[50%] md:w-[50%] md:p-0 p-4 w-full">
             <Image
               src="/home/about.png"
               alt="VeBlyss Global Artisan Heritage"
               height={460}
               width={706}
-              className="rounded-r-3xl w-full h-[360px] object-cover shadow-lg"
+              className="md:rounded-r-3xl rounded-3xl w-full md:h-[360px] h-[240px] object-cover shadow-lg"
             />
           </div>
 
-          <div className="flex-1 px-2 text-center flex flex-col pr-14 gap-4 md:text-left">
+          <div className="flex-1 px-2 text-center flex flex-col md:pr-14 gap-4 md:text-left">
             <h2 className="text-3xl md:text-3xl font-bold text-[var(--button-red)]">
               Exporting India&apos;s Finest to the World
             </h2>
@@ -179,7 +179,7 @@ function ProductCategoriesSection() {
 
   return (
     <section id="products" className="py-20">
-      <div className="mx-auto px-24">
+      <div className="mx-auto md:px-24 px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--button-red)]">
           Product Categories
         </h2>
@@ -204,7 +204,7 @@ function PartnersSection() {
   return (
     <section className="py-16">
       <div className="pl-16 mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="flex flex-col-reverse md:flex-row items-center gap-8">
           <div className="flex-1">
             <h2 className="text-3xl md:text-3xl font-bold text-[var(--button-red)]">
               Let&apos;s Build a Global Partnership

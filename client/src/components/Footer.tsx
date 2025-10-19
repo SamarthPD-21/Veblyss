@@ -49,7 +49,7 @@ export default function Footer() {
       <div className="w-full bg-[var(--veblyss-color)]/95 text-white">
         <div className="mx-auto px-4 py-4">
           <div>
-            <div className="flex justify-between">
+            <div className="flex md:flex-row flex-col justify-between">
               <div className="flex items-end-safe gap-3">
                 {socialIcons.map((icon, index) => (
                   icon.link ? (
