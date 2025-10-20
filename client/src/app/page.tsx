@@ -85,9 +85,9 @@ function HeroSection() {
 function WelcomeSection() {
   return (
     <section id="about" className="py-16">
-      <div className="w-full">
-        <div className="flex flex-col md:mr-0 mr-4 md:flex-row items-center gap-8">
-          <div className="md:max-w-[50%] md:w-[50%] md:p-0 p-4 pl-0  w-full">
+      <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-8">
+        <div className="md:pr-0 pr-4">
+          <div className="">
             <Image
               src="/home/about.png"
               alt="VeBlyss Global Artisan Heritage"
@@ -207,11 +207,11 @@ function PartnersSection() {
     <section className="py-16">
       <div className="">
         <div className="flex flex-col-reverse md:flex-row items-center gap-8">
-          <div className="flex-1 mx-4">
-            <h2 className="text-[26px] text-center md:text-3xl font-bold text-[var(--button-red)]">
+          <div className="flex-1 md:ml-24 mx-4">
+            <h2 className="text-[26px] md:text-start text-center md:text-3xl font-bold text-[var(--button-red)]">
               Let&apos;s Build a Global Partnership
             </h2>
-            <p className="text-xl text-center text-gray-700">
+            <p className="text-xl md:mt-8 md:text-start text-center text-gray-700">
               Reach out today to explore our curated collections and export
               services tailored for your market.
             </p>
