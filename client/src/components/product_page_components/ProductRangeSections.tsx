@@ -13,7 +13,7 @@ export default function ProductRangeSections({
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 flex flex-col items-center text-center">
         {/* Section Title */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--button-red)] leading-tight drop-shadow-lg mb-12">
+        <h1 className="text-[26px] md:text-5xl lg:text-6xl font-extrabold text-[var(--button-red)] leading-tight drop-shadow-lg mb-12">
           Our Product Range
         </h1>
 

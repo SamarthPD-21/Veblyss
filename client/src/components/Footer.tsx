@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { triggerPop } from "./Pop";
+import { link } from "fs";
 export default function Footer() {
   const socialIcons = [
     {
@@ -24,6 +25,7 @@ export default function Footer() {
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/ec26709e9aca62af8f7ef1d837d635c77fc463df?width=69",
       alt: "Facebook",
+      link: "https://m.facebook.com/61582672670887/",
     },
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/69333b329d2202c4ee17aeb58e3f6f6b75f2aba7?width=68",
@@ -167,7 +169,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-8 border-t border-white pt-4 text-left text-sm text-white/80">
+          <div className="mt-8 border-t border-white pt-4 text-left text-[12px] text-white/80">
             <p>© VeBlyss Global Pvt Ltd. All Rights Reserved.</p>
             <p className="mt-2">
               Website designed & powered by Krisha – Art from Heart | Branding •

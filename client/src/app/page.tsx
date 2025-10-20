@@ -33,7 +33,7 @@ const Card = ({
     <div className="p-6">
       <h2 className="text-2xl text-gray-900 font-bold mb-3">{title}</h2>
 
-      <p className="text-center text-xl mx-2 text-gray-700">
+      <p className="text-center text-md mx-2 text-gray-700">
         {description}
       </p>
 
@@ -65,7 +65,7 @@ function HeroSection() {
         <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="w-full flex flex-col items-center text-center py-14 md:py-20">
             <div className="flex flex-col items-center justify-center text-center py-16">
-              <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg">
                 Welcome to VeBlyss Global
               </h1>
               <p className="text-[20px] text-white/90 mt-6 max-w-4xl">
@@ -86,22 +86,24 @@ function WelcomeSection() {
   return (
     <section id="about" className="py-16">
       <div className="w-full">
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="md:max-w-[50%] md:w-[50%] md:p-0 p-4 w-full">
+        <div className="flex flex-col md:mr-0 mr-4 md:flex-row items-center gap-8">
+          <div className="md:max-w-[50%] md:w-[50%] md:p-0 p-4 pl-0  w-full">
             <Image
               src="/home/about.png"
               alt="VeBlyss Global Artisan Heritage"
               height={460}
               width={706}
-              className="md:rounded-r-3xl rounded-3xl w-full md:h-[360px] h-[240px] object-cover shadow-lg"
+              className="rounded-r-3xl w-full md:h-[360px] h-[240px] object-cover shadow-lg"
             />
           </div>
+        </div>
+        <div className="flex mx-4 flex-col md:flex-row items-center gap-8">
 
           <div className="flex-1 px-2 text-center flex flex-col md:pr-14 gap-4 md:text-left">
-            <h2 className="text-3xl md:text-3xl font-bold text-[var(--button-red)]">
+            <h2 className="text-[26px] md:text-3xl font-bold text-[var(--button-red)]">
               Exporting India&apos;s Finest to the World
             </h2>
-            <p className="mt-4 text-gray-700">
+            <p className="mt-4 text-justify text-gray-700">
               Based in Bengaluru, VeBlyss Global connects India&apos;s artisan
               heritage with international markets. We specialize in ethically
               sourced, premium exports including imitation jewelry, copperware,
@@ -180,7 +182,7 @@ function ProductCategoriesSection() {
   return (
     <section id="products" className="py-20">
       <div className="mx-auto xl:px-24 px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--button-red)]">
+        <h2 className="text-[26px] md:text-4xl font-bold text-center text-[var(--button-red)]">
           Product Categories
         </h2>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:gap-20 md:gap-14 gap-4 items-start justify-items-center">
@@ -203,22 +205,22 @@ function ProductCategoriesSection() {
 function PartnersSection() {
   return (
     <section className="py-16">
-      <div className="pl-16 mx-auto">
+      <div className="">
         <div className="flex flex-col-reverse md:flex-row items-center gap-8">
-          <div className="flex-1">
-            <h2 className="text-3xl md:text-3xl font-bold text-[var(--button-red)]">
+          <div className="flex-1 mx-4">
+            <h2 className="text-[26px] text-center md:text-3xl font-bold text-[var(--button-red)]">
               Let&apos;s Build a Global Partnership
             </h2>
-            <p className="my-8 mr-8 text-xl text-gray-700">
+            <p className="text-xl text-center text-gray-700">
               Reach out today to explore our curated collections and export
               services tailored for your market.
             </p>
-            <div className="mt-6">
+            <div className="mt-6 flex justify-center md:justify-start">
               <Btn size="large">Explore Products</Btn>
             </div>
           </div>
 
-          <div className="md:flex-none md:w-[705px]">
+          <div className="md:flex-none ml-4 md:w-[705px]">
             <Image
               src="https://api.builder.io/api/v1/image/assets/TEMP/f357956c466d4af5feea16f7a25acec44c4dab9b?width=1410"
               alt="Global Partnership"

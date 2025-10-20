@@ -17,10 +17,10 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-transparent flex items-center">
         <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="flex flex-col items-center justify-center text-center py-16 -mt-4 md:-mt-8 lg:-mt-12">
-              <h1 className="text-2xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg">
                 About Veblyss Global Pvt Ltd
               </h1>
-              <p className="text-[20px] text-white/90 mt-6 max-w-2xl">
+              <p className="text-[24px] text-white/90 mt-6 max-w-2xl">
                 Where Indian Craft Meets Global Standards
               </p>
             </div>
@@ -42,7 +42,7 @@ function WhoWeAreSection() {
               alt="VeBlyss Global Artisan Heritage"
               height={706}
               width={460}
-              className="lg:rounded-r-3xl rounded-3xl w-full h-[360px] md:h-[540px] lg:h-[630px] object-cover shadow-lg"
+              className="lg:rounded-r-3xl rounded-3xl w-full h-[250px] md:h-[500px] object-cover shadow-lg"
             />
           </div>
 
@@ -50,7 +50,7 @@ function WhoWeAreSection() {
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--button-red)]">
               Who we are
             </h2>
-            <p className="mt-4 text-xl text-gray-700">
+            <p className="mt-4 m-4 text-justify text-[16px] text-gray-700">
               At VeBlyss Global, we are committed to delivering handpicked,
               high-quality products to global markets. From artisan-made leather
               goods to Eco-conscious lifestyle products, we blend{" "}
@@ -58,7 +58,7 @@ function WhoWeAreSection() {
               ensuring every shipment meets global{" "}
               <strong>quality, compliance, and design standards.</strong>
             </p>
-            <p className="mt-4 text-xl text-gray-700">
+            <p className="mt-4 m-4 text-justify text-[16px] text-gray-700">
               Based in Bengaluru, India – the heart of traditional craftsmanship
               and modern manufacturing – our team bridges{" "}
               <strong>heritage and trend</strong>. We specialize in curating,
@@ -69,7 +69,7 @@ function WhoWeAreSection() {
               </strong>{" "}
               to clients worldwide.
             </p>
-            <p className="mt-4 text-xl text-gray-700">
+            <p className="mt-4 mx-4 text-justify text-[16px] text-gray-700">
               We don’t just export products{" "}
               <strong>
                 we deliver excellence, reliability, and compliance in every
@@ -86,26 +86,26 @@ function WhoWeAreSection() {
 function VisionAndMissionSection() {
   return (
     <section>
-      <div className="max-w-screen flex flex-col items-center py-16 md:px-6 px-1">
+      <div className="max-w-screen flex flex-col items-center py-16 md:px-6">
         <div className="flex flex-col items-center justify-center container gap-8">
           <h2 className="font-poppins md:text-4xl text-3xl text-[var(--button-red)] font-bold">
             Our Vision & Mission
           </h2>
-          <div className="flex flex-col md:flex-row gap-12 md:gap-24 md:mr-12 md:ml-16 items-center md:items-start">
-            <div className="text-gray-700 md:max-w-[50%] md:p-0 p-2 text-left flex flex-col gap-12">
-              <h3 className="font-extrabold text-2xl">Our Vision</h3>
+          <div className="flex flex-col md:flex-row gap-12 md:gap-24 md:mr-12 md:ml-16 items-center justify-center md:items-start">
+            <div className="text-gray-700 md:max-w-[50%] md:p-0 p-4 text-left flex flex-col gap-12">
+              <h3 className="font-extrabold text-2xl md:text-start text-center">Our Vision</h3>
 
-              <p className="text-2xl">
+              <p className="text-[16px] text-justify">
                 To be a global leader in exporting Indian-crafted fashion,
                 lifestyle, and essential products — showcasing the best of
                 quality and craftsmanship while delivering trust and value to
                 every client.
               </p>
             </div>
-            <div className="text-gray-700 md:max-w-[50%] md:p-0 p-2 text-left flex flex-col gap-12">
-              <h3 className="font-extrabold text-2xl">Our Mission</h3>
+            <div className="text-gray-700 md:max-w-[50%] md:p-0 p-4 pr-0 text-left flex flex-col gap-12">
+              <h3 className="font-extrabold text-center md:text-start text-2xl">Our Mission</h3>
 
-              <ul className="list-disc list-inside space-y-2 text-2xl">
+              <ul className="list-disc list-inside space-y-2 text-[16px] ">
                 <li>
                   To empower Indian artisans and manufacturers by giving them
                   global reach.
@@ -128,8 +128,8 @@ function MarketsWeServeSection() {
     <section>
       <div className="max-w-screen flex flex-col items-center py-16 px-6">
         <div className="flex flex-col items-center justify-center container gap-8">
-          <h2 className="font-poppins text-4xl text-[var(--button-red)] font-bold">
-            Our Vision & Mission
+          <h2 className="font-poppins md:text-4xl text-[26px] text-[var(--button-red)] font-bold">
+            Markets We Serve
           </h2>
           <div className="flex flex-col w-full items-center">
             <Image
@@ -160,7 +160,7 @@ function CertificationsSection() {
     <section>
       <div className="max-w-screen flex flex-col items-center py-16 px-6">
         <div className="flex flex-col items-center justify-center container gap-8">
-          <h2 className="font-poppins text-4xl text-[var(--button-red)] font-bold">
+          <h2 className="font-poppins md:text-4xl text-[26px] text-center text-[var(--button-red)] font-bold">
             Certifications & Legal Compliance
           </h2>
           <div className="flex flex-col w-full items-center">

@@ -13,7 +13,7 @@ export default function FeatureCard({
       <div className="w-12 h-12 flex items-center justify-center">
         <Image src={icon} alt={title} width={40} height={40} />
       </div>
-      <h3 className="text-center text-xl font-medium">{title}</h3>
+      <h3 className="text-center text-lg font-medium">{title}</h3>
     </div>
   );
 }

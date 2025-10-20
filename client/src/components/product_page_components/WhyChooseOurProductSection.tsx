@@ -5,7 +5,7 @@ export default function WhyChooseOurProductSection({ name, features }: { name: s
     <section>
       <div className="max-w-screen flex flex-col items-center py-16 px-6">
         <div className="flex flex-col items-center justify-center container gap-8">
-          <h2 className="font-poppins text-center text-4xl text-[var(--button-red)] font-bold">
+          <h2 className="font-poppins text-center lg:text-4xl text-[26px] text-[var(--button-red)] font-bold">
             Why Choose Our {name} Products
           </h2>
           <div className="flex flex-col w-full items-center">

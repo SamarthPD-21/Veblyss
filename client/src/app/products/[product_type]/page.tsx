@@ -74,7 +74,7 @@ function OtherProductsSection({
   return (
     <section className="relative w-full py-20 overflow-hidden">
       <div className="relative z-10 px-6">
-        <h1 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-[var(--button-red)] leading-tight drop-shadow-lg mb-8 text-center">
+        <h1 className="text-[26px] md:text-2xl lg:text-3xl font-extrabold text-[var(--button-red)] leading-tight drop-shadow-lg mb-8 text-center">
           Explore Other Products
         </h1>
 

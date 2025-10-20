@@ -78,16 +78,17 @@ export default function ContactPage() {
 
           {/* Social card */}
           <div className="rounded-2xl  p-8 flex flex-col items-center text-center">
-            <h3 className="text-[48px] font-bold text-[#792727] mb-2">
+            <h3 className="md:text-[48px] text-[26px] font-bold text-[#792727] mb-2">
               Social Media Links
             </h3>
             <div className="grid md:grid-cols-4 grid-cols-2 items-center gap-6 ">
+              <Link href="https://m.facebook.com/61582672670887/" target="_blank" rel="noopener noreferrer">
               <div 
               onClick={() => triggerPop("Coming soon!")}
               className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
                 <div className="w-12 h-12 flex items-center justify-center">
                   <img
-                    src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png"
+                    src="https://api.builder.io/api/v1/image/assets/TEMP/ec26709e9aca62af8f7ef1d837d635c77fc463df?width=69"
                     alt="Facebook logo"
                     width={54}
                     height={54}
@@ -96,6 +97,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="text-center text-xl font-medium">Facebook</h3>
               </div>
+              </Link>
               <Link
                 href="https://www.instagram.com/veblyss_global?igsh=eWd3OHFuNWc1d2M3"
                 target="_blank"

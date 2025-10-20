@@ -38,7 +38,7 @@ export default function Difference() {
   return (
     <section className="py-16">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-[30px] font-bold text-center text-[var(--button-red)]">
+        <h2 className="text-[26px] md:text-[30px] font-bold text-center text-[var(--button-red)]">
           What Makes Us Different
         </h2>
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
