@@ -63,9 +63,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-50 pt-2 transform transition-all duration-500 ease-out ${
-        mounted ? "translate-y-0 opacity-100" : "-translate-y-6 opacity-0"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 pt-2 transform transition-all duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "-translate-y-6 opacity-0"
+        }`}
       aria-label="Main navigation"
     >
       <div className="w-full px-4">
@@ -107,17 +106,17 @@ export default function Navbar() {
                 </button>
 
                 <div
-                  className={`absolute left-0 mt-2 w-48 bg-[var(--veblyss-color)] border border-white/20 rounded-lg shadow-lg py-2 z-50 transform transition-all duration-300 ease-out origin-top ${
-                    showDropdown
+                  className={`absolute right-0 top-0 mt-2 w-48 bg-[var(--veblyss-color)] border border-white/20 rounded-lg shadow-lg py-2 z-50 transform transition-all duration-300 ease-out origin-top 
+                    ${showDropdown
                       ? "opacity-100 scale-100 translate-y-0"
                       : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
-                  }`}
+                    }`}
                 >
                   {products.map((product) => (
                     <Link
                       key={product.name}
                       href={product.link}
-                      className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors"
+                      className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors duration-200 ease-out hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30"
                       onClick={() => setShowDropdown(false)}
                     >
                       {product.name}
@@ -175,19 +174,16 @@ export default function Navbar() {
                 <span className="sr-only">Toggle menu</span>
                 <div className="w-6 h-5 relative">
                   <span
-                    className={`block absolute h-0.5 w-6 bg-white left-0 top-0 transition-transform duration-200 ${
-                      mobileOpen ? "rotate-45 translate-y-2.5" : ""
-                    }`}
+                    className={`block absolute h-0.5 w-6 bg-white left-0 top-0 transition-transform duration-200 ${mobileOpen ? "rotate-45 translate-y-2.5" : ""
+                      }`}
                   />
                   <span
-                    className={`block absolute h-0.5 w-6 bg-white left-0 top-2.25 transition-all duration-200 ${
-                      mobileOpen ? "opacity-0" : ""
-                    }`}
+                    className={`block absolute h-0.5 w-6 bg-white left-0 top-2.25 transition-all duration-200 ${mobileOpen ? "opacity-0" : ""
+                      }`}
                   />
                   <span
-                    className={`block absolute h-0.5 w-6 bg-white left-0 top-4.5 transition-transform duration-200 ${
-                      mobileOpen ? "-rotate-45 -translate-y-2.5" : ""
-                    }`}
+                    className={`block absolute h-0.5 w-6 bg-white left-0 top-4.5 transition-transform duration-200 ${mobileOpen ? "-rotate-45 -translate-y-2.5" : ""
+                      }`}
                   />
                 </div>
               </button>
@@ -197,11 +193,10 @@ export default function Navbar() {
       </div>
       {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transform transition-opacity duration-300 text-[20px] ${
-          mobileOpen
+        className={`fixed inset-0 z-40 md:hidden transform transition-opacity duration-300 text-[20px] ${mobileOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
-        }`}
+          }`}
         aria-hidden={!mobileOpen}
       >
         <div
@@ -234,20 +229,18 @@ export default function Navbar() {
               >
                 <span>Products</span>
                 <span
-                  className={`transition-transform duration-150 ${
-                    mobileProductsOpen ? "rotate-180" : ""
-                  }`}
+                  className={`transition-transform duration-150 ${mobileProductsOpen ? "rotate-180" : ""
+                    }`}
                 >
                   ▾
                 </span>
               </button>
 
               <div
-                className={`${
-                  mobileProductsOpen
+                className={`${mobileProductsOpen
                     ? "max-h-96 py-2"
                     : "max-h-0 overflow-hidden"
-                } transition-all duration-200`}
+                  } transition-all duration-200`}
               >
                 <div className="flex flex-col gap-1">
                   {products.map((product) => (
