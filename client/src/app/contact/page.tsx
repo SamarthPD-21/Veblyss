@@ -1,5 +1,5 @@
 "use client";
-import Btn from '@/components/Btn';
+import ContactForm from '@/components/ContactForm';
 import { MapButton, WhatsappButton } from '@/components/ContactActions';
 import Link from 'next/link';
 import { triggerPop } from '@/components/Pop';
@@ -36,7 +36,7 @@ export default function ContactPage() {
           </p>
 
           <div className="w-full md:w-auto flex justify-center md:justify-end">
-            <Btn size="large">Contact Form</Btn>
+            <ContactForm />
           </div>
         </div>
         {/* Cards row */}
