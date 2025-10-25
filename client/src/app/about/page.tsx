@@ -3,6 +3,7 @@ import BackgroundImage from "@/components/BackgroundImage";
 import React from "react";
 import Image from "next/image";
 import FeatureCard from "@/components/FeatureCard";
+import WorldMap from "@/components/WorldMap";
 
 
 function HeroSection() {
@@ -187,14 +188,7 @@ function MarketsWeServeSection() {
             Markets We Serve
           </h2>
           <div className="flex flex-col w-full items-center">
-            <Image
-              src="/about/marketsweserve.jpg"
-              alt="Map and markets we serve - international export destinations"
-              height={400}
-              width={650}
-              className="w-[80%] md:w-[50%] object-cover"
-              loading="lazy"
-            />
+            <WorldMap />
           </div>
         </div>
       </div>
