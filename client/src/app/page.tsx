@@ -257,6 +257,13 @@ function Difference() {
 }
 
 function PartnersSection() {
+  const handleExploreClick = () => {
+    const productsSection = document.getElementById("products");
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="py-16">
       <div className="">
@@ -270,7 +277,7 @@ function PartnersSection() {
               services tailored for your market.
             </p>
             <div className="mt-6 flex justify-center md:justify-start">
-              <Btn size="large">Explore Products</Btn>
+              <Btn size="large" onClick={handleExploreClick}>Explore Products</Btn>
             </div>
           </div>
 
