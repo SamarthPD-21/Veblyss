@@ -16,7 +16,7 @@ export default function HeroSection({backgroundImage, mainHeading, subHeading, c
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg max-w-3xl">
               {mainHeading}
             </h1>
-            <p className="mt-6 text-base md:text-xl text-white/90 max-w-4xl">
+            <p className="mt-6 text-base text-justify md:text-xl text-white/90 max-w-4xl">
               {subHeading}
             </p>
             {catalogueLink && (
