@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { triggerPop } from "./Pop";
-import { link } from "fs";
 export default function Footer() {
   const socialIcons = [
     {
@@ -52,44 +51,12 @@ export default function Footer() {
         <div className="mx-auto px-4 py-4">
           <div>
             <div className="flex md:flex-row flex-col justify-between">
-              <div className="flex items-end-safe gap-3">
-                {socialIcons.map((icon, index) => (
-                  icon.link ? (
-                 <Link
-                    key={index}
-                    href={icon.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div
-                      key={index}
-                      className="w-9 h-9 rounded flex items-center justify-center"
-                    >
-                      <Image
-                        src={icon.src}
-                        alt={icon.alt}
-                        width={28}
-                        height={28}
-                      />
-                    </div>
-                  </Link>
-                  ) : (
-                    <div
-                      key={index}
-                      className="w-9 h-9 rounded flex items-center justify-center"
-                      onClick={() => triggerPop("Coming Soon!")}
-                    >
-                      <Image
-                        src={icon.src}
-                        alt={icon.alt}
-                        width={28}
-                        height={28}
-                      />
-                    </div>
-                  )
-                ))}
-              </div>
-
+              <Image
+                src="/logo.png"
+                alt="VeBlyss Logo"
+                width={350}
+                height={350}
+              />
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold">Quick Links</h3>
@@ -138,7 +105,10 @@ export default function Footer() {
                         ))}
                       </div>
                     </div>
-                    <Link href="/contact" className="text-sm text-white/90 transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/30">
+                    <Link
+                      href="/contact"
+                      className="text-sm text-white/90 transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-105 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/30"
+                    >
                       Contact
                     </Link>
                   </div>
@@ -148,6 +118,43 @@ export default function Footer() {
                   <h3 className="text-lg font-semibold">Contact</h3>
                   <div className="mt-3 text-sm text-white/90">
                     +xx xxxxx-xxxxx
+                  </div>
+                  <div className="flex items-end-safe gap-3">
+                    {socialIcons.map((icon, index) =>
+                      icon.link ? (
+                        <Link
+                          key={index}
+                          href={icon.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <div
+                            key={index}
+                            className="w-9 h-9 rounded flex items-center justify-center"
+                          >
+                            <Image
+                              src={icon.src}
+                              alt={icon.alt}
+                              width={28}
+                              height={28}
+                            />
+                          </div>
+                        </Link>
+                      ) : (
+                        <div
+                          key={index}
+                          className="w-9 h-9 rounded flex items-center justify-center"
+                          onClick={() => triggerPop("Coming Soon!")}
+                        >
+                          <Image
+                            src={icon.src}
+                            alt={icon.alt}
+                            width={28}
+                            height={28}
+                          />
+                        </div>
+                      )
+                    )}
                   </div>
                 </div>
 

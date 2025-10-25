@@ -120,12 +120,12 @@ function OtherProductsSection({
 
 type ProductTypeKey = keyof typeof productsData;
 
-export default function Products({
+export default async function Products({
   params,
 }: {
   params: { product_type: string };
 }) {
-  const { product_type } = params;
+  const { product_type } = await params;
 
   const productData = productsData[product_type as ProductTypeKey] as
     | productDataType
