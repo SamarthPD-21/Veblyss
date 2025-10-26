@@ -145,8 +145,8 @@ export const productsData = {
     "imitation-jewelry": {
         "heroSection": {
             "backgroundImage": "/images/products/jewelry/hero.png",
-            "mainHeading": "Imitation Jewelry",
-            "subHeading": "High-quality imitation and fashion jewelry made with lead & nickel-free materials, blending intricate Indian craftsmanship with contemporary global styles."
+            "mainHeading": "Imitation Jewellery",
+            "subHeading": "High-quality imitation and fashion Jewellery made with lead & nickel-free materials, blending intricate Indian craftsmanship with contemporary global styles."
         },
         "productRangeSections": [
             {
@@ -175,7 +175,7 @@ export const productsData = {
             }
         ],
         "whyChooseOurProductSection": {
-            "name": "Imitation Jewelry",
+            "name": "Imitation Jewellery",
             "features": [
                 "Lead & Nickel Free Materials",
                 "Intricate Indian Designs",
@@ -188,7 +188,7 @@ export const productsData = {
                 "icon": "/images/products/jewelry/fashion-retailers.png"
             },
             {
-                "title": "Jewelry Boutiques",
+                "title": "Jewellery Boutiques",
                 "icon": "/images/products/jewelry/luxury-boutiques.png"
             },
             {

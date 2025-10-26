@@ -13,7 +13,7 @@ export default function Navbar() {
   const products = [
     { name: "Leather Products", link: "/products/leather-products" },
     { name: "Copper Products", link: "/products/copper-products" },
-    { name: "Imitation Jewelry", link: "/products/imitation-jewelry" },
+    { name: "Imitation Jewellery", link: "/products/imitation-jewelry" },
     { name: "Handicrafts", link: "/products/handicrafts" },
     { name: "Sustainable Products", link: "/products/sustainable-products" },
     { name: "Agricultural Products", link: "/products/agricultural-products" },
