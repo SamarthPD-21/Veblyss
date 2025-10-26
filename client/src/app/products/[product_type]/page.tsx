@@ -48,7 +48,7 @@ function OtherProductsSection({
       type: "copper-products",
     },
     {
-      name: "Imitation Jewellery",
+      name: "Imitation Jewelry",
       image: "/home/imitation.png",
       type: "imitation-jewelry",
     },
