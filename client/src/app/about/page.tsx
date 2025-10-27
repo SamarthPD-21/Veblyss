@@ -1,4 +1,3 @@
-"use client";
 import BackgroundImage from "@/components/BackgroundImage";
 import React from "react";
 import Image from "next/image";
@@ -182,14 +181,12 @@ function Difference() {
 function MarketsWeServeSection() {
   return (
     <section>
-      <div className="max-w-screen flex flex-col items-center py-16 px-6">
+      <div className="max-w-screen flex flex-col items-center py-16">
         <div className="flex flex-col items-center justify-center container gap-8">
           <h2 className="font-poppins md:text-4xl text-[26px] text-[var(--button-red)] font-bold">
             Markets We Serve
           </h2>
-          <div className="flex flex-col w-full items-center">
             <WorldMap />
-          </div>
         </div>
       </div>
     </section>
