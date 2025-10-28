@@ -51,12 +51,14 @@ export default function Footer() {
         <div className="mx-auto px-4 py-4">
           <div>
             <div className="flex md:flex-row flex-col justify-between">
-              <Image
-                src="/logo.png"
-                alt="VeBlyss Logo"
-                width={350}
-                height={350}
-              />
+              <Link href="/">
+                <Image
+                  src="/logo.png"
+                  alt="VeBlyss Logo"
+                  width={350}
+                  height={350}
+                />
+              </Link>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold">Quick Links</h3>

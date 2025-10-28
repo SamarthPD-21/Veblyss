@@ -63,8 +63,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed inset-x-0 top-0 z-50 pt-2 transform transition-all duration-500 ease-out ${mounted ? "translate-y-0 opacity-100" : "-translate-y-6 opacity-0"
-        }`}
+      className={`fixed inset-x-0 top-0 z-50 pt-2 transform transition-all duration-500 ease-out ${
+        mounted ? "translate-y-0 opacity-100" : "-translate-y-6 opacity-0"
+      }`}
       aria-label="Main navigation"
     >
       <div className="w-full px-4">
@@ -72,13 +73,15 @@ export default function Navbar() {
           <div className="bg-[var(--veblyss-color)] rounded-lg px-6 py-3 flex items-center justify-between shadow-md border border-white/10 h-16 relative">
             {/* Left Logo */}
             <div className="flex items-center gap-4 w-[195px] h-[90px]">
-              <img
-                src="/logo.png"
-                alt="VeBlyss Global company logo"
-                width={195}
-                height={90}
-                className="w-[140px] h-auto object-contain zoom-in duration-300 ease-out hover:scale-105 active:translate-y-1"
-              />
+              <Link href="/">
+                <img
+                  src="/logo.png"
+                  alt="VeBlyss Global company logo"
+                  width={195}
+                  height={90}
+                  className="w-[140px] h-auto object-contain zoom-in duration-300 ease-out hover:scale-105 active:translate-y-1"
+                />
+              </Link>
             </div>
 
             {/* Navigation Links */}
@@ -107,9 +110,10 @@ export default function Navbar() {
 
                 <div
                   className={`absolute right-0 top-0 mt-2 w-48 bg-[var(--veblyss-color)] border border-white/20 rounded-lg shadow-lg py-2 z-50 transform transition-all duration-300 ease-out origin-top 
-                    ${showDropdown
-                      ? "opacity-100 scale-100 translate-y-0"
-                      : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+                    ${
+                      showDropdown
+                        ? "opacity-100 scale-100 translate-y-0"
+                        : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
                     }`}
                 >
                   {products.map((product) => (
@@ -174,16 +178,19 @@ export default function Navbar() {
                 <span className="sr-only">Toggle menu</span>
                 <div className="w-6 h-5 relative">
                   <span
-                    className={`block absolute h-0.5 w-6 bg-white left-0 top-0 transition-transform duration-200 ${mobileOpen ? "rotate-45 translate-y-2.5" : ""
-                      }`}
+                    className={`block absolute h-0.5 w-6 bg-white left-0 top-0 transition-transform duration-200 ${
+                      mobileOpen ? "rotate-45 translate-y-2.5" : ""
+                    }`}
                   />
                   <span
-                    className={`block absolute h-0.5 w-6 bg-white left-0 top-2.25 transition-all duration-200 ${mobileOpen ? "opacity-0" : ""
-                      }`}
+                    className={`block absolute h-0.5 w-6 bg-white left-0 top-2.25 transition-all duration-200 ${
+                      mobileOpen ? "opacity-0" : ""
+                    }`}
                   />
                   <span
-                    className={`block absolute h-0.5 w-6 bg-white left-0 top-4.5 transition-transform duration-200 ${mobileOpen ? "-rotate-45 -translate-y-2.5" : ""
-                      }`}
+                    className={`block absolute h-0.5 w-6 bg-white left-0 top-4.5 transition-transform duration-200 ${
+                      mobileOpen ? "-rotate-45 -translate-y-2.5" : ""
+                    }`}
                   />
                 </div>
               </button>
@@ -193,10 +200,11 @@ export default function Navbar() {
       </div>
       {/* Mobile menu overlay */}
       <div
-        className={`fixed inset-0 z-40 md:hidden transform transition-opacity duration-300 text-[20px] ${mobileOpen
+        className={`fixed inset-0 z-40 md:hidden transform transition-opacity duration-300 text-[20px] ${
+          mobileOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
-          }`}
+        }`}
         aria-hidden={!mobileOpen}
       >
         <div
@@ -205,7 +213,9 @@ export default function Navbar() {
         />
 
         <div className={`absolute top-16 right-0 left-0 px-4`}>
-          <div className={`bg-[var(--veblyss-color)] rounded-lg p-4 mx-auto w-full max-w-md shadow-lg`}>
+          <div
+            className={`bg-[var(--veblyss-color)] rounded-lg p-4 mx-auto w-full max-w-md shadow-lg`}
+          >
             <nav aria-label="Mobile navigation" className="flex flex-col gap-2">
               <Link
                 href="/"
@@ -229,18 +239,20 @@ export default function Navbar() {
               >
                 <span>Products</span>
                 <span
-                  className={`transition-transform duration-150 ${mobileProductsOpen ? "rotate-180" : ""
-                    }`}
+                  className={`transition-transform duration-150 ${
+                    mobileProductsOpen ? "rotate-180" : ""
+                  }`}
                 >
                   ▾
                 </span>
               </button>
 
               <div
-                className={`${mobileProductsOpen
+                className={`${
+                  mobileProductsOpen
                     ? "max-h-96 py-2"
                     : "max-h-0 overflow-hidden"
-                  } transition-all duration-200`}
+                } transition-all duration-200`}
               >
                 <div className="flex flex-col gap-1">
                   {products.map((product) => (
