@@ -257,12 +257,15 @@ function CertificationsSection() {
                   <div className="flex items-center justify-center gap-2 mb-3 flex-nowrap overflow-hidden">
                     {cert.images.map((img, i) => (
                       // smaller fixed-height images, do not wrap — stay in one row
-                      <img
-                        key={i}
-                        src={img}
-                        alt={`${cert.name} ${i + 1}`}
-                        className="h-10 md:h-12 w-auto object-contain flex-shrink-0"
-                      />
+                      <div key={i} className="flex-shrink-0 h-10 md:h-12">
+                        <Image
+                          src={img}
+                          alt={`${cert.name} ${i + 1}`}
+                          width={80}
+                          height={48}
+                          className="h-10 md:h-12 w-auto object-contain"
+                        />
+                      </div>
                     ))}
                   </div>
                   <div className="text-lg font-medium">{cert.name}</div>

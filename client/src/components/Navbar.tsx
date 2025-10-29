@@ -1,6 +1,6 @@
 "use client";
-// Use native <img> for static export reliability
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 
 export default function Navbar() {
@@ -74,12 +74,13 @@ export default function Navbar() {
             {/* Left Logo */}
             <div className="flex items-center gap-4 w-[195px] h-[90px]">
               <Link href="/">
-                <img
+                <Image
                   src="/logo.png"
                   alt="VeBlyss Global company logo"
                   width={195}
                   height={90}
                   className="w-[140px] h-auto object-contain zoom-in duration-300 ease-out hover:scale-105 active:translate-y-1"
+                  priority
                 />
               </Link>
             </div>
@@ -142,12 +143,13 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src="https://api.builder.io/api/v1/image/assets/TEMP/01dcb384f2c1c328b2985c852aa9ab955ff469c4?width=72"
                   alt="Email contact icon"
                   width={36}
                   height={36}
                   className="w-9 h-9 object-contain"
+                  unoptimized
                 />
               </Link>
               <Link
@@ -156,12 +158,13 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="ml-2"
               >
-                <img
+                <Image
                   src="https://api.builder.io/api/v1/image/assets/TEMP/73da6505901c7d3ffb216886239f3a763691faed?width=60"
                   alt="WhatsApp contact icon"
                   width={30}
                   height={30}
                   className="w-7 h-7 object-contain"
+                  unoptimized
                 />
               </Link>
             </div>

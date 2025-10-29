@@ -63,7 +63,8 @@ const ContactModal: React.FC = () => {
     const body = bodyLines.join('\r\n');
     const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Open the user's mail client (this behaves like other mailto links / Outlook links)
+    // Indicate sending state, open the user's mail client (mailto) and then clear
+    setSending(true);
     window.location.href = mailto;
 
     setConfirmation('opened mail client');
@@ -72,6 +73,7 @@ const ContactModal: React.FC = () => {
       setFormData({ firstName: '', lastName: '', phone: '', email: '', company: '', product: '', message: '' });
       setIsOpen(false);
       setConfirmation(null);
+      setSending(false);
     }, 1800);
   };
 

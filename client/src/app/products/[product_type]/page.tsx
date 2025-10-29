@@ -120,12 +120,15 @@ function OtherProductsSection({
 
 type ProductTypeKey = keyof typeof productsData;
 
-export default function Products({
+export default async function Products({
   params,
 }: {
   params: { product_type: string };
 }) {
-  const { product_type } = params;
+  // Next.js may provide `params` as a promise-like in some runtimes.
+  // Await `params` before using its properties to avoid the runtime error:
+  // "params should be awaited before using its properties".
+  const { product_type } = (await params) as { product_type: string };
 
   const productData = productsData[product_type as ProductTypeKey] as
     | productDataType

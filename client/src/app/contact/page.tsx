@@ -2,17 +2,16 @@
 import ContactForm from '@/components/ContactForm';
 import { MapButton, WhatsappButton } from '@/components/ContactActions';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ContactPage() {
   return (
     <section className="w-full overflow-hidden">
       {/* Hero - full bleed */}
       <div className="relative w-screen left-1/2 right-1/2 translate-x-[-50%] h-[500px] md:h-[500px]">
-        <img
-          src="/contact/hero.png"
-          alt="Contact page hero - VeBlyss Global building or products"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <div className="absolute inset-0 w-full h-full">
+          <Image src="/contact/hero.png" alt="Contact page hero - VeBlyss Global building or products" fill className="object-cover" priority />
+        </div>
 
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg tracking-tight max-w-4xl">
@@ -85,12 +84,13 @@ export default function ContactPage() {
               <div 
               className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
                 <div className="w-12 h-12 flex items-center justify-center">
-                  <img
+                  <Image
                     src="https://api.builder.io/api/v1/image/assets/TEMP/ec26709e9aca62af8f7ef1d837d635c77fc463df?width=69"
                     alt="Facebook logo"
                     width={54}
                     height={54}
                     className="hover:scale-110 transition-transform duration-200 cursor-pointer"
+                    unoptimized
                   />
                 </div>
                 <h3 className="text-center text-xl font-medium">Facebook</h3>
@@ -103,12 +103,13 @@ export default function ContactPage() {
               >
               <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
                 <div className="w-12 h-12 flex items-center justify-center">
-                  <img
+                  <Image
                     src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
                     alt="Instagram logo"
                     width={54}
                     height={54}
                     className="hover:scale-110 transition-transform duration-200 cursor-pointer"
+                    unoptimized
                   />
                 </div>
                 <h3 className="text-center text-xl font-medium">Instagram</h3>
@@ -121,12 +122,13 @@ export default function ContactPage() {
               >
                 <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
                   <div className="w-12 h-12 flex items-center justify-center">
-                    <img
+                    <Image
                       src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"
                       alt="LinkedIn logo"
                       width={54}
                       height={54}
                       className="hover:scale-110 transition-transform duration-200 cursor-pointer"
+                      unoptimized
                     />
                   </div>
                   <h3 className="text-center text-xl font-medium">Linkdin</h3>
@@ -139,12 +141,13 @@ export default function ContactPage() {
               >
                 <div className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
                   <div className="w-12 h-12 flex items-center justify-center">
-                    <img
+                    <Image
                       src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
                       alt="Email / Gmail icon"
                       width={54}
                       height={54}
                       className="hover:scale-110 transition-transform duration-200 cursor-pointer"
+                      unoptimized
                     />
                   </div>
                   <h3 className="text-center text-xl font-medium">Mail</h3>

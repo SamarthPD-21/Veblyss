@@ -22,17 +22,17 @@ export default function ProductRangeSections({
           {products.map((product) => (
             <div
               key={product.name}
-              className="bg-white/90 rounded-xl shadow-lg overflow-hidden flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+              className="bg-white/90 border-[10px] border-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
             >
               <Image
                 src={product.image}
                 alt={product.name}
                 width={384}
                 height={394}
-                className="w-full h-[210px] object-cover"
+                className="w-full h-[210px] object-cover "
               />
               <div className="p-6">
-                <h2 className="text-2xl text-gray-900 mb-3">
+                <h2 className="text-xl text-gray-900 mb-3">
                   {product.name}
                 </h2>
                 <div className="mt-4">
