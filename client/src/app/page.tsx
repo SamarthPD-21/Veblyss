@@ -73,7 +73,7 @@ function HeroSection() {
               </p>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
-                  <EnquireBtn />
+              <EnquireBtn />
             </div>
           </div>
         </div>
@@ -87,13 +87,12 @@ function WelcomeSection() {
     <section id="about" className="py-16">
       <div className="grid md:grid-cols-2 grid-cols-1 items-center gap-8">
         <div className="md:pr-0 pr-4">
-          <div className="">
+          <div className="relative w-full h-[460px] overflow-hidden rounded-r-3xl shadow-lg">
             <Image
               src="/home/about.png"
               alt="VeBlyss Global Artisan Heritage"
-              height={460}
-              width={706}
-              className="rounded-r-3xl w-full h-[460px] md:h-[600px] object-cover overflow-hidden shadow-lg"
+              fill
+              className="object-cover object-[50%_22%]"
             />
           </div>
         </div>
@@ -111,7 +110,7 @@ function WelcomeSection() {
             </p>
             <div className="mt-6">
               <Link href="/about">
-              <Btn size="medium">Read More</Btn>
+                <Btn size="medium">Read More</Btn>
               </Link>
             </div>
           </div>
@@ -203,7 +202,7 @@ function ProductCategoriesSection() {
 }
 
 function Difference() {
-   const features = [
+  const features = [
     {
       id: 1,
       title: "Experienced in Global Trade",
