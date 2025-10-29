@@ -194,14 +194,44 @@ function MarketsWeServeSection() {
 }
 
 function CertificationsSection() {
-  const certifications: string[] = [
-    "Import Export Code (IEC)",
-    "APEDA/ Spices Board/ Tea Board/ FIEO",
-    "GST, DGFT, MSME Udyam",
-    "CE, RoHS, FDA, ISO, REACH",
-    "PhytoSanitary Certificate",
-    "Certifiate of Origin (COO)",
+  const certifications: { name: string; images: string[] }[] = [
+    {
+      name: "Import Export Code (IEC)",
+      images: ["/about/certs/IEC.jpg"],
+    },
+    {
+      name: "APEDA / Spices Board / Tea Board / FIEO",
+      images: [
+        "/about/certs/APEDA.jpg",
+        "/about/certs/Spice-Board.jpeg",
+        "/about/certs/TeaBoard.jpg",
+        "/about/certs/FIEO.jpg",
+      ],
+    },
+    {
+      name: "GST, DGFT, MSME Udyam",
+      images: ["/about/certs/GST.jpg", "/about/certs/DGFT.jpg", "/about/certs/MSME.jpg"],
+    },
+    {
+      name: "CE, RoHS, FDA, ISO, REACH",
+      images: [
+        "/about/certs/CE.jpg",
+        "/about/certs/ROHS.jpg",
+        "/about/certs/FDA.jpg",
+        "/about/certs/ISO.jpg",
+        "/about/certs/REACH.jpg",
+      ],
+    },
+    {
+      name: "PhytoSanitary Certificate",
+      images: ["/about/certs/FAO.jpg"],
+    },
+    {
+      name: "Certificate of Origin (COO)",
+      images: ["/about/certs/COO.jpg"],
+    },
   ];
+
   return (
     <section>
       <div className="max-w-screen flex flex-col items-center py-16 px-6">
@@ -211,12 +241,23 @@ function CertificationsSection() {
           </h2>
           <div className="flex flex-col w-full items-center">
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {certifications.map((text, index) => (
+              {certifications.map((cert, index) => (
                 <div
                   key={index}
-                  className="bg-gray-100 p-4 rounded-lg text-center text-lg font-medium text-gray-800 shadow-md"
+                  className="bg-[#FEFEFE] p-4 rounded-lg text-center text-lg font-medium text-gray-800 shadow-md"
                 >
-                  {text}
+                  <div className="flex items-center justify-center gap-2 mb-3 flex-nowrap overflow-hidden">
+                    {cert.images.map((img, i) => (
+                      // smaller fixed-height images, do not wrap — stay in one row
+                      <img
+                        key={i}
+                        src={img}
+                        alt={`${cert.name} ${i + 1}`}
+                        className="h-10 md:h-12 w-auto object-contain flex-shrink-0"
+                      />
+                    ))}
+                  </div>
+                  <div className="text-lg font-medium">{cert.name}</div>
                 </div>
               ))}
             </div>
