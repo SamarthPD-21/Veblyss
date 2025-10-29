@@ -18,7 +18,7 @@ export default function ProductRangeSections({
         </h1>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-3 w-full">
           {products.map((product) => (
             <div
               key={product.name}
@@ -29,7 +29,7 @@ export default function ProductRangeSections({
                 alt={product.name}
                 width={384}
                 height={394}
-                className="w-full h-[240px] object-cover"
+                className="w-full h-[210px] object-cover"
               />
               <div className="p-6">
                 <h2 className="text-2xl text-gray-900 mb-3">

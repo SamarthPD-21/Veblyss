@@ -2,7 +2,6 @@
 import ContactForm from '@/components/ContactForm';
 import { MapButton, WhatsappButton } from '@/components/ContactActions';
 import Link from 'next/link';
-import { triggerPop } from '@/components/Pop';
 
 export default function ContactPage() {
   return (
@@ -29,7 +28,7 @@ export default function ContactPage() {
       <div className="md:px-32 px-4 mx-auto py-12 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0] rounded-3xl shadow-lg flex flex-col gap-8">
         {/* Intro area */}
         <div className="w-full bg-transparent rounded-xl md:p-8 flex flex-col md:flex-row items-center gap-6">
-          <p className="text-center text-[#4b2f2f] max-w-2xl mx-auto text-base leading-relaxed font-medium">
+          <p className="text-center text-[#4b2f2f] max-w-2xl mx-auto text-base leading-relaxed font-medium text-xl">
             We&apos;d love to hear from you. Whether you&apos;re interested in
             our wholesale products, have a query, or want to explore
             collaborations — just reach out.
@@ -84,7 +83,6 @@ export default function ContactPage() {
             <div className="grid md:grid-cols-4 grid-cols-2 items-center gap-6 ">
               <Link href="https://m.facebook.com/61582672670887/" target="_blank" rel="noopener noreferrer">
               <div 
-              onClick={() => triggerPop("Coming soon!")}
               className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
                 <div className="w-12 h-12 flex items-center justify-center">
                   <img
@@ -135,7 +133,7 @@ export default function ContactPage() {
                 </div>
               </Link>
               <Link
-                href="mailto:Info@veblyssglobal.com"
+                href="mailto:sales@veblyssglobal.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -102,7 +102,7 @@ function WelcomeSection() {
             <h2 className="text-[26px] md:text-3xl font-bold text-[var(--button-red)]">
               Exporting India&apos;s Finest to the World
             </h2>
-            <p className="mt-4 text-justify text-gray-700">
+            <p className="mt-4 text-justify text-gray-700 text-xl">
               Based in Bengaluru, VeBlyss Global connects India&apos;s artisan
               heritage with international markets. We specialize in ethically
               sourced, premium exports including imitation jewelry, copperware,

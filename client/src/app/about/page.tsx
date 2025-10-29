@@ -2,7 +2,6 @@ import BackgroundImage from "@/components/BackgroundImage";
 import React from "react";
 import Image from "next/image";
 import FeatureCard from "@/components/FeatureCard";
-import WorldMap from "@/components/WorldMap";
 
 
 function HeroSection() {
@@ -17,19 +16,19 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/25 to-transparent flex items-center">
         <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="flex flex-col items-center justify-center text-center py-16 -mt-4 md:-mt-8 lg:-mt-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg">
-                About Veblyss Global Pvt Ltd
-              </h1>
-              <p className="text-[24px] text-white/90 mt-6 max-w-2xl">
-                Where Indian Craft Meets Global Standards
-              </p>
-            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg">
+              About Veblyss Global Pvt Ltd
+            </h1>
+            <p className="text-[24px] text-white/90 mt-6 max-w-2xl">
+              Where Indian Craft Meets Global Standards
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
-  
-  
+
+
 }
 function WhoWeAreSection() {
   return (
@@ -123,13 +122,13 @@ function VisionAndMissionSection() {
   );
 }
 function Difference() {
-   const features = [
+  const features = [
     {
       id: 1,
       title: "Ethical & Sustainable Sourcing",
       icon: "https://api.builder.io/api/v1/image/assets/TEMP/c287701095fc37491a96a7eef19e5c880ec8d4d9?width=80",
     },
-    
+
     {
       id: 2,
       title: "Certified & Compliant",
@@ -144,7 +143,7 @@ function Difference() {
       id: 4,
       title: "Eco-Friendly Packaging",
       icon: "https://api.builder.io/api/v1/image/assets/TEMP/8ce3347b26f3befa41dcb5ffc3db4facf5f5091a?width=80",
-    },   
+    },
     {
       id: 5,
       title: "Timely Delivery & Quality Assurance",
@@ -155,7 +154,7 @@ function Difference() {
       title: "End-to-End Export Support",
       icon: "https://api.builder.io/api/v1/image/assets/TEMP/caa26d32b3d2c1006ea850e4554f04792d935332?width=80",
     },
-    
+
   ];
 
   return (
@@ -186,7 +185,16 @@ function MarketsWeServeSection() {
           <h2 className="font-poppins md:text-4xl text-[26px] text-[var(--button-red)] font-bold">
             Markets We Serve
           </h2>
-            <WorldMap />
+          <div className="flex flex-col w-full items-center">
+            <Image
+              src="/about/marketsweserve.jpg"
+              alt="Map and markets we serve - international export destinations"
+              height={400}
+              width={650}
+              className="w-[80%] md:w-[50%] object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </section>

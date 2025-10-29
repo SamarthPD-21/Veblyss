@@ -22,6 +22,8 @@ const ContactModal: React.FC = () => {
     product: '',
     message: '',
   });
+  const [sending, setSending] = useState(false);
+  const [confirmation, setConfirmation] = useState<string | null>(null);
 
   const overlayRef = useRef<HTMLDivElement | null>(null);
 
@@ -45,9 +47,32 @@ const ContactModal: React.FC = () => {
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // TODO: replace with API call
-    setIsOpen(false);
+    // Build a mailto: link that fills the user's mail client (Outlook) with the form contents
+    const to = 'info@veblyss.com';
+    const subject = `Veblyss contact: ${formData.firstName || ''} ${formData.lastName || ''}`.trim();
+    const bodyLines = [
+      `Name: ${formData.firstName || ''} ${formData.lastName || ''}`.trim(),
+      `Company: ${formData.company || ''}`,
+      `Product interest: ${formData.product || ''}`,
+      `Phone: ${formData.phone || ''}`,
+      `Email: ${formData.email || ''}`,
+      '',
+      'Message:',
+      formData.message || '',
+    ];
+    const body = bodyLines.join('\r\n');
+    const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    // Open the user's mail client (this behaves like other mailto links / Outlook links)
+    window.location.href = mailto;
+
+    setConfirmation('opened mail client');
+    // optionally clear form and close modal shortly after
+    setTimeout(() => {
+      setFormData({ firstName: '', lastName: '', phone: '', email: '', company: '', product: '', message: '' });
+      setIsOpen(false);
+      setConfirmation(null);
+    }, 1800);
   };
 
   return (
@@ -115,7 +140,16 @@ const ContactModal: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-center gap-3">
-                  <button type="submit" className="px-4 py-2 rounded-md bg-[var(--button-red)] text-white">Send Message</button>
+                  {confirmation ? (
+                    <div className="text-sm font-semibold text-green-600">{confirmation}</div>
+                  ) : (
+                    <button
+                      type="submit"
+                      disabled={sending}
+                      className={`px-4 py-2 rounded-md text-white ${sending ? 'bg-gray-400' : 'bg-[var(--button-red)]'}`}>
+                      {sending ? 'Sending...' : 'Send Message'}
+                    </button>
+                  )}
                 </div>
               </form>
             </div>
