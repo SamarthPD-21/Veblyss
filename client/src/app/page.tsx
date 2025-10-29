@@ -93,7 +93,7 @@ function WelcomeSection() {
               alt="VeBlyss Global Artisan Heritage"
               height={460}
               width={706}
-              className="rounded-r-3xl w-full md:h-[360px] h-[240px] object-cover shadow-lg"
+              className="rounded-r-3xl w-full h-[460px] md:h-[600px] object-cover overflow-hidden shadow-lg"
             />
           </div>
         </div>
