@@ -17,7 +17,7 @@ export default function EnquirePopup({
   onClose,
   message = "Hello, I am interested in your product.",
   whatsappNumber = "919999999999",
-  email = "info@veblyss.com",
+  email = "sales@veblyss.com",
   subject = "Enquiry from website",
 }: EnquirePopupProps) {
   // Prevent body scroll when popup is open
