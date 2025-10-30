@@ -49,7 +49,7 @@ function WhoWeAreSection() {
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--button-red)]">
               Who we are
             </h2>
-            <p className="mt-4 m-4 text-justify text-[16px] text-gray-700">
+            <p className="mt-4 m-4 text-justify text-[18px] text-gray-700">
               At VeBlyss Global, we are committed to delivering handpicked,
               high-quality products to global markets. From artisan-made leather
               goods to Eco-conscious lifestyle products, we blend{" "}
@@ -57,7 +57,7 @@ function WhoWeAreSection() {
               ensuring every shipment meets global{" "}
               <strong>quality, compliance, and design standards.</strong>
             </p>
-            <p className="mt-4 m-4 text-justify text-[16px] text-gray-700">
+            <p className="mt-4 m-4 text-justify text-[18px] text-gray-700">
               Based in Bengaluru, India – the heart of traditional craftsmanship
               and modern manufacturing – our team bridges{" "}
               <strong>heritage and trend</strong>. We specialize in curating,
@@ -68,7 +68,7 @@ function WhoWeAreSection() {
               </strong>{" "}
               to clients worldwide.
             </p>
-            <p className="mt-4 mx-4 text-justify text-[16px] text-gray-700">
+            <p className="mt-4 mx-4 text-justify text-[18px] text-gray-700">
               We don’t just export products{" "}
               <strong>
                 we deliver excellence, reliability, and compliance in every
@@ -94,7 +94,7 @@ function VisionAndMissionSection() {
             <div className="text-gray-700 md:max-w-[50%] md:p-0 p-4 text-left flex flex-col gap-12">
               <h3 className="font-extrabold text-2xl md:text-start text-center">Our Vision</h3>
 
-              <p className="text-[16px] text-justify">
+              <p className="text-[18px] text-justify">
                 To be a global leader in exporting Indian-crafted fashion,
                 lifestyle, and essential products — showcasing the best of
                 quality and craftsmanship while delivering trust and value to
@@ -104,7 +104,7 @@ function VisionAndMissionSection() {
             <div className="text-gray-700 md:max-w-[50%] md:p-0 p-4 pr-0 text-left flex flex-col gap-12">
               <h3 className="font-extrabold text-center md:text-start text-2xl">Our Mission</h3>
 
-              <ul className="list-disc list-inside space-y-2 text-[16px] ">
+              <ul className="list-disc list-inside space-y-2 text-[18px] ">
                 <li>
                   To empower Indian artisans and manufacturers by giving them
                   global reach.
