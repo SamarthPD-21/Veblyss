@@ -5,23 +5,31 @@ import Image from "next/image";
 import Btn from "@/components/Btn";
 import SlideShow from "@/components/SlideShow";
 import EnquireBtn from "@/components/EnquireBtn";
+import EnquirePopup from "@/components/EnquirePopup";
 import { triggerPop } from "@/components/Pop";
 import Link from "next/link";
+import { useState, useCallback } from "react";
 
 const Card = ({
   title,
   description,
   image,
   slug,
+  onEnquire,
+  hoverDisabled,
 }: {
   title: string;
   description: string;
   image: string;
   slug?: string;
+  onEnquire: () => void;
+  hoverDisabled: boolean;
 }) => (
   <div
     key={title}
-    className="bg-white/90 rounded-xl shadow-lg overflow-hidden flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+    className={`bg-white/90 rounded-xl shadow-lg overflow-hidden flex flex-col items-center text-center transition-transform duration-300 ${
+      hoverDisabled ? "" : "hover:scale-105"
+    }`}
   >
     <Image
       src={image}
@@ -45,8 +53,8 @@ const Card = ({
         ) : (
           <Btn size="small">Explore</Btn>
         )}
-        <EnquireBtn size="small" />
-        <div onClick={() => triggerPop("Sorry, we’re working on it! Meanwhile, feel free to send us an enquiry message.")}><Btn size="small">Catalogue</Btn></div>
+        <Btn size="small" onClick={onEnquire}>Enquire</Btn>
+        <div onClick={() => triggerPop("Sorry, we're working on it! Meanwhile, feel free to send us an enquiry message.")}><Btn size="small">Catalogue</Btn></div>
       </div>
     </div>
   </div>
@@ -121,6 +129,18 @@ function WelcomeSection() {
 }
 
 function ProductCategoriesSection() {
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<string>("");
+
+  const handleEnquire = useCallback((productName: string) => {
+    setSelectedProduct(productName);
+    setPopupOpen(true);
+  }, []);
+
+  const handleClose = useCallback(() => {
+    setPopupOpen(false);
+  }, []);
+
   const productCategories = [
     {
       id: 1,
@@ -192,11 +212,20 @@ function ProductCategoriesSection() {
                 description={product.description}
                 image={product.image}
                 slug={product.slug}
+                onEnquire={() => handleEnquire(product.title)}
+                hoverDisabled={popupOpen}
               />
             </div>
           ))}
         </div>
       </div>
+
+      {/* Single shared popup for all products */}
+      <EnquirePopup
+        open={popupOpen}
+        onClose={handleClose}
+        message={`Hi, I'm interested in ${selectedProduct}`}
+      />
     </section>
   );
 }

@@ -1,13 +1,26 @@
 "use client";
-import React from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
-// Btn intentionally not used here; EnquireBtn replaces it
-import EnquireBtn from "@/components/EnquireBtn";
+import Btn from "@/components/Btn";
+import EnquirePopup from "@/components/EnquirePopup";
+
 export default function ProductRangeSections({
   products,
 }: {
   products: { name: string; image: string }[];
 }) {
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<string>("");
+
+  const handleEnquire = useCallback((productName: string) => {
+    setSelectedProduct(productName);
+    setPopupOpen(true);
+  }, []);
+
+  const handleClose = useCallback(() => {
+    setPopupOpen(false);
+  }, []);
+
   return (
     <section className="relative w-full py-20 overflow-hidden">
       {/* Content */}
@@ -22,7 +35,9 @@ export default function ProductRangeSections({
           {products.map((product) => (
             <div
               key={product.name}
-              className="bg-white/90 border-[10px] border-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+              className={`bg-white/90 border-[10px] border-white rounded-xl shadow-lg overflow-hidden flex flex-col items-center text-center transition-transform duration-300 ${
+                popupOpen ? "" : "hover:scale-105"
+              }`}
             >
               <Image
                 src={product.image}
@@ -36,13 +51,26 @@ export default function ProductRangeSections({
                   {product.name}
                 </h2>
                 <div className="mt-4">
-                  <EnquireBtn message={`Hi, I'm interested in ${product.name}`} className="mt-0 bg-[var(--button-red)] text-white" />
+                  <Btn 
+                    size="medium"
+                    className="mt-0 bg-[var(--button-red)] text-white" 
+                    onClick={() => handleEnquire(product.name)}
+                  >
+                    Enquire
+                  </Btn>
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Single shared popup for all products */}
+      <EnquirePopup
+        open={popupOpen}
+        onClose={handleClose}
+        message={`Hi, I'm interested in ${selectedProduct}`}
+      />
     </section>
   );
 }
