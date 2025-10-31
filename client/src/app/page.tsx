@@ -309,13 +309,13 @@ function PartnersSection() {
             </div>
           </div>
 
-          <div className="md:flex-none ml-4 md:w-[705px]">
+          <div className="md:flex-none ml-4 md:w-[705px] md:h-[420px] overflow-hidden rounded-l-3xl  ">
             <Image
-              src="https://api.builder.io/api/v1/image/assets/TEMP/f357956c466d4af5feea16f7a25acec44c4dab9b?width=1410"
+              src="./home/Global.jpg"
               alt="Global Partnership"
               width={705}
               height={460}
-              className="rounded-lg object-cover"
+              className="object-cover object-[50%_22%]"
             />
           </div>
         </div>

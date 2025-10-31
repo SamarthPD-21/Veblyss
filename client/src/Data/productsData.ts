@@ -214,7 +214,7 @@ export const productsData = {
       },
     ],
   },
-  handicrafts: {
+  "handicrafts": {
     heroSection: {
       backgroundImage: "/images/products/handicrafts/hero.png",
       mainHeading: "Indian Handicrafts",
@@ -385,6 +385,10 @@ export const productsData = {
       {
         name: "Organic products",
         image: "/images/products/agriculture/organic.png",
+      },
+      {
+        name: "Frozen foods",
+        image: "/images/products/agriculture/FrozenFood.jpg",
       },
     ],
     whyChooseOurProductSection: {
