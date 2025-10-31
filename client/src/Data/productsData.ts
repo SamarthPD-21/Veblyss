@@ -42,7 +42,7 @@ export const productsData = {
         "Modern Design",
       ],
     },
-    
+
     idealForSection: [
       {
         title: "Health & Wellness Stores",
@@ -151,7 +151,7 @@ export const productsData = {
       backgroundImage: "/images/products/jewelry/hero.png",
       mainHeading: "Imitation Jewellery",
       subHeading:
-        "High-quality imitation and fashion jewelry made with lead & nickel-free materials, blending intricate Indian craftsmanship with contemporary global styles.",
+        "Trendy and timeless fashion jewellery blending traditional craftsmanship with contemporary fashion, offering affordable luxury for style-conscious customers worldwide.",
     },
     productRangeSections: [
       {
@@ -311,7 +311,7 @@ export const productsData = {
         image: "/images/products/sustainable/rice.png",
       },
       {
-        name: "Coconut shell kitchenware",
+        name: "Wooden Beer Mugs",
         image: "/images/products/sustainable/kitchenware.png",
       },
       {

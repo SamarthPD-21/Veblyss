@@ -50,15 +50,18 @@ export default function Footer() {
       <div className="w-full bg-[var(--veblyss-color)]/95 text-white">
         <div className="mx-auto px-4 py-4">
           <div>
-            <div className="flex md:flex-row flex-col justify-between">
+            <div className="grid md:grid-cols-2 grid-cols-1">
+              <div className="w-full md:h-[200px] h-[100px]">
               <Link href="/">
                 <Image
                   src="/logo.png"
                   alt="VeBlyss Logo"
                   width={350}
                   height={350}
+                  className="w-full h-full object-cover"
                 />
               </Link>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                   <h3 className="text-lg font-semibold">Quick Links</h3>
