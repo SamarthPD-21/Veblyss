@@ -45,8 +45,8 @@ export function EnquireActions({ message }: { message?: string }) {
 
 export function MapButton() {
   const address =
-    "VeBlyss Global Pvt Ltd, 2619, 36th A Cross, 26th Main, 4th T Block, 9th Block Post, Jayanagar, Bengaluru, Karnataka - 560069";
-  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+    "VeBlyss Global Pvt Ltd, 2619, 36th A Cross, 26th Main, 4th T Block, 9th Block Post, Jayanagar, Bengaluru, Karnataka - 560041";
+  const mapsUrl = `https://maps.app.goo.gl/TUarG1jS4cA7ViCk6`;
 
   const openMap = () => {
     window.open(mapsUrl, "_blank", "noopener,noreferrer");

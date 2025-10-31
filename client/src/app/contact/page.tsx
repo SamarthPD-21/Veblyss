@@ -67,7 +67,7 @@ export default function ContactPage() {
                     <br />
                     4th T Block, 9th Block Post,
                     <br />
-                    Jayanagar, Bengaluru, Karnataka - 560069
+                    Jayanagar, Bengaluru, Karnataka - 560041
                   </p>
                 </div>
               </div>
