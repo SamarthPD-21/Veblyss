@@ -159,23 +159,23 @@ export const productsData = {
         image: "/images/products/jewelry/oxidized.png",
       },
       {
-        name: "Designer anti-tarnish necklaces",
+        name: "Designer Anti-Tarnish Necklaces",
         image: "/images/products/jewelry/necklace.png",
       },
       {
-        name: "Anti-tarnish Pendant sets",
+        name: "Anti-Tarnish Pendant Sets",
         image: "/images/products/jewelry/pendent.png",
       },
       {
-        name: "Designer stud earrings",
+        name: "Designer Stud Earrings",
         image: "/images/products/jewelry/earrings.png",
       },
       {
-        name: "Designer solitaire bracelets",
+        name: "Designer Solitaire Bracelets",
         image: "/images/products/jewelry/bracelets.png",
       },
       {
-        name: "Rose gold bracelet",
+        name: "Rose Gold Bracelet",
         image: "/images/products/jewelry/rose-gold.png",
       },
     ],
@@ -223,23 +223,23 @@ export const productsData = {
     },
     productRangeSections: [
       {
-        name: "Wooden décor",
+        name: "Wooden Décor",
         image: "/images/products/handicrafts/decor.png",
       },
       {
-        name: "Metal art",
+        name: "Metal Art",
         image: "/images/products/handicrafts/metal-art.png",
       },
       {
-        name: "Brass idols",
+        name: "Brass Idols",
         image: "/images/products/handicrafts/brass-idols.png",
       },
       {
-        name: "Festive items",
+        name: "Festive Items",
         image: "/images/products/handicrafts/festival.png",
       },
       {
-        name: "Hand-painted boxes",
+        name: "Hand-Painted Boxes",
         image: "/images/products/handicrafts/boxes.png",
       },
       {
@@ -247,15 +247,15 @@ export const productsData = {
         image: "/images/products/handicrafts/pottery.png",
       },
       {
-        name: "Handwoven home accents",
+        name: "Handwoven Home Accents",
         image: "/images/products/handicrafts/accents.png",
       },
       {
-        name: "Terracotta items",
+        name: "Terracotta Items",
         image: "/images/products/handicrafts/terracotta.png",
       },
       {
-        name: "Gift items",
+        name: "Gift Items",
         image: "/images/products/handicrafts/gift.png",
       },
     ],
@@ -303,7 +303,7 @@ export const productsData = {
     },
     productRangeSections: [
       {
-        name: "Bamboo & jute bags",
+        name: "Bamboo & Jute Bags",
         image: "/images/products/sustainable/bags.png",
       },
       {
@@ -315,11 +315,11 @@ export const productsData = {
         image: "/images/products/sustainable/beer-mugs.png",
       },
       {
-        name: "Plantable seed paper gifts",
+        name: "Plantable Seed Paper Gifts",
         image: "/images/products/sustainable/gifts.png",
       },
       {
-        name: "Cotton apparel",
+        name: "Cotton Apparel",
         image: "/images/products/sustainable/apparel.png",
       },
       {
@@ -383,11 +383,11 @@ export const productsData = {
         image: "/images/products/agriculture/tea.png",
       },
       {
-        name: "Organic products",
+        name: "Organic Products",
         image: "/images/products/agriculture/organic.png",
       },
       {
-        name: "Frozen foods",
+        name: "Frozen Foods",
         image: "/images/products/agriculture/FrozenFood.jpg",
       },
     ],
@@ -401,7 +401,7 @@ export const productsData = {
     },
     idealForSection: [
       {
-        title: "Organic and natural retailers",
+        title: "Organic and Natural Retailers",
         icon: "/images/products/agriculture/organic-natural.png",
       },
       {
@@ -413,7 +413,7 @@ export const productsData = {
         icon: "/images/products/agriculture/restaurants.png",
       },
       {
-        title: "Wellness brands",
+        title: "Wellness Brands",
         icon: "/images/products/agriculture/wellness-brands.png",
       },
       {
@@ -421,7 +421,7 @@ export const productsData = {
         icon: "/images/products/agriculture/exporters.png",
       },
       {
-        title: "Eco communities",
+        title: "Eco Communities",
         icon: "/images/products/agriculture/eco-communities.png",
       },
     ],
