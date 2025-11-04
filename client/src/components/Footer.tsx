@@ -174,7 +174,17 @@ export default function Footer() {
                     <br />
                     Jayanagar, Bengaluru,
                     <br />
-                    Karnataka - 560069
+                    Karnataka - 560041
+                  </div>
+                  <br />
+                  <div className="mt-3 text-sm text-white/90">
+                    VeBlyss Limited
+                    <br />
+                    71-75 Shelton Street,
+                    <br />
+                    Covent Garden, London,
+                    <br />
+                    WC2H 9JQ, United Kingdom
                   </div>
                 </div>
               </div>

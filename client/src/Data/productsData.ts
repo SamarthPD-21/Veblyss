@@ -307,8 +307,8 @@ export const productsData = {
         image: "/images/products/sustainable/bags.png",
       },
       {
-        name: "Rice",
-        image: "/images/products/sustainable/rice.png",
+        name: "Stationery",
+        image: "/images/products/sustainable/stationery.png",
       },
       {
         name: "Wooden Beer Mugs",
