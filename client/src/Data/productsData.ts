@@ -312,7 +312,7 @@ export const productsData = {
       },
       {
         name: "Wooden Beer Mugs",
-        image: "/images/products/sustainable/kitchenware.png",
+        image: "/images/products/sustainable/beer-mugs.png",
       },
       {
         name: "Plantable seed paper gifts",
