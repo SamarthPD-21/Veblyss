@@ -26,8 +26,8 @@ export default function ContactPage() {
       {/* Content: Pink panel + cards */}
       <div className="md:px-32 px-4 mx-auto py-12 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0] rounded-3xl shadow-lg flex flex-col gap-8">
         {/* Intro area */}
-        <div className="w-full bg-transparent rounded-xl md:p-8 flex flex-col md:flex-row items-center gap-6">
-          <p className="text-center text-[#4b2f2f] max-w-2xl mx-auto text-base leading-relaxed font-medium text-xl">
+        <div className="w-full bg-transparent rounded-xl md:p-8 flex flex-col items-center gap-14">
+          <p className="text-center text-[#4b2f2f] max-w-2xl mx-auto leading-relaxed font-medium text-xl">
             We&apos;d love to hear from you. Whether you&apos;re interested in
             our wholesale products, have a query, or want to explore
             collaborations — just reach out.
@@ -36,10 +36,7 @@ export default function ContactPage() {
           <div className="w-full md:w-auto flex justify-center md:justify-end">
             <ContactForm />
           </div>
-        </div>
-        {/* Cards row */}
-        <div className="mt-8 flex flex-col items-center">
-          {/* Contact card */}
+
           <div className="rounded-2xl w-fit p-6 bg-white shadow-lg flex flex-col justify-between">
             <div className="flex items-start gap-4">
               <div className="text-3xl">📞</div>
@@ -48,7 +45,8 @@ export default function ContactPage() {
                   <h3 className="font-bold text-[30px] text-[#792727]">Contact:</h3>
                   <WhatsappButton />
                 </div>
-                <p className="mt-3 text-gray-700 text-base">+xx xxxxxxxxxx</p>
+                <p className="mt-3 text-gray-700 text-base">+91 80265 82427</p>
+                <p className="mt-1 text-gray-700 text-base">+91 98448 44225</p>
               </div>
             </div>
 
@@ -76,7 +74,7 @@ export default function ContactPage() {
 
           {/* Social card */}
           <div className="rounded-2xl  p-8 flex flex-col items-center text-center">
-            <h3 className="md:text-[48px] text-[26px] font-bold text-[#792727] mb-2">
+            <h3 className="text-[26px] md:text-3xl font-bold text-[var(--button-red)] text-center mb-2">
               Social Media Links
             </h3>
             <div className="grid md:grid-cols-4 grid-cols-2 items-center gap-6 ">
