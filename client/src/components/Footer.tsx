@@ -10,7 +10,7 @@ export default function Footer() {
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/a485700930340924e8ea7079d9d2f12894a62a98?width=70",
       alt: "WhatsApp",
-      link: "https://wa.me/918904592009?text=Hello%2C%20I%27m%20interested%20in%20your%20%5BProduct%20Name%5D%20from%20VeBlyss%20Global.%20Please%20share%20more%20details.",
+      link: "https://wa.me/919844844225?text=Hello%2C%20I%27m%20interested%20in%20your%20%5BProduct%20Name%5D%20from%20VeBlyss%20Global.%20Please%20share%20more%20details.",
     },
     {
       src: "https://cdn-icons-png.flaticon.com/512/3536/3536505.png",
@@ -38,17 +38,17 @@ export default function Footer() {
   const dropdownRef = React.useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-      const handleClickOutside = (e: MouseEvent) => {
-        if (
-          dropdownRef.current &&
-          !dropdownRef.current.contains(e.target as Node)
-        ) {
-          setShowDropdown(false);
-        }
-      };
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
+        setShowDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const products = [
     { name: "Leather Products", link: "/products/leather-products" },
@@ -65,19 +65,19 @@ export default function Footer() {
         <div className="mx-auto px-4 py-4">
           <div>
             <div className="grid md:grid-cols-2 grid-cols-1">
-              <div className="w-full md:h-[200px] h-[100px]">
-              <Link href="/">
-                <Image
-                  src="/logo.png"
-                  alt="VeBlyss Logo"
-                  width={350}
-                  height={350}
-                  className="w-full h-full object-cover"
-                />
-              </Link>
+              <div className="w-full md:h-[200px] h-[150px]">
+                <Link href="/">
+                  <Image
+                    src="/logo.png"
+                    alt="VeBlyss Logo"
+                    width={350}
+                    height={350}
+                    className="w-full h-full object-cover"
+                  />
+                </Link>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
+              <div className="flex md:flex-row flex-col gap-8">
+                <div className="w-1/2 md:w-1/3">
                   <h3 className="text-lg font-semibold">Quick Links</h3>
                   <div className="mt-3 relative space-y-2 gap-2 flex flex-col align-items-start">
                     {/* Shared animation classes for quick links: subtle lift, color change and scale */}
@@ -133,23 +133,38 @@ export default function Footer() {
                   </div>
                 </div>
 
-                <div>
-                  <h3 className="text-lg font-semibold">Contact</h3>
-                  <div className="mt-3 text-sm text-white/90">
-                    <a href="tel:+918026582427">+91 80 2658 2427</a>
-                  </div>
-                  <div className="flex items-end-safe gap-3">
-                    {socialIcons.map((icon, index) =>
-                      icon.link ? (
-                        <Link
-                          key={index}
-                          href={icon.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                <div className="flex flex-wrap gap-8 w-1/2 md:w-2/3">
+                  <div>
+                    <h3 className="text-lg font-semibold">Contact</h3>
+                    <div className="mt-3 text-sm text-white/90">
+                      <a href="tel:+918026582427">+91 80 2658 2427</a>
+                    </div>
+                    <div className="flex items-end-safe gap-3">
+                      {socialIcons.map((icon, index) =>
+                        icon.link ? (
+                          <Link
+                            key={index}
+                            href={icon.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <div
+                              key={index}
+                              className="w-9 h-9 rounded flex items-center justify-center"
+                            >
+                              <Image
+                                src={icon.src}
+                                alt={icon.alt}
+                                width={28}
+                                height={28}
+                              />
+                            </div>
+                          </Link>
+                        ) : (
                           <div
                             key={index}
                             className="w-9 h-9 rounded flex items-center justify-center"
+                            onClick={() => triggerPop("Coming Soon!")}
                           >
                             <Image
                               src={icon.src}
@@ -158,47 +173,34 @@ export default function Footer() {
                               height={28}
                             />
                           </div>
-                        </Link>
-                      ) : (
-                        <div
-                          key={index}
-                          className="w-9 h-9 rounded flex items-center justify-center"
-                          onClick={() => triggerPop("Coming Soon!")}
-                        >
-                          <Image
-                            src={icon.src}
-                            alt={icon.alt}
-                            width={28}
-                            height={28}
-                          />
-                        </div>
-                      )
-                    )}
+                        )
+                      )}
+                    </div>
                   </div>
-                </div>
 
-                <div>
-                  <h3 className="text-lg font-semibold">Location</h3>
-                  <div className="mt-3 text-sm text-white/90">
-                    VeBlyss Global Pvt Ltd
+                  <div>
+                    <h3 className="text-lg font-semibold">Location</h3>
+                    <div className="mt-3 text-sm text-white/90">
+                      VeBlyss Global Pvt Ltd
+                      <br />
+                      2619, 36th A Cross, 26th Main,
+                      <br />
+                      4th T Block, 9th Block Post,
+                      <br />
+                      Jayanagar, Bengaluru,
+                      <br />
+                      Karnataka - 560041
+                    </div>
                     <br />
-                    2619, 36th A Cross, 26th Main,
-                    <br />
-                    4th T Block, 9th Block Post,
-                    <br />
-                    Jayanagar, Bengaluru,
-                    <br />
-                    Karnataka - 560041
-                  </div>
-                  <br />
-                  <div className="mt-3 text-sm text-white/90">
-                    VeBlyss Limited
-                    <br />
-                    71-75 Shelton Street,
-                    <br />
-                    Covent Garden, London,
-                    <br />
-                    WC2H 9JQ, United Kingdom
+                    <div className="mt-3 text-sm text-white/90">
+                      VeBlyss Limited
+                      <br />
+                      71-75 Shelton Street,
+                      <br />
+                      Covent Garden, London,
+                      <br />
+                      WC2H 9JQ, United Kingdom
+                    </div>
                   </div>
                 </div>
               </div>

@@ -77,7 +77,7 @@ export default function ContactPage() {
             <h3 className="text-[26px] md:text-3xl font-bold text-[var(--button-red)] text-center mb-2">
               Social Media Links
             </h3>
-            <div className="grid md:grid-cols-4 grid-cols-2 items-center gap-6 ">
+            <div className="grid lg:grid-cols-4 grid-cols-2 items-center gap-6">
               <Link href="https://m.facebook.com/61582672670887/" target="_blank" rel="noopener noreferrer">
               <div 
               className="flex flex-col items-center gap-2 p-3 bg-white rounded-2xl shadow">
