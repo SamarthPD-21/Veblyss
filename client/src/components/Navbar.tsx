@@ -153,7 +153,7 @@ export default function Navbar() {
                 />
               </Link>
               <Link
-                href="https://wa.me/918904592009?text=Hello%2C%20I%27m%20interested%20in%20your%20%5BProduct%20Name%5D%20from%20VeBlyss%20Global.%20Please%20share%20more%20details."
+                href="https://wa.me/919844844225?text=Hello%2C%20I%27m%20interested%20in%20your%20%5BProduct%20Name%5D%20from%20VeBlyss%20Global.%20Please%20share%20more%20details."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ml-2"
