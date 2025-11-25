@@ -10,7 +10,7 @@ export default function Footer() {
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/a485700930340924e8ea7079d9d2f12894a62a98?width=70",
       alt: "WhatsApp",
-      link: "https://wa.me/919844844225?text=Hello%2C%20I%27m%20interested%20in%20your%20%5BProduct%20Name%5D%20from%20VeBlyss%20Global.%20Please%20share%20more%20details.",
+      link: "https://wa.me/447722184477?text=Hello%2C%20I%27m%20interested%20in%20your%20%5BProduct%20Name%5D%20from%20VeBlyss%20Global.%20Please%20share%20more%20details.",
     },
     {
       src: "https://cdn-icons-png.flaticon.com/512/3536/3536505.png",

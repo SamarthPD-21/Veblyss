@@ -4,7 +4,7 @@ import React from "react";
 import Btn from "@/components/Btn";
 
 // Default contact details (update later if you want a different number/email)
-const DEFAULT_WHATSAPP_NUMBER = "919844844225";
+const DEFAULT_WHATSAPP_NUMBER = "447722184477";
 const DEFAULT_EMAIL = "info@veblyss.com";
 
 export function WhatsappButton({ message }: { message?: string }) {

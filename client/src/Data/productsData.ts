@@ -328,7 +328,7 @@ export const productsData = {
       },
     ],
     whyChooseOurProductSection: {
-      name: "Sustainable Products",
+      name: "Sustainable",
       features: [
         "Eco-Certified Materials",
         "Carbon Neutral Production",
@@ -392,7 +392,7 @@ export const productsData = {
       },
     ],
     whyChooseOurProductSection: {
-      name: "Agricultural Products",
+      name: "Agricultural",
       features: [
         "Ethically Sourced",
         "Fresh and nutrient-rich",
