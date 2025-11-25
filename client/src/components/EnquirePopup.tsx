@@ -16,7 +16,7 @@ export default function EnquirePopup({
   open,
   onClose,
   message = "Hello, I am interested in your product.",
-  whatsappNumber = "919999999999",
+  whatsappNumber = "447722184477",
   email = "sales@veblyss.com",
   subject = "Enquiry from website",
 }: EnquirePopupProps) {
