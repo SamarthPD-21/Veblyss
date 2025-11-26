@@ -112,7 +112,7 @@ export const productsData = {
       },
     ],
     whyChooseOurProductSection: {
-      name: "leather",
+      name: "Leather",
       features: [
         "Private Label Services Available",
         "Skilled Handcrafted Detailing",
@@ -395,8 +395,8 @@ export const productsData = {
       name: "Agricultural",
       features: [
         "Ethically Sourced",
-        "Fresh and nutrient-rich",
-        "Supports farmers and the environment",
+        "Fresh and Nutrient-Rich",
+        "Supports Farmers and the Environment",
       ],
     },
     idealForSection: [
