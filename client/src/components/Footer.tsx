@@ -138,6 +138,8 @@ export default function Footer() {
                     <h3 className="text-lg font-semibold">Contact</h3>
                     <div className="mt-3 text-sm text-white/90">
                       <a href="tel:+918026582427">+91 80 2658 2427</a>
+                      <br />
+                      <a href="tel:+919844844225">+91 98448 44225</a>
                     </div>
                     <div className="flex items-end-safe gap-3">
                       {socialIcons.map((icon, index) =>
