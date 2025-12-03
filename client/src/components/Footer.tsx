@@ -202,6 +202,8 @@ export default function Footer() {
                       Covent Garden, London,
                       <br />
                       WC2H 9JQ, United Kingdom
+                      <br />
+                      <a href="tel:+447722184477">+44 7722 184477</a>
                     </div>
                   </div>
                 </div>
