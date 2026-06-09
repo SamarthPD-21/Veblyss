@@ -56,7 +56,7 @@ export default function Footer() {
     { name: "Imitation Jewelry", link: "/products/imitation-jewelry" },
     { name: "Handicrafts", link: "/products/handicrafts" },
     { name: "Sustainable Products", link: "/products/sustainable-products" },
-    { name: "Agricultural Products", link: "/products/agricultural-products" },
+    { name: "Food Products", link: "/products/agricultural-products" },
   ];
 
   return (

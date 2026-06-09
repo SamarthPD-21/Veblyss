@@ -189,7 +189,7 @@ function ProductCategoriesSection() {
     },
     {
       id: 6,
-      title: "Agricultural Products",
+      title: "Food Products",
       description:
         "Fresh, sustainable produce and quality grains from trusted farms.",
       image:

@@ -16,7 +16,7 @@ export default function Navbar() {
     { name: "Imitation Jewellery", link: "/products/imitation-jewelry" },
     { name: "Handicrafts", link: "/products/handicrafts" },
     { name: "Sustainable Products", link: "/products/sustainable-products" },
-    { name: "Agricultural Products", link: "/products/agricultural-products" },
+    { name: "Food Products", link: "/products/agricultural-products" },
   ];
 
   useEffect(() => {

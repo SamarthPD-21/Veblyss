@@ -4,8 +4,8 @@ export const productsData = {
       backgroundImage: "/images/products/copper/hero.png",
       mainHeading: "Copper Products",
       subHeading:
-        ["Our Copper Collection showcases authentic Indian craftsmanship, blending the timeless wisdom of Ayurveda with contemporary design and functionality. Each product is carefully crafted to promote holistic well-being, offering natural health benefits while complementing today’s modern lifestyles. Perfect for the health-conscious global market, our copperware embodies purity, tradition, and sustainability.",
-          "For over 5,000 years, copper has been cherished across civilizations for its beauty, durability, and wellness benefits. Inspired by this timeless heritage, VeBlyss brings thoughtfully crafted copperware that blends ancient wisdom with modern living."
+        ["For over 5,000 years, copper has been cherished across civilizations for its beauty, durability, and wellness benefits. Inspired by this timeless heritage, VeBlyss brings thoughtfully crafted copperware that blends ancient wisdom with modern living.",
+          "Our Copper Collection showcases authentic Indian craftsmanship, blending the timeless wisdom of Ayurveda with contemporary design and functionality. Each product is carefully crafted to promote holistic well-being, offering natural health benefits while complementing today’s modern lifestyles. Perfect for the health-conscious global market, our copperware embodies purity, tradition, and sustainability."
         ],
       catalogueLink:
         "https://drive.google.com/file/d/1fnx2SFX2x-XFpphu5WNdXE2J2AYkl5Dm/view?usp=sharing",
@@ -365,7 +365,7 @@ export const productsData = {
   "agricultural-products": {
     heroSection: {
       backgroundImage: "/images/products/agriculture/hero.png",
-      mainHeading: "Agricultural Products",
+      mainHeading: "Food Products",
       subHeading:
         "High-quality agricultural produce and organic ingredients sourced from trusted farmers and ethical supply chains.",
     },
