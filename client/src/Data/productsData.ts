@@ -1,5 +1,3 @@
-import { line } from "framer-motion/m";
-
 export const productsData = {
   "copper-products": {
     heroSection: {
