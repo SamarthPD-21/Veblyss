@@ -95,7 +95,7 @@ export default function ContactPage() {
               </div>
               </Link>
               <Link
-                href="https://www.instagram.com/veblyss_global?igsh=eWd3OHFuNWc1d2M3"
+                href="https://www.instagram.com/veblyssglobal.pvt.ltd"
                 target="_blank"
                 rel="noopener noreferrer"
               >

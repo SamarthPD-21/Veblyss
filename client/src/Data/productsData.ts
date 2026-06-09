@@ -1,10 +1,14 @@
+import { line } from "framer-motion/m";
+
 export const productsData = {
   "copper-products": {
     heroSection: {
       backgroundImage: "/images/products/copper/hero.png",
       mainHeading: "Copper Products",
       subHeading:
-        "Our Copper Collection showcases authentic Indian craftsmanship, blending the timeless wisdom of Ayurveda with contemporary design and functionality. Each product is carefully crafted to promote holistic well-being, offering natural health benefits while complementing today’s modern lifestyles. Perfect for the health-conscious global market, our copperware embodies purity, tradition, and sustainability.",
+        ["Our Copper Collection showcases authentic Indian craftsmanship, blending the timeless wisdom of Ayurveda with contemporary design and functionality. Each product is carefully crafted to promote holistic well-being, offering natural health benefits while complementing today’s modern lifestyles. Perfect for the health-conscious global market, our copperware embodies purity, tradition, and sustainability.",
+          "For over 5,000 years, copper has been cherished across civilizations for its beauty, durability, and wellness benefits. Inspired by this timeless heritage, VeBlyss brings thoughtfully crafted copperware that blends ancient wisdom with modern living."
+        ],
       catalogueLink:
         "https://drive.google.com/file/d/1fnx2SFX2x-XFpphu5WNdXE2J2AYkl5Dm/view?usp=sharing",
     },
@@ -40,6 +44,7 @@ export const productsData = {
         "Authentic Craftsmanship",
         "Pure & Premium Quality",
         "Modern Design",
+        "White Label/Customisation"
       ],
     },
 
@@ -71,7 +76,8 @@ export const productsData = {
       backgroundImage: "/images/products/leather/hero.png",
       mainHeading: "Leather Products",
       subHeading:
-        "Premium Indian leather goods combining traditional craftsmanship with modern design, perfect for global markets seeking quality and authenticity.",
+        ["Premium Indian leather goods combining traditional craftsmanship with modern design, perfect for global markets seeking quality and authenticity."
+        , "Crafted in the heart of Mumbai by skilled leather artisans from Dharavi — one of India’s most resilient and industrious craft communities."],
     },
     productRangeSections: [
       {

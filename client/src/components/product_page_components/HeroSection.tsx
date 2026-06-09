@@ -2,7 +2,7 @@ import React from "react";
 import BackgroundImage from "@/components/BackgroundImage";
 import Btn from "../Btn";
 
-export default function HeroSection({backgroundImage, mainHeading, subHeading, catalogueLink}: {backgroundImage: string, mainHeading: string, subHeading: string, catalogueLink?: string}) {
+export default function HeroSection({backgroundImage, mainHeading, subHeading, catalogueLink}: {backgroundImage: string, mainHeading: string, subHeading: string | string[], catalogueLink?: string}) {
   return (
     <section
       className="relative w-full h-[640px] md:h-[695.1781616210938px] overflow-hidden"
@@ -16,9 +16,19 @@ export default function HeroSection({backgroundImage, mainHeading, subHeading, c
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-[#AFD8D1] leading-tight drop-shadow-lg max-w-3xl">
               {mainHeading}
             </h1>
-            <p className="mt-6 text-base text-center md:text-xl text-white/90 max-w-4xl p-4">
-              {subHeading}
-            </p>
+            {Array.isArray(subHeading) ? (
+              <div className="mt-6 flex flex-col gap-4">
+                {subHeading.map((paragraph, index) => (
+                  <p key={index} className="text-base text-center md:text-xl text-white/90 max-w-4xl px-4">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p className="mt-6 text-base text-center md:text-xl text-white/90 max-w-4xl p-4">
+                {subHeading}
+              </p>
+            )}
             {catalogueLink && (
               <a href={catalogueLink} target="_blank" rel="noopener noreferrer">
                 <Btn size="large" className="mt-8 shadow-xl">

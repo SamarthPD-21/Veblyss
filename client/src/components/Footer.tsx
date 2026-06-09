@@ -30,7 +30,7 @@ export default function Footer() {
     {
       src: "https://api.builder.io/api/v1/image/assets/TEMP/69333b329d2202c4ee17aeb58e3f6f6b75f2aba7?width=68",
       alt: "Instagram",
-      link: "https://www.instagram.com/veblyss_global?igsh=eWd3OHFuNWc1d2M3",
+      link: "https://www.instagram.com/veblyssglobal.pvt.ltd",
     },
   ];
 

@@ -95,25 +95,15 @@ function VisionAndMissionSection() {
               <h3 className="font-extrabold text-2xl md:text-start text-center">Our Vision</h3>
 
               <p className="text-[18px] text-justify">
-                To be a global leader in exporting Indian-crafted fashion,
-                lifestyle, and essential products — showcasing the best of
-                quality and craftsmanship while delivering trust and value to
-                every client.
+                VeBlyss was founded with a simple vision: to bring ethically sourced, premium-quality handcrafted products and essential goods to customers who value authenticity, wellness, and responsible living. By connecting skilled artisans and trusted producers with global markets, we create products that deliver exceptional quality while supporting craftsmanship, sustainability, and healthier lifestyles.
               </p>
             </div>
             <div className="text-gray-700 md:max-w-[50%] md:p-0 p-4 pr-0 text-left flex flex-col gap-12">
               <h3 className="font-extrabold text-center md:text-start text-2xl">Our Mission</h3>
 
-              <ul className="list-disc list-inside space-y-2 text-[18px] ">
-                <li>
-                  To empower Indian artisans and manufacturers by giving them
-                  global reach.
-                </li>
-                <li>
-                  To deliver high-quality, sustainable, and ethically sourced
-                  products from India.
-                </li>
-              </ul>
+              <p className="text-[18px] text-justify">
+                Our mission is not simply to sell products; it is to share stories, preserve craftsmanship, and create opportunities. Every product we offer is carefully selected for its quality, authenticity, and the positive impact it can have on both the people who make it and the people who use it.
+                </p>
             </div>
           </div>
         </div>
@@ -204,8 +194,10 @@ function MarketsWeServeSection() {
 function CertificationsSection() {
   const certifications: { name: string; images: string[] }[] = [
     {
-      name: "Import Export Code (IEC)",
-      images: ["/about/certs/IEC.jpg"],
+      name: "Import Export Code (IEC) / FSSAI",
+      images: ["/about/certs/IEC.jpg",
+        "/about/certs/FSSAI.jpg",
+      ],
     },
     {
       name: "APEDA / Spices Board / Tea Board / FIEO",
@@ -279,12 +271,33 @@ function CertificationsSection() {
   );
 }
 
+function Ourstory() {
+  return (
+    <section>
+      <div className="max-w-screen flex flex-col items-center py-16">
+        <div className="flex flex-col items-center justify-center container gap-8">
+          <h2 className="font-poppins md:text-4xl text-[26px] text-[var(--button-red)] font-bold">
+            Our Story
+          </h2>
+          <p className="mt-4 m-4 text-justify text-[18px] text-gray-700 max-w-7xl">
+            We started VeBlyss after noticing how difficult it had become for consumers and businesses to find products that genuinely combine quality, authenticity, ethical sourcing, and value. Too often, handcrafted goods were overlooked, artisan communities struggled to access global markets, and consumers were left choosing between mass-produced products and products they could truly trust.
+We wanted to create a brand that bridges this gap—connecting people with premium handcrafted fashion, lifestyle, and essential products that are responsibly sourced and thoughtfully made. Our goal was to help customers make more conscious purchasing decisions, enjoy healthier lifestyles, and experience products with a genuine story behind them.
+What makes VeBlyss different is our belief that quality should never come at the expense of ethics, and that every purchase should create value beyond the product itself. We work to bring together skilled artisans, trusted producers, and discerning customers through a commitment to craftsmanship, transparency, sustainability, and long-term relationships.
+At VeBlyss, we believe that the best products are not only beautifully made and functional—they also support communities, preserve traditions, and contribute to a healthier and more meaningful way of living.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function About() {
   return (
     <section className="min-h-screen">
       <HeroSection />
       <div className="relative z-10 bg-gradient-to-b from-[#FFECE0] via-[#EAB4B4] to-[#FFECE0]">
         <WhoWeAreSection />
+        <Ourstory />
         <VisionAndMissionSection />
         <Difference />
         <MarketsWeServeSection />
